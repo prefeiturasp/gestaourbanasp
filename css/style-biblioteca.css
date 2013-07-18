@@ -1,0 +1,83 @@
+#library .inner h1 {
+	margin-bottom:75px;
+	float:left;
+}
+
+#library .inner ul {
+	float:right;
+}
+
+#library .inner ul li {
+	display:inline-block;
+	margin-left:25px;
+}
+
+#library .inner .box {
+	width:226px;
+	height:226px;
+	float:left;
+	margin-right:16px;
+	margin-bottom:16px;
+	border:1px solid #cccccc;
+	background:white;
+}
+
+#library .inner .boxes .box:nth-of-type(4n) {
+	margin-right:0;
+}
+
+#library .inner .box img.hover{
+	display:none;
+}
+
+#library .inner .box a{
+	color:#D7322F;
+}
+
+#library .inner .box:hover {
+	background:#d7322f;
+}
+
+#library .inner .box:hover a{
+	color:white;
+}
+
+#library .inner .box:hover img.hover{
+	display:inline;
+}
+
+#library .inner .box:hover img.normal{
+	display: none;
+}
+
+#library .inner .box .inner-box {
+	padding:25px 20px;
+}
+
+#library .inner .box .inner-box h5{
+	margin-top:35px;
+}
+
+@media screen and (max-width: 539px) {
+  
+  #library .inner ul {
+    margin-bottom:30px;
+  }
+  
+  #library .inner .box {
+    width:168px;
+    height:168px;
+    margin-right:5px;
+  }
+  #library .inner .boxes .box:nth-of-type(2n) {
+    margin-right:0;
+  }
+  
+  #library .inner .box .inner-box {
+    padding: 10px 10px;
+  }
+  #library .inner .box .inner-box h5 {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}

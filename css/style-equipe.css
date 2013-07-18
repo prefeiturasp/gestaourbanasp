@@ -1,0 +1,9 @@
+.equipe .collaborator {
+	background:url(images/icon-team-collaborator.png) center left no-repeat;
+	padding-left:30px;
+}
+
+.equipe .tecnology {
+	background:url(images/icon-team-tecnology.png) center left no-repeat;
+	padding-left:30px;
+}

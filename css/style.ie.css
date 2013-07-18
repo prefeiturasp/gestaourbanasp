@@ -1,0 +1,71 @@
+header .inner ul li {
+  float:left;
+}
+
+header .inner ul li#newsletter {
+   width:auto;
+   margin-left:25px;
+}
+
+header .inner ul li.last {
+   width:208px;
+   margin-left:25px;
+}
+
+header .inner ul li.last .social-buttons {
+  width:140px;
+}
+
+header .inner ul li.last .social-buttons .fb-like {
+  width:74px;
+  float:left;
+}
+
+
+.menu-menu-principal-container LI {
+    float:left;
+}
+
+.menu-menu-principal-container li ul.sub-menu {
+  padding-bottom:20px;
+}
+
+.ie8 header .inner UL LI {
+  /*margin-right:30px;*/
+}
+
+.ie8 header .inner UL LI.last {
+  margin-right:0;
+}
+
+.ie8 header .inner UL LI .left.label {
+}
+
+.ie8 #wrapper-third-home .bottom-news .news-title,
+.ie8 #wrapper-third-home .bottom-news .news-text {
+  padding:0 20px;
+}
+
+.ie8 #wrapper-third-home .bottom-news .first .news-title,
+.ie8 #wrapper-third-home .bottom-news .first .news-text {
+  padding-left:0;
+}
+
+.ie8 #wrapper-third-home .bottom-news .last .news-title,
+.ie8 #wrapper-third-home .bottom-news .last .news-text {
+  padding-right:0;
+}
+
+.ie8 footer .footer-col {
+  width:33%;
+}
+#second {margin-left: 30px !important;}
+
+.ie7 .footer-row .label, .ie8 .footer-row .label {
+  position: relative;
+  margin: 10px 10px 0 0;
+}
+
+.footer-col .contato {
+  margin-top: -29px;
+}

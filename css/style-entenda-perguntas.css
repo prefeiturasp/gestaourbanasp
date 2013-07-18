@@ -1,0 +1,67 @@
+#wrapper-second-perguntas {
+	margin-top:80px;
+}
+
+#wrapper-second-perguntas .left{
+	width:70%;
+}
+
+ #wrapper-second-perguntas .right {
+ 	width:30%;
+ }
+
+#wrapper-second-perguntas .left .inner {
+	margin-right:10px;
+}
+
+#wrapper-second-perguntas .left .inner .text {
+	border-bottom:1px solid #cccccc; 
+	
+}
+
+#wrapper-second-perguntas .left .inner .inner-text {
+	display: none;
+}
+
+#wrapper-second-perguntas .left .inner .inner-text.open {
+	display:block;
+}
+
+#wrapper-second-perguntas .left .inner a{
+	color:#d7322f;
+	font-family:'museuSlab', Arial, Helvetica, sans-serif;
+	font-size:15px;
+}
+
+#wrapper-second-perguntas .left .inner p {
+	font-size:14px;
+}
+
+#wrapper-second-perguntas .right .inner {
+	margin-left:10px;
+}
+
+#wrapper-second-perguntas .right .inner .contato{
+	margin:120px 0 40px;
+}
+
+#wrapper-second-perguntas .right .inner .text .secretaria{
+	font-size: 15px;
+}
+
+@media screen and (max-width: 539px) {
+	#wrapper-second-perguntas .left, #wrapper-second-perguntas .right {
+		width:100%;
+		float:none;		
+	}
+	#wrapper-second-perguntas .left .inner {
+		margin:0;
+	}
+	
+	#wrapper-second-perguntas .right .inner {
+		margin:0;
+	}
+	#wrapper-second-perguntas .right{
+		margin-top:40px;
+	}
+}

@@ -1,0 +1,195 @@
+#wrapper-second-etapas .left {
+	width:60%; 
+}
+
+#wrapper-second-etapas .right {
+	width:40%; 
+}
+
+#wrapper-second-etapas .right .inner {
+
+}
+
+#wrapper-second-etapas .right .inner img {
+	width:100%;
+}
+
+@media screen and (max-width: 539px) {
+	#wrapper-second-etapas .left {
+		width:100%; 
+	}
+	#wrapper-second-etapas .right {
+		display: none; 
+	}
+	
+}
+
+#wrapper-third-etapas {
+	padding-top:80px;
+}
+
+#wrapper-third-etapas img {
+	width:100%;
+}
+
+#wrapper-forth-etapas {
+	margin-top:80px;
+}
+
+#wrapper-forth-etapas .left, #wrapper-forth-etapas .right {
+	width:50%;
+}
+
+#wrapper-forth-etapas .left .inner {
+	margin-right:10px;
+}
+
+#wrapper-forth-etapas .right .inner {
+	margin-left:10px;
+}
+
+@media screen and (max-width: 539px) {
+	#wrapper-forth-etapas .left, #wrapper-forth-etapas .right {
+		width:100%;
+		float:none;		
+	}
+	#wrapper-forth-etapas .left .inner {
+		margin:0;
+	}
+	
+	#wrapper-forth-etapas .right .inner {
+		margin:0;
+	}	
+}
+
+#wrapper-fifth-etapas {
+	margin-top:80px;
+}
+
+#wrapper-fifth-etapas .left, #wrapper-fifth-etapas .right {
+	width:50%;
+}
+
+#wrapper-fifth-etapas .left .inner {
+	margin-right:10px;
+}
+
+#wrapper-fifth-etapas .right .inner {
+	margin-left:10px;
+}
+
+@media screen and (max-width: 539px) {
+	#wrapper-fifth-etapas .left, #wrapper-fifth-etapas .right {
+		width:100%;
+		float:none;		
+	}
+	#wrapper-fifth-etapas .left .inner {
+		margin:0;
+	}
+	
+	#wrapper-fifth-etapas .right .inner {
+		margin:0;
+	}	
+}
+
+#wrapper-sixth-etapas {
+	margin-top:80px;
+	position:relative;
+}
+
+#wrapper-sixth-etapas .left{
+	width:50%;
+	z-index: 999;
+	top:0;
+	position:absolute;
+}
+
+#wrapper-sixth-etapas .left .inner {
+	margin-right:10px;
+}
+
+#wrapper-sixth-etapas img {
+	width:100%;
+}
+
+@media screen and (max-width: 850px) {
+	#wrapper-sixth-etapas .left {
+		width:100%;
+		float:none;
+		position:static;
+	}
+	#wrapper-sixth-etapas .left .inner {
+		margin:0;
+	}
+	#wrapper-sixth-etapas img {
+		display: none;
+	}
+}
+
+#wrapper-seventh-etapas {
+	margin-top:80px;
+}
+
+#wrapper-seventh-etapas .left, #wrapper-seventh-etapas .right {
+	width:50%;
+}
+
+#wrapper-seventh-etapas .left .inner {
+	margin-right:10px;
+}
+
+#wrapper-seventh-etapas .right .inner {
+	margin-left:10px;
+}
+
+#wrapper-seventh-etapas .right .inner .box{
+	border:1px solid #000000;
+	padding:20px;
+}
+
+@media screen and (max-width: 539px) {
+	#wrapper-seventh-etapas .left, #wrapper-seventh-etapas .right {
+		width:100%;
+		float:none;		
+	}
+	#wrapper-seventh-etapas .left .inner {
+		margin:0;
+	}
+	
+	#wrapper-seventh-etapas .right .inner {
+		margin:0;
+	}	
+}
+
+#wrapper-eighth-etapas {
+	margin-top:80px;
+}
+
+#wrapper-eighth-etapas .left, #wrapper-eighth-etapas .right {
+	width:50%;
+}
+
+#wrapper-eighth-etapas .left .inner {
+	margin-right:10px;
+}
+
+#wrapper-eighth-etapas .right .inner {
+	margin-left:10px;
+}
+
+@media screen and (max-width: 539px) {
+	#wrapper-eighth-etapas .left, #wrapper-eighth-etapas .right {
+		width:100%;
+		float:none;		
+	}
+	#wrapper-eighth-etapas .left .inner {
+		margin:0;
+	}
+	
+	#wrapper-eighth-etapas .right .inner {
+		margin:0;
+	}
+	#wrapper-eighth-etapas .right{
+		margin-top:40px;
+	}
+}

@@ -1,0 +1,15 @@
+/* Columns CPT Events */
+ 
+th#col_ev_date, th#tf_col_ev_cat {width:150px}
+td.col_ev_date em {color:gray;}
+th#col_ev_times {width:150px}
+th#col_ev_thumb {width:100px}
+
+
+/* Metabox */
+ 
+.meta {  }
+.eta ul li { height: 20px; clear:both; margin: 0 0 15px 0;}
+.meta ul li label { width: 100px; display:block; float:left; padding-top:4px; }
+.meta ul li input { width:125px; display:block; float:left; }
+.meta ul li em { width: 200px; display:block; float:left; color:gray; margin-left:10px; padding-top: 4px}

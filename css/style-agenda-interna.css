@@ -1,0 +1,128 @@
+#agenda-inner .left
+{
+	width:70%;
+}
+
+#agenda-inner .right
+{
+	width:30%;
+}
+
+#agenda-inner .left .inner {
+	margin-right:15px;
+}
+
+#agenda-inner .right .inner {
+	margin-left:15px;
+}
+
+#agenda-inner h2 {
+	color:#9b9b9b;
+}
+
+#agenda-inner h3, #agenda-inner h4{
+	color:#D7322F;
+}
+
+#agenda-inner h3, #agenda-inner h2 {
+	margin:15px 0 30px;
+}
+
+#agenda-inner h4 {
+	margin:15px 0 30px;
+}
+
+#agenda-inner .left .text {
+	border-bottom:1px solid #CCCCCC;
+	margin-bottom:40px;
+	padding-bottom:40px;
+}
+
+#agenda-inner .left .text img {
+	float:left;
+	margin:0 20px 20px 0;
+}
+
+#agenda-inner .left .text .time,
+#agenda-inner .left .text .information,
+#agenda-inner .left .text .place {
+	font-family: 'museuSlab', Arial, Helvetica, sans-serif;
+	font-size:15px;
+	padding: 10px 30px;
+	display:inline-block;
+}
+
+#agenda-inner .left .text .time {
+	background:url(../images/bg-agenda-time.png) left center no-repeat;
+}
+
+#agenda-inner .left .text .place {
+	background:url(../images/bg-agenda-place.png) left center no-repeat;
+}
+
+#agenda-inner .left .text .information {
+	background:url(../images/bg-agenda-information.png) left center no-repeat;
+}
+
+#agenda-inner .left .text img{
+	width:30%;
+	height:auto;
+	float:left;
+	margin:0 20px 20px 0;
+	border-radius:5px;
+}
+
+#agenda-inner .pages .prev {
+	float:left;
+}
+#agenda-inner .pages .next {
+	float:right;
+} 
+#agenda-inner .pages .prev a,  #agenda-inner .pages .next a{
+	color:#D7322F;
+	font-size:15px;
+	font-family:'museuSlam', Arial, Helvetica, sans-serif;
+}
+
+#agenda-inner .left .see-also {
+	margin-top:50px;	
+}
+
+#agenda-inner .left .see-also ul {
+	margin-top:15px;
+}
+
+#agenda-inner .left .see-also ul li {
+	width:33%;
+	display:inline-block;
+}
+
+#agenda-inner .left .see-also ul li img{
+	border-radius:5px;
+}
+
+#agenda-inner .left .see-also ul li:nth-of-type(2) {
+	text-align:center;
+}
+
+#agenda-inner .left .see-also ul li:nth-of-type(3) {
+	text-align:right;
+}
+
+#agenda-inner .left .see-also .subtitle {
+	text-align:left;
+	width:190px;
+	display: inline-block;
+} 
+
+
+@media screen and (max-width: 560px) {
+	#agenda-inner .left {
+		float:none;
+		width:100%;
+	}
+	
+	#agenda-inner .left .inner {
+		margin:0;
+	}
+}

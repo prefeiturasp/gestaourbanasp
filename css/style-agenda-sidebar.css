@@ -1,0 +1,13 @@
+#agenda-sidebar .inner .title img {
+	width:100%;
+}
+
+#agenda-sidebar .inner .title {
+	margin-bottom:25px;
+}
+
+@media screen and (max-width: 560px) {
+	#agenda-sidebar {
+		display:none;
+	}
+}

@@ -1,0 +1,92 @@
+#agenda .left
+{
+	width:70%;
+}
+
+#agenda .right
+{
+	width:30%;
+}
+
+#agenda .left .inner {
+	margin-right:15px;
+}
+
+#agenda .right .inner {
+	margin-left:15px;
+}
+
+#agenda h2 {
+	color:#9b9b9b;
+}
+
+#agenda h3, #agenda h4{
+	color:#D7322F;
+}
+
+#agenda h3, #agenda h2 {
+	margin:15px 0 30px;
+}
+
+#agenda h4 {
+	margin:15px 0 30px;
+}
+
+#agenda .left .text {
+	border-bottom:1px solid #CCCCCC;
+	margin-bottom:40px;
+	padding-bottom:40px;
+}
+
+#agenda .left .text img {
+	float:left;
+	margin:0 20px 20px 0;
+}
+
+#agenda .left .text .time,
+#agenda .left .text .place {
+	font-family: 'museuSlab', Arial, Helvetica, sans-serif;
+	font-size:15px;
+	padding: 10px 30px;
+	display:inline-block;
+}
+
+#agenda .left .text .time {
+	background:url(../images/bg-agenda-time.png) left center no-repeat;
+}
+
+#agenda .left .text .place {
+	background:url(../images/bg-agenda-place.png) left center no-repeat;
+}
+
+#agenda .left .text img{
+	width:30%;
+	height:auto;
+	float:left;
+	margin:0 20px 20px 0;
+	border-radius:5px;
+}
+
+#agenda .pages .prev {
+	float:left;
+}
+#agenda .pages .next {
+	float:right;
+} 
+#agenda .pages .prev a,  #agenda .pages .next a{
+	color:#D7322F;
+	font-size:15px;
+	font-family:'museuSlam', Arial, Helvetica, sans-serif;
+} 
+
+
+@media screen and (max-width: 560px) {
+	#agenda .left {
+		float:none;
+		width:100%;
+	}
+	
+	#agenda .left .inner {
+		margin:0;
+	}
+}

@@ -1,0 +1,37 @@
+
+
+/* Comments
+############################################################################################################## */
+.comments-list { padding-top: 20px;}
+.comments-list h2 { color:#272d36; font: normal 28px/28px "Arial"; letter-spacing: -1px; padding-bottom: 20px;}
+.comments-list div.entry { margin-bottom: 15px; /*padding: 25px; border: 1px solid #eeeeee; background: #fff url(../images/comments/comments-list-entry-bkg.png) no-repeat right bottom;*/}
+.comments-list div.alt { /*background: #eeeeee url(../images/comments/comments-list-alt-bkg.png) no-repeat left top; padding-top: 40px;*/ border: none; margin-bottom: 25px;}
+.comments-list p.name { font: bold 14px/14px "Arial" sans-serif; letter-spacing: -1px; color:#000;}
+.comments-list p.avt { padding: 0px; margin: 0px; float: right;}
+.comments-list p.avt img { border: solid 1px #ccc;}
+* html .comments-list p.avt { left: -60px; }
+.comments-list p.date { font-size: 11px; margin-bottom: 5px;}
+.comments-list p.date a, .comments-list p.date a:visited, .comments-list p.date a:hover { color:#96b1bc; text-decoration: underline;}
+
+.comments-list .con { font: normal 12px/17px "Verdana"; margin-right: 90px; color:#333;}
+.comments-list .con p { font: normal 12px/17px "Verdana"; padding: 5px 0px; margin: 0px; color:#333;}
+.comments-list .con blockquote { font: italic 14px/19px Georgia, "Times New Roman", Times, serif; color:#666; margin: 10px 20px; }
+.comments-list .con blockquote p { font: italic 14px/19px Georgia, "Times New Roman", Times, serif; color:#666; }
+
+
+/* Comments Form
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.comments-form { /*background: #eeeeee; padding: 20px;*/ margin: 10px 0px;}
+.comments-form h3 { color:#272d36; font: normal 28px/28px "Arial"; letter-spacing: -1px; padding-bottom: 5px; margin-bottom: 5px; border-bottom: solid 1px #cbcbcb; }
+.comments-form p { padding: 7px 0px; color:#808080;}
+.comments-form .required { font-weight: normal; color:#ff0000;}
+.comments-form input { padding: 5px; width: 210px; margin-right: 7px; }
+.comments-form input.formid { border: 1px solid #cbcbcb; background: #fff url(../images/comments/form-name-bkg.png) no-repeat left; padding: 5px 5px 5px 40px;}
+.comments-form input.formemail { border: 1px solid #cbcbcb; background: #fff url(../images/comments/form-email-bkg.png) no-repeat left; padding: 5px 5px 5px 40px;}
+.comments-form input.formuri { border: 1px solid #cbcbcb; background: #fff url(../images/comments/form-uri-bkg.png) no-repeat left; padding: 5px 5px 5px 40px;}
+
+.comments-form textarea { border: 1px solid #cbcbcb; background: #fff; padding: 4px; width: 97%;}
+.comments-form .button { border: 1px solid #cbcbcb; background: url(../images/comments/button-post-comment.png) no-repeat left; color:#fff; width: auto; font-size: 11px; font-weight: bold; padding: 4px 6px 4px 38px;}
+
+
+

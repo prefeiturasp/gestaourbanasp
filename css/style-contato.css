@@ -1,0 +1,30 @@
+#default-inner.contato .form .label {
+	font-family:'museoSlab', Arial, Helvetica, sans-serif;
+}
+
+#default-inner.contato .form .error {
+	color:red;
+}
+
+#default-inner.contato .form .sent {
+	color:blue;
+}
+
+#default-inner.contato input[type="text"],
+#default-inner.contato textarea {
+	width:100%;
+	padding:5px;
+}
+
+#default-inner.contato textarea {
+	height:100px;
+}
+
+#default-inner.contato input[type="submit"] {
+	background:none;
+	border:none;
+	color:#D7322F;
+	font-size:15px;
+	cursor:pointer;
+	font-family:'museoSlab', Arial, Helvetica, sans-serif;
+}
