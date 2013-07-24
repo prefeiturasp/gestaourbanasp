@@ -7,7 +7,7 @@ Version: 0.2
 Text Domain: gestaourbana
 */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -25,8 +25,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -37,7 +37,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -68,7 +68,7 @@ a {
 /**
  * WebFonts
  */
- 
+
 @font-face {
     font-family: 'museoSlab';
     src: url('webfonts/museo_slab_500-webfont.eot');
@@ -113,7 +113,7 @@ a {
 /**
  * Main site css
  */
- 
+
 h1 {
 	font-size:50px;
 	line-height:55px;
@@ -166,17 +166,17 @@ strong {
 		font-size:35px;
 		line-height: 40px;
 	}
-	
+
 	h2 {
 		font-size:30px;
 		line-height: 35px;
 	}
-	
+
 	h3 {
 		font-size:25px;
 		line-height: 30px;
 	}
-	
+
 	h4 {
 		font-size:18px;
 		line-height: 23px;
@@ -192,23 +192,23 @@ strong {
 		font-size:25px;
 		line-height:30px;
 	}
-	
+
 	h2 {
 		font-size:20px;
 		line-height: 25px;
 	}
-	
+
 	h2 {
 		font-size:18px;
 		line-height: 23px;
 	}
-	
+
 	h4 {
 		font-size:16px;
 		line-height: 18px;
 	}
 }
- 
+
 body {
 	color:#333333;
 	font-family: 'museoSans', Arial, sans-serif;
@@ -302,7 +302,7 @@ header #newsletter input[type="submit"]{
 }
 
 @media screen and (min-width: 540px) and (max-width: 960px) {
-	
+
 	#pmsp-header-container {display: none}
 
 	header .inner ul li{
@@ -313,7 +313,7 @@ header #newsletter input[type="submit"]{
 	header .inner ul li:nth-of-type(2){
 		text-align:right;
 	}
-	
+
 	header .inner ul li:nth-of-type(3)
 	{
 		width:301px;
@@ -326,24 +326,24 @@ header #newsletter input[type="submit"]{
 		margin-top:20px;
 		float:right;
 	}
-	
+
 }
 
 @media screen and (max-width: 539px) {
-	
+
 	#pmsp-header-container {display: none}
-	
+
 	header .inner ul li{
 		display: inline-block;
 		margin:0 auto;
 		width:49%;
 	}
-	
+
 	header .inner ul li:nth-of-type(1) img{
 		width:100%;
 		max-width:191px;
 	}
-	
+
 	header .inner ul li:nth-of-type(2) img{
 		width:100%;
 		max-width:131px;
@@ -351,7 +351,7 @@ header #newsletter input[type="submit"]{
 	header .inner ul li:nth-of-type(2) {
 		text-align:right;
 	}
-	
+
 	header .inner ul li:nth-of-type(3){
 		width:100%;
 		margin-top:20px;
@@ -361,12 +361,12 @@ header #newsletter input[type="submit"]{
 		width:100%;
 		margin-top:20px;
 	}
-	
+
 	header .inner ul li:nth-of-type(3) .right{
 		float:left;
 		margin-left:15px;
 	}
-	
+
 	header .inner ul li:nth-of-type(4) .right{
 		float:left;
 		margin-left:15px;
@@ -425,7 +425,7 @@ footer .footer-col:nth-of-type(3) .footer-row:nth-of-type(2) .social-buttons{
 	footer .footer-col:nth-of-type(1),footer .footer-col:nth-of-type(2),footer .footer-col:nth-of-type(3) {
 		width:100%;
 	}
-	
+
 	footer .footer-col {
 		width:100%;
 		float:none;
@@ -566,15 +566,15 @@ footer .footer-col:nth-of-type(3) .footer-row:nth-of-type(2) .social-buttons{
 	#wrapper-first nav#principal li.first{
 		padding:0;
 	}
-	
+
 	.menu-menu-principal-container {
 	  width:100%;
 	}
-	
+
 	#menu-menu-principal {
 	  width: 100%;
 	}
-	
+
 	#menu-menu-principal li,.menu-menu-principal-container #menu-menu-principal > li.menu-item-type-custom:nth-of-type(1) {
 	  padding:5px;
 	  background:#D7322F;
@@ -582,11 +582,11 @@ footer .footer-col:nth-of-type(3) .footer-row:nth-of-type(2) .social-buttons{
 	  margin:0 0 5px;
 	  display:block
 	}
-	
+
 	#menu-menu-principal li a,.menu-menu-principal-container #menu-menu-principal > li.menu-item-type-custom:nth-of-type(1) a{
 	  color:white;
 	}
-	
+
 	.menu-menu-principal-container li ul {
 	  background:#d7322f;
 	}
@@ -594,7 +594,7 @@ footer .footer-col:nth-of-type(3) .footer-row:nth-of-type(2) .social-buttons{
 
 
 #default-inner .left{
-	width:70%;	
+	width:70%;
 }
 
 #default-inner .left .inner{
@@ -638,12 +638,6 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 }
 
 .btn:hover {color: white;}
-
-#arquivo-biblioteca {
-	position: absolute;
-	left:0;
-	top:50px;
-}
 
 #pmsp-header-container a:link {
 	font-family: verdana, arial, helvetica, serif !important;
