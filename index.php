@@ -22,7 +22,7 @@ Template Name: Index
 					<div>
 						<br /><br />
 						<div align="center" class="slider-nav-images">
-              
+
 						</div>
 					</div>
 				</div>
@@ -31,7 +31,7 @@ Template Name: Index
 		</ul>
 	</div>
 </div>
-              
+
 <script>
   jQuery('.slider-nav-images').each(function(index) {
     jQuery(this).html(
@@ -43,22 +43,22 @@ Template Name: Index
           '<img src="<?php echo $image['sizes']['126xX'] ?>" class="slider-nav-image-image-<?php echo $count; ?>" />' +
         '</a>' <?php if ($count < 3) { echo '+'; } ?>
       <?php $count++; endwhile; wp_reset_query();?>
-    ); 
+    );
   });
-</script>              
+</script>
 <br /><br />
 <br /><br />
 <br /><br />
 <div class="wrapper" id="wrapper-third-home">
 	<h1>Notícias</h1>
-	
-	
+
+
 	<?php $news_query = new WP_Query( array('post_type' => 'noticias', 'posts_per_page' => 4)); ?>
 	<?php $count = 1; ?>
   <?php while ( $news_query->have_posts() ) : $news_query->the_post(); ?>
-	
+
     <?php if ($count == 1): ?>
-      
+
   	<div class="top-news">
   	  <?php if (get_the_post_thumbnail()): ?>
     		<div class="image">
@@ -74,9 +74,9 @@ Template Name: Index
   		</div>
   		<div class="clear"></div>
   	</div>
-  	
+
   	<?php else : ?>
-  	
+
   	<?php if ($count == 2): ?>
     	<div class="bottom-news table">
     		<div class="news cell first">
@@ -153,7 +153,14 @@ Template Name: Index
 		<div class="clear"></div>
 	</div>
 </div>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=391372857648079";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="wrapper" id="wrapper-fifth-home">
 	<h1>Redes Sociais</h1>
 	<div class="social-box">
