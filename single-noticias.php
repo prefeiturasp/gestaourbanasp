@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-  
+
 <?php
-  $counter_post_meta = get_post_meta($post->ID, 'views_counter_'.date('M')); 
+  $counter_post_meta = get_post_meta($post->ID, 'views_counter_'.date('M'));
 ?>
 <?php update_post_meta($post->ID, 'views_counter_'.date('M'), @$counter_post_meta[0] + 1, true); //Add counter to news ?>
 
@@ -16,7 +16,7 @@
           <h3><?php echo the_title(); ?></h3>
           <div class="subtitle"><strong><?php echo the_excerpt(); ?></strong></div>
           <br /><br />
-          
+
           <div class="inner-text">
             <?php
               $content = get_the_content();
@@ -31,11 +31,11 @@
                   <?php if (function_exists('the_related')) { the_related(); }; ?>
                 </div>
               <?php endif; ?>
-              
+
               <p><?php echo str_replace('</p>', '',$content[$x]); ?></p>
-              
+
             <?php endfor; ?>
-              
+
             <div class="clear"></div>
           </div>
         </div>
@@ -44,13 +44,13 @@
         <?php endif; ?>
         <!--Comentários-->
         <?php comments_template( '', true ); ?>
-      </div>      
+      </div>
     </div>
-    
+
     <?php include('noticias-sidebar.php'); ?>
-    
+
     <div class="clear"></div>
-    
+
   </div>
 </div>
 

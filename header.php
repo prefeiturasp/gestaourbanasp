@@ -39,15 +39,7 @@
 	<script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/glDatePicker.js"></script>
 	<script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/script.js?<?php echo time(); ?>"></script>
-	
- 	<meta property="fb:app_id" content="171948572963967" />
-	<meta property="og:url" content="http://www.gestaourbana.prefeitura.sp.gov.br/" />
-	<meta property="og:title" content="Gestão Urbana SP" />
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content="http://www.gestaourbana.prefeitura.sp.gov.br/images/logo-gestao_urbana.png" />
-	<meta property="og:description" content="Se você é preocupado com a sua cidade, quer espaços públicos bem cuidados, preservar o meio ambiente, se preocupa com moradia adequada para todos, quer poder ir trabalhar, passear, estudar sem enfrentar congestionamentos e longas horas nos deslocamentos? Luta por qualidade de vida? A prefeitura quer…" />
-	<meta property="og:updated_time" content="<?php echo time(); ?>" />
-	
+
 	<?php //wp_head(); ?>
 </head>
 <!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
@@ -56,14 +48,6 @@
 <!--[if IE 9 ]> <body class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=391372857648079";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 	<header>
 		<div class="inner">
 			<div class="wrapper">
@@ -91,11 +75,7 @@
 						  Redes<br />sociais
 						</div>
 						<div class="right social-buttons">
-							<?php /*<img src="<?php echo bloginfo('template_url'); ?>/images/btn-facebook-27x27.png" />*/ ?>
-							 <div class="fb-like" data-href="https://www.facebook.com/pmsp.smdu" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
-							<a href="https://twitter.com/pmsp_smdu" class="twitter-follow-button" data-show-count="false" data-lang="pt" data-show-screen-name="false">Seguir @pmsp_smdu</a>
-							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
+							<iframe src="<?php echo bloginfo('template_url'); ?>/social-bar-home.php" name="social-bar-home" frameborder="0" height="25" width="180" scrolling="no"></iframe>
 						</div>
 						<div class="clear"></div>
 					</li>

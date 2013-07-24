@@ -27,26 +27,25 @@ Template Name: Noticias
                   <h3><?php the_title(); ?></h3>
                 <?php else : ?>
                   <h4><?php the_title(); ?></h4>
-                <?php endif; ?>                    						  
+                <?php endif; ?>
     						<div class="inner-text">
     							<p class="subtitle"><?php the_excerpt(); ?></p>
-    						</div>    						
+    						</div>
     					</a>
     					<span><?php the_tags() ?></span>
 
     				</div>
 			  <?php $count++; endwhile;?>
 
-				
 				<?php the_content_nav(); ?>
-			
-			</div>			
+
+			</div>
 		</div>
-		
+
 		<?php include('noticias-sidebar.php'); ?>
-		
+
 		<div class="clear"></div>
-		
+
 	</div>
 </div>
 
