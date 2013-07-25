@@ -13,7 +13,7 @@
       <div class="inner">
         <div class="text">
           <p class="news-date"><?php echo the_time('d/m/Y'); ?></p>
-          <h3><?php echo the_title(); ?></h3>
+          <h3 class="titulo"><?php echo the_title(); ?></h3>
           <div class="subtitle"><strong><?php echo the_excerpt(); ?></strong></div>
           <br /><br />
 
