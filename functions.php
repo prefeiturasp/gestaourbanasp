@@ -10,16 +10,16 @@
   if ( function_exists( 'add_theme_support' ) ) {
   add_theme_support( 'post-thumbnails' );
     add_image_size( '96xX', 96, 0 );
-    add_image_size( '126xX', 126, 0 );
+    add_image_size( '150xX', 150, 0 );
     add_image_size( '170xX', 170, 0 );
     add_image_size( '657xX', 657, 0 );
-    add_image_size( '565xX', 565, 0 );
+    add_image_size( '510xX', 510, 0 );
     add_image_size( '365x195', 664, 195, true);
   }
-  
+
   /**
    * SETUP MENUS
-   */   
+   */
   function register_my_menus() {
     register_nav_menus(
       array(
@@ -29,18 +29,18 @@
     );
   }
   add_action( 'init', 'register_my_menus' );
-  
+
   /**
    * SETUP PAGE NAVIGATION
    */
-   
+
   if ( ! function_exists( 'the_content_nav' ) ) :
   /**
    * Display navigation to next/previous pages when applicable
    */
   function the_content_nav() {
     global $wp_query;
-    
+
     if ( $wp_query->max_num_pages > 1 ) :?>
       <div class="pages">
         <div class="prev"><?php echo previous_posts_link( 'Anterior' ); ?></div>
@@ -50,11 +50,11 @@
     <?php endif;
   }
   endif; // twentyeleven_content_nav
-  
+
   /**
    * SETUP COMMENTS
    */
-    
+
    /* function alter_comment_form_fields($fields){
       //if (esc_attr($commenter['comment_author']) == '') { $commenter['comment_author'] = __('Seu Nome*:'); }
       $commenter['comment_author'] = __('Seu Nome*:');
@@ -70,13 +70,13 @@
         $fields['comment'] = '<textarea name="comment" class="defaultText defaultTextActive" title="'.$commenter['comment_comment'].'"></textarea>';
         return $fields;
     }
-    
+
     add_filter('comment_form_default_fields','alter_comment_form_fields');*/
 
   /**
    * SETUP THEME PAGE TYPES
    */
-   
+
   /********************************************************************************/
   /**************** CUSTOM AGENDA                   *******************************/
   /********************************************************************************/
@@ -113,24 +113,24 @@
     register_post_type( 'agenda' , $args );
     flush_rewrite_rules( );
   }
-  
+
   // Show Columns
-   
+
   add_filter ("manage_edit-agenda_columns", "agenda_edit_columns");
   add_action ("manage_posts_custom_column", "agenda_custom_columns");
-   
+
   function agenda_edit_columns($columns) {
-   
+
   $columns = array(
       "cb" => "<input type=\"checkbox\" />",
       "title" => "Evento",
       "col_ev_date" => "Data",
-      "col_ev_times" => "Hora",      
+      "col_ev_times" => "Hora",
       "col_ev_location" => "Local"
       );
   return $columns;
   }
-   
+
   function agenda_custom_columns($column)
   {
   global $post;
@@ -154,31 +154,31 @@
       // - show times -
       echo $custom["agenda_location"][0];
   break;
-   
+
   }
   }
-  
+
   // Show Meta-Box
-   
+
   add_action( 'admin_init', 'agenda_create' );
-   
+
   function agenda_create() {
       add_meta_box('agenda_meta_date', 'Data', 'agenda_meta_date', 'agenda');
       add_meta_box('agenda_meta_hour', 'Horários', 'agenda_meta_hour', 'agenda');
       add_meta_box('agenda_meta_location', 'Local', 'agenda_meta_location', 'agenda');
   }
-  
-  function agenda_meta_date () {   
+
+  function agenda_meta_date () {
     // - grab data -
-     
+
     global $post;
     $custom = get_post_custom($post->ID);
     $meta_value = $custom["agenda_show_date"][0];
-    
+
     //if ($meta_value == null) {$meta_value = time(); }
-     
+
     // - output -
-     
+
     ?>
     <div class="meta">
       <input type="hidden" name="events-nonce" value="<?php echo wp_create_nonce( 'events-nonce' ); ?>" />
@@ -190,31 +190,31 @@
     <?php
   }
 
-  function agenda_meta_location () {   
+  function agenda_meta_location () {
     // - grab data -
-     
+
     global $post;
     $custom = get_post_custom($post->ID);
     $meta_value = $custom["agenda_location"][0];
-     
+
     // - output -
-     
+
     ?>
     <div class="meta">
       <input name="agenda_location" class="location" value="<?php echo $meta_value; ?>" style="width:90%"/>
     </div>
     <?php
   }
-  
-  function agenda_meta_hour () {   
+
+  function agenda_meta_hour () {
     // - grab data -
-     
+
     global $post;
     $custom = get_post_custom($post->ID);
     $meta_value = $custom["agenda_hour"][0];
-     
+
     // - output -
-     
+
     ?>
     <div class="meta">
       <textarea name="agenda_hour" class="hour" style="width:90%"><?php echo $meta_value; ?></textarea>
@@ -223,51 +223,51 @@
   }
 
   // Save Data
- 
+
   add_action ('save_post', 'save_agenda');
-   
+
   function save_agenda(){
-   
+
     global $post;
-     
+
     // - still require nonce
-     
+
     if ( !wp_verify_nonce( $_POST['events-nonce'], 'events-nonce' )) {
         return $post->ID;
     }
-     
+
     if ( !current_user_can( 'edit_post', $post->ID ))
         return $post->ID;
-    
+
     //if(!isset($_POST["agenda_location"])):
     //return $post;
     //endif;
     $updatelocation = $_POST["agenda_location"];
     update_post_meta($post->ID, "agenda_location", $updatelocation );
-    
+
     if($_POST["agenda_show_date_y"] != ''):
       $updatedate = strtotime($_POST["agenda_show_date_y"].'-'.$_POST["agenda_show_date_m"].'-'.$_POST["agenda_show_date_d"].' 23:59:59');
     else :
       $updatedate = '';
-    endif;    
+    endif;
     update_post_meta($post->ID, "agenda_show_date", $updatedate );
-    
+
     //if(!isset($_POST["agenda_hour"])):
     //return $post;
     //endif;
     $updatehour = $_POST["agenda_hour"];
     update_post_meta($post->ID, "agenda_hour", $updatehour );
-   
+
   }
-  
+
   // Customize Update Messages
- 
+
   add_filter('post_updated_messages', 'events_updated_messages');
-   
+
   function events_updated_messages( $messages ) {
-   
+
     global $post, $post_ID;
-   
+
     $messages['agenda'] = array(
       0 => '', // Unused. Messages start at index 1.
       1 => sprintf( __('Event updated. <a href="%s">View item</a>'), esc_url( get_permalink($post_ID) ) ),
@@ -284,19 +284,19 @@
         date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
       10 => sprintf( __('Event draft updated. <a target="_blank" href="%s">Preview event</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
     );
-   
+
     return $messages;
   }
 
   // JS Datepicker UI
-   
+
   function events_styles() {
       global $post_type;
       if( 'agenda' != $post_type )
           return;
       wp_enqueue_style('ui-datepicker', get_bloginfo('template_url') . '/css/jqueryui/jquery-ui-1.10.2.custom.min.css');
   }
-   
+
   function events_scripts() {
       global $post_type;
       if( 'agenda' != $post_type )
@@ -305,21 +305,21 @@
       wp_enqueue_script('ui-datepicker', get_bloginfo('template_url') . '/js/jquery.ui.datepicker.min.js');
       wp_enqueue_script('custom_script', get_bloginfo('template_url').'/js/script-admin.js', array('jquery'));
   }
-   
+
   add_action( 'style-admin.css', 'events_styles', 1000 );
-  
-  add_action( 'init', 'add_agenda_rules' );  
+
+  add_action( 'init', 'add_agenda_rules' );
   function add_agenda_rules() {
-      add_rewrite_rule(  
+      add_rewrite_rule(
           "([^/]+)/data/?([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})/?$",
-          "index.php?name=$matches[1]&date=$matches[2]",  
-          "top");  
+          "index.php?name=$matches[1]&date=$matches[2]",
+          "top");
   }
-  
+
   /********************************************************************************/
-   
-   
-   
+
+
+
   /********************************************************************************/
   /**************** CUSTOM NOTÍCIAS                 *******************************/
   /********************************************************************************/
@@ -355,7 +355,7 @@
     register_post_type( 'noticias' , $args );
     flush_rewrite_rules( );
   }
-  
+
   add_filter("manage_edit-noticias_columns", "noticias_edit_columns");
   function noticias_edit_columns($columns){
     $columns = array(
@@ -366,9 +366,9 @@
     );
     return $columns;
   }
-  
+
   function create_noticiascategory_taxonomy() {
- 
+
     $labels = array(
         'name' => _x( 'Categories', 'taxonomy general name' ),
         'singular_name' => _x( 'Category', 'taxonomy singular name' ),
@@ -385,7 +385,7 @@
         'add_or_remove_items' => __( 'Add or remove categories' ),
         'choose_from_most_used' => __( 'Choose from the most used categories' ),
     );
-     
+
     register_taxonomy('newscategory','noticias', array(
         'label' => __('Category'),
         'labels' => $labels,
@@ -395,11 +395,11 @@
         'rewrite' => array( 'slug' => 'noticias-category' ),
     ));
   }
- 
+
 add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
-  
+
   /********************************************************************************/
-  
+
   /********************************************************************************/
   /**************** CUSTOM BIBLIOTECA               *******************************/
   /********************************************************************************/
@@ -435,7 +435,7 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
     register_post_type( 'biblioteca' , $args );
     flush_rewrite_rules( );
   }
-  
+
   add_filter("manage_edit-biblioteca_columns", "biblioteca_edit_columns");
   function biblioteca_edit_columns($columns){
     $columns = array(
@@ -447,9 +447,9 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
     );
     return $columns;
   }
-  
+
   function create_bibliotecacategory_taxonomy() {
- 
+
     $labels = array(
         'name' => _x( 'Categories', 'taxonomy general name' ),
         'singular_name' => _x( 'Category', 'taxonomy singular name' ),
@@ -466,7 +466,7 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
         'add_or_remove_items' => __( 'Add or remove categories' ),
         'choose_from_most_used' => __( 'Choose from the most used categories' ),
     );
-     
+
     register_taxonomy('librarycategory','biblioteca', array(
         'label' => __('Category'),
         'labels' => $labels,
@@ -477,24 +477,24 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
         'show_in_nav_menus' => false,
     ));
   }
- 
+
   add_action( 'init', 'create_bibliotecacategory_taxonomy', 0 );
 
   add_action( 'admin_init', 'biblioteca_create' );
-   
+
   function biblioteca_create() {
       add_meta_box('biblioteca_meta_link', 'Link', 'biblioteca_meta_link', 'biblioteca');
   }
-  
-  function biblioteca_meta_link () {   
+
+  function biblioteca_meta_link () {
     // - grab data -
-     
+
     global $post;
     $custom = get_post_custom($post->ID);
     $meta_value = $custom["library_link"][0];
-     
+
     // - output -
-     
+
     ?>
     <div class="meta">
       <input type="hidden" name="library-nonce" value="<?php echo wp_create_nonce( 'library-nonce' ); ?>" />
@@ -502,29 +502,29 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
     </div>
     <?php
   }
-  
+
   add_action ('save_post', 'save_biblioteca');
-   
+
   function save_biblioteca(){
-   
+
     global $post;
-     
+
     // - still require nonce
-     
+
     if ( !wp_verify_nonce( $_POST['library-nonce'], 'library-nonce' )) {
         return $post->ID;
     }
-     
+
     if ( !current_user_can( 'edit_post', $post->ID ))
         return $post->ID;
-    
-    
+
+
     update_post_meta($post->ID, "library_link", $_POST['library_link'] );
-   
+
   }
-  
+
   /********************************************************************************/
-  
+
   /********************************************************************************/
   /**************** CUSTOM PERGUNTAS FREQUENTES     *******************************/
   /********************************************************************************/
@@ -559,7 +559,7 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
     register_post_type( 'wp_super_faq' , $args );
     flush_rewrite_rules( );
   }
-  
+
   add_filter("manage_edit-faq_columns", "faq_edit_columns");
   function faq_edit_columns($columns){
     $columns = array(
@@ -570,10 +570,10 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
     );
     return $columns;
   }
-  
+
   /********************************************************************************/
-  
-  
+
+
 /********************************************************************************/
   /**************** CUSTOM HOME SLIDER            *******************************/
   /******************************************************************************/
@@ -610,13 +610,13 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
     register_post_type( 'slider' , $args );
     flush_rewrite_rules( );
   }
-  
+
   // Show Columns
-   
+
   //add_filter ("manage_edit-slider_columns", "slider_edit_columns");
-   
+
   function slider_edit_columns($columns) {
-   
+
   $columns = array(
       "cb" => "<input type=\"checkbox\" />",
       "title" => "Título",
@@ -624,10 +624,10 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
       );
   return $columns;
   }
-   
-  
-  
-  
+
+
+
+
   /********************************************************************************/
 
   /**
@@ -635,7 +635,7 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
    */
   wp_register_theme_activation_hook('gestaourbana', 'gestaourbana_theme_activate');
   wp_register_theme_deactivation_hook('gestaourbana', 'gestaourbana_theme_deactivate');
-  
+
   /**
    *
    * @desc registers a theme activation hook
@@ -649,7 +649,7 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
           update_option($optionKey , 1);
       }
   }
-  
+
   /**
    * @desc registers deactivation hook
    * @param string $code : Code of the theme. This must match the value you provided in wp_register_theme_activation_hook function as $code
@@ -659,16 +659,16 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
   {
       // store function in code specific global
       $GLOBALS["wp_register_theme_deactivation_hook_function" . $code]=$function;
-  
+
       // create a runtime function which will delete the option set while activation of this theme and will call deactivation function provided in $function
       $fn=create_function('$theme', ' call_user_func($GLOBALS["wp_register_theme_deactivation_hook_function' . $code . '"]); delete_option("theme_is_activated_' . $code. '");');
-  
+
       // add above created function to switch_theme action hook. This hook gets called when admin changes the theme.
       // Due to wordpress core implementation this hook can only be received by currently active theme (which is going to be deactivated as admin has chosen another one.
       // Your theme can perceive this hook as a deactivation hook.)
       add_action("switch_theme", $fn);
   }
-  
+
   function gestaourbana_theme_activate()
   {
       $default_pages = array(
@@ -735,13 +735,13 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
       );
       $existing_pages = get_pages();
       $existing_titles = array();
-  
-      foreach ($existing_pages as $page) 
+
+      foreach ($existing_pages as $page)
       {
           $existing_titles[] = $page->post_title;
       }
-  
-      foreach ($default_pages as $new_page) 
+
+      foreach ($default_pages as $new_page)
       {
           if( !in_array( $new_page['title'], $existing_titles ) )
           {
@@ -753,23 +753,23 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
                   'post_type' => 'page',
                   'page_template' => $new_page['template']
                 );
-  
+
               // insert the post into the database
-              $result = wp_insert_post($add_default_pages);   
+              $result = wp_insert_post($add_default_pages);
           }
       }
-      
+
   }
-  
-  function gestaourbana_theme_deactivate() 
+
+  function gestaourbana_theme_deactivate()
   {
      // code to execute on theme deactivation
   }
-  
+
   /**
    * REMOVE OPTIONS FROM MENU
    */
-   
+
    function remove_menus () {
     global $menu;
       //$restricted = array(__('Dashboard'), __('Posts'), __('Media'), __('Links'), __('Pages'), __('Appearance'), __('Tools'), __('Users'), __('Settings'), __('Comments'), __('Plugins'));
@@ -818,9 +818,9 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
               $avatar_size = 68;
               if ( '0' != $comment->comment_parent )
                 $avatar_size = 39;
-  
+
               echo get_avatar( $comment, $avatar_size );
-  
+
               /* translators: 1: comment author, 2: date and time */
               printf( __( '%1$s em %2$s <span class="says">disse:</span>', 'twentyeleven' ),
                 sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
@@ -832,24 +832,24 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
                 )
               );
             ?>
-  
+
             <?php edit_comment_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
           </div><!-- .comment-author .vcard -->
-  
+
           <?php if ( $comment->comment_approved == '0' ) : ?>
             <em class="comment-awaiting-moderation"><?php _e( 'Seu comentário está aguardando moderação.', 'twentyeleven' ); ?></em>
             <br />
           <?php endif; ?>
-  
+
         </div>
-  
+
         <div class="comment-content"><?php comment_text(); ?></div>
-  
+
         <div class="reply">
           <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Responder <span>&darr;</span>', 'twentyeleven' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
         </div><!-- .reply -->
       </article><!-- #comment-## -->
-  
+
     <?php
         break;
     endswitch;
@@ -885,8 +885,8 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
 //add_action( 'widgets_init', 'register_my_widget' );
 
 //init widget
-//function register_my_widget() {  
-//    register_widget( 'noticias_widget' );  
+//function register_my_widget() {
+//    register_widget( 'noticias_widget' );
 //}
 
 //enclose widget

@@ -42,7 +42,7 @@ jQuery(function() {
 			width         : width,
 			responsive    : true,
 			showmarkers : true,
-			showcontrols : false,
+			showcontrols : true,
 			animduration : 1000,
 			animspeed : 10000,
 			nexttext : '<img src="'+template_url+'/images/btn-slide-next.png" />',

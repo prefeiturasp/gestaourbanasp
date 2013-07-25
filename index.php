@@ -14,25 +14,58 @@ Template Name: Index
 			<li class="bjqs-slide bjqs-slide-<?php echo $count; ?>" id="slide-first">
 				<div class="right image">
 				  <?php $image = get_field('big_image'); ?>
-					<img src="<?php echo $image['sizes']['565xX'] ?>" />
+					<img src="<?php echo $image['sizes']['510xX'] ?>" />
 				</div>
 				<div class="left text">
 					<a href="<?php the_field('link'); ?>"><h2><?php the_title(); ?></h2></a>
 					<p><?php the_content(); ?></p>
-					<div>
-						<br /><br />
-						<div align="center" class="slider-nav-images">
-
-						</div>
-					</div>
 				</div>
+                <div class="toolbar-links left">
+                    <?php
+                        $image_chamada_1 = get_field('image_chamada_1');
+                        $link_chamada_1 = get_field('link_chamada_1');
+
+                        $image_chamada_2 = get_field('image_chamada_2');
+                        $link_chamada_2 = get_field('link_chamada_2');
+
+                        $image_chamada_3 = get_field('image_chamada_3');
+                        $link_chamada_3 = get_field('link_chamada_3');
+                    ?>
+                    <ul>
+                        <?php if ( (!empty($link_chamada_1)) && (!empty($image_chamada_1)) ) { ?>
+                        <li>
+                            <a href="<?php echo $link_chamada_1; ?>">
+                                <img src="<?php echo $image_chamada_1['sizes']['150xX']; ?>" />
+                            </a>
+                        </li>
+                        <?php
+                        }
+                        if ( (!empty($link_chamada_2)) && (!empty($image_chamada_2)) ) { ?>
+                        <li>
+                            <a href="<?php echo $link_chamada_2; ?>">
+                                <img src="<?php echo $image_chamada_2['sizes']['150xX']; ?>" />
+                            </a>
+                        </li>
+                        <?php
+                        }
+                        if ( (!empty($link_chamada_3)) && (!empty($image_chamada_3)) ) { ?>
+                        <li>
+                            <a href="<?php echo $link_chamada_3; ?>">
+                                <img src="<?php echo $image_chamada_3['sizes']['150xX']; ?>" />
+                            </a>
+                        </li>
+                        <?php } ?>
+                    </ul>
+
+                </div>
+                <?php $image = get_field('small_image'); ?>
 			</li>
 			<?php $count++; endwhile;wp_reset_query();?>
 		</ul>
 	</div>
 </div>
 
-<script>
+<!--script>
   jQuery('.slider-nav-images').each(function(index) {
     jQuery(this).html(
       <?php $slide_query = new WP_Query( array('post_type' => 'slider', 'posts_per_page' => 3, 'orderby'=>'menu_order', 'order' => 'ASC')); ?>
@@ -48,7 +81,7 @@ Template Name: Index
 </script>
 <br /><br />
 <br /><br />
-<br /><br />
+<br /><br /-->
 <div class="wrapper" id="wrapper-third-home">
 	<h1>Notícias</h1>
 
