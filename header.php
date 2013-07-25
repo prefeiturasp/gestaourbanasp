@@ -107,3 +107,6 @@ wp_head();
 			<div class="clear"></div>
 		</div> <!-- #wrapper -->
 	</div>
+    <div class="wrapper" id="mensagem-alerta">
+        <p>ÚLTIMOS DIAS P/ ENVIO DE PROPOSTA DO PLANO DIRETOR: NÃO PERCA A OFICINA FINAL (SÁBADO 27/07) OU ENVIE ONLINE ATÉ DIA 31/07.</p>
+    </div>
