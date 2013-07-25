@@ -1,6 +1,6 @@
 jQuery(function() {
-	
-	
+
+
 	/*Navigation*/
 	jQuery('#wrapper .menu-menu-principal-container li ul').hide().removeClass('sub-menu');
 	jQuery('#wrapper .menu-menu-principal-container li').click(
@@ -24,16 +24,16 @@ jQuery(function() {
 		},
 		function () {
 			jQuery('ul', this).stop().slideUp(100);
-			jQuery(this).removeClass('open');			
+			jQuery(this).removeClass('open');
 		}
 	);
-	
-	var width = $('#wrapper-second-home').width();
+
+	var width = jQuery('#wrapper-second-home').width();
 	if (width > 960)
 	{
 		width = 960;
 	}
-	
+
 	/*Basicslider*/
 	if (jQuery('#banner-slide').length > 0) {
 		jQuery('#banner-slide').bjqs({
@@ -47,10 +47,10 @@ jQuery(function() {
 			animspeed : 10000,
 			nexttext : '<img src="'+template_url+'/images/btn-slide-next.png" />',
 			prevtext : '<img src="'+template_url+'/images/btn-slide-prev.png" />'
-			
+
 		});
 	}
-	
+
 	/*Perguntas e respostas*/
 	jQuery('#wrapper-second-perguntas .text').click(function() {
 		var last = this;
@@ -62,9 +62,9 @@ jQuery(function() {
 					jQuery(this).addClass('open');
 				});
 			});
-		}		
+		}
 	});
-	
+
 	/*Inputs auto complement*/
 	jQuery(".defaultText").focus(function(srcc)
     {
@@ -74,7 +74,7 @@ jQuery(function() {
         	jQuery(this).val("");
         }
     });
-    
+
 	jQuery(".defaultText").blur(function()
     {
         if (jQuery(this).val() == "")
@@ -83,13 +83,13 @@ jQuery(function() {
         	jQuery(this).val(jQuery(this)[0].title);
         }
     });
-    
+
 	jQuery(".defaultText").blur();
-	
+
 	/*jQuery('#register-newsletter').submit(function() {
-		
-		var html = jQuery('#newsletter').html(); 
-		
+
+		var html = jQuery('#newsletter').html();
+
 		jQuery.ajax({
 		  type: "POST",
 		  url: "ajax-cadastro.php",
@@ -102,13 +102,13 @@ jQuery(function() {
 		});
 		return false;
 	});*/
-	
+
 	jQuery('.ajax_submit_form').submit(function() {
-		
-		var _this = this; 
+
+		var _this = this;
 		var html = jQuery(this).html();
-		
-		
+
+
 		jQuery.ajax({
 		  type: "POST",
 		  url: jQuery(_this).attr('action'),
@@ -119,18 +119,18 @@ jQuery(function() {
 		  setTimeout(function() {
       		jQuery(_this).html(html);
       		jQuery.fancybox.close();
-      		$("#data").html('');
+      		jQuery("#data").html('');
 		  }, 3000);
 		});
 		return false;
 	});
-	
-	$("a#inline").fancybox({
+
+	jQuery("a#inline").fancybox({
 		//'hideOnContentClick': true,
 		'modal' : true,
 		'onClosed'		: function() {
-		    $("#data").html('');
+		    jQuery("#data").html('');
 		}
 	});
-	
+
 });

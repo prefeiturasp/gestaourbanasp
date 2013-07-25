@@ -32,6 +32,18 @@
 	  var template_url = "<?php echo bloginfo('template_url'); ?>";
 	  var slider = 'slider';
 	</script>
+
+<?php
+wp_enqueue_script('respond', get_stylesheet_directory_uri() . '/js/respond.min.js');
+wp_enqueue_script('site-script', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ));
+wp_enqueue_script('bjqs', get_stylesheet_directory_uri() . '/js/bjqs-1.3.js', array( 'jquery' ));
+wp_enqueue_script('glDatePicker', get_stylesheet_directory_uri() . '/js/glDatePicker.js', array( 'jquery' ));
+wp_enqueue_script('jquery.fancybox', get_stylesheet_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ));
+
+
+/*
+
+
 	<script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/respond.min.js"></script>
 	<!--[if lte IE 8 ]> <script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/jquery-1.9.1.min.js"></script> <![endif]-->
 	<!--[if (gte IE 9)|!(IE)]><!--> <script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/jquery-2.0.0.min.js"></script> <!--<![endif]-->
@@ -39,8 +51,10 @@
 	<script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/glDatePicker.js"></script>
 	<script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="<?php echo bloginfo('template_url'); ?>/js/script.js?<?php echo time(); ?>"></script>
+*/
+wp_head();
 
-	<?php //wp_head(); ?>
+?>
 </head>
 <!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
 <!--[if IE 7 ]> <body class="ie7"> <![endif]-->

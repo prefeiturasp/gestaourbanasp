@@ -8,6 +8,7 @@
  * Date: Tue Jan 1 2013
  */
  ;(function() {
+    var $ = jQuery;
 	$.fn.glDatePicker = function(options) {
 		var pluginName = 'glDatePicker';
 
