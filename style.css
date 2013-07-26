@@ -733,6 +733,7 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 #mensagem-alerta {
     background-color: #d73230;
     margin-top:-10px;
+    margin-bottom: 15px;
 }
 
  #mensagem-alerta p {
@@ -741,4 +742,5 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
     margin: 0;
     padding: 10px 5px;
     font-size: 13px;
+    text-align: center;
 }
