@@ -3,7 +3,7 @@
 }
 
 #wrapper-second-home #banner-slide {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 #wrapper-second-home #banner-slide  .image {
@@ -25,7 +25,7 @@
   top: 0;
   width: 45%;
   z-index: 999;
-  margin-top:30px;
+  margin-top:10px;
 }
 
 #wrapper-second-home #banner-slide  .text h2 {
@@ -91,7 +91,7 @@
 }
 
 #wrapper-third-home h1 {
-  margin-top:30px;
+  margin-top:60px;
 }
 
 #wrapper-third-home .top-news {
