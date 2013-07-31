@@ -53,9 +53,22 @@
 
 #wrapper-second-home #banner-slide  .toolbar-links ul li {
     display: inline-block;
-    width: 150px;
-    height: 150px;
-    margin:0 35px;
+    width: 205px;
+    height: 205px;
+    margin:0 15px;
+}
+#wrapper-second-home #banner-slide  .toolbar-links ul li a {
+    width: 205px;
+    height: 205px;
+    float: left;
+}
+#wrapper-second-home #banner-slide  .toolbar-links ul li a img{
+    margin: 30px 20px;
+    width: 135px;
+}
+
+#wrapper-second-home #banner-slide  .toolbar-links ul li a:hover {
+    background: url("../images/hover-chamada.png") no-repeat top left transparent;
 }
 
 #wrapper-second-home .bjqs-markers {
