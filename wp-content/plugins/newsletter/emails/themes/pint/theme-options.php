@@ -1,0 +1,1 @@
+<p>This theme has no options.</p>

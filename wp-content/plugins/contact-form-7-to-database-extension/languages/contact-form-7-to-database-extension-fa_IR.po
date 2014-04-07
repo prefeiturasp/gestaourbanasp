@@ -1,0 +1,730 @@
+# Copyright (C) 2012 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/contact-form-7-to-database-"
+"extension\n"
+"POT-Creation-Date: 2012-07-10 03:33:23+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-11-16 13:48+0330\n"
+"Last-Translator: Ali Alef <ali@eilia13.ir>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: CF7DBOptionsManager.php:281 CF7DBPlugin.php:341
+#: ExportToGoogleLiveData.php:31
+msgid "You do not have sufficient permissions to access this page."
+msgstr "شما مجوز کافی برای دسترسی به این صفحه را ندارید."
+
+#: CF7DBOptionsManager.php:299
+msgid "System Settings"
+msgstr "تنظیمات سیستم"
+
+#: CF7DBOptionsManager.php:301
+msgid "System"
+msgstr "سیستم"
+
+#: CF7DBOptionsManager.php:302
+msgid "PHP Version"
+msgstr "PHP نسخه"
+
+#: CF7DBOptionsManager.php:307
+msgid ""
+"(WARNING: This plugin may not work properly with versions earlier than PHP "
+"5.2)"
+msgstr "(اخطار: این افزونه ممکن است به درستی کار با نسخه های پیشین از PHP 5.2)"
+
+#: CF7DBOptionsManager.php:313
+msgid "MySQL Version"
+msgstr "mysql نسخه"
+
+#: CF7DBOptionsManager.php:318
+msgid ""
+"(WARNING: This plugin may not work properly with versions earlier than MySQL "
+"5.0)"
+msgstr ""
+"(اخطار: این افزونه ممکن است به درستی کار با نسخه های پیشین از MySQL 5.0)"
+
+#: CF7DBOptionsManager.php:326
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: CF7DBOptionsManager.php:351
+msgid "Save Changes"
+msgstr "ذخیره تغییرات"
+
+#: CF7DBOptionsManager.php:410 CF7DBPlugin.php:78
+#: CFDBViewShortCodeBuilder.php:718 CFDBViewShortCodeBuilder.php:925
+#: CFDBViewShortCodeBuilder.php:934 CFDBViewShortCodeBuilder.php:976
+msgid "true"
+msgstr "درست"
+
+#: CF7DBOptionsManager.php:411 CF7DBPlugin.php:80
+#: CFDBViewShortCodeBuilder.php:719 CFDBViewShortCodeBuilder.php:924
+#: CFDBViewShortCodeBuilder.php:933 CFDBViewShortCodeBuilder.php:977
+msgid "false"
+msgstr "غلط"
+
+#: CF7DBPlugin.php:49
+msgid "I have donated to this plugin"
+msgstr "من از این افزونه حمایت مالی میکنم"
+
+#: CF7DBPlugin.php:50
+msgid "Capture form submissions from Contact Form 7 Plugin"
+msgstr "گرفتن فرم ارسالی از تماس فرم 7 پلاگین"
+
+#: CF7DBPlugin.php:51
+msgid "Capture form submissions from Fast Secure Contact Form Plugin"
+msgstr "گرفتن فرم ارسالی از پلاگین فرم تماس با ما امن سریع"
+
+#: CF7DBPlugin.php:52
+msgid "Capture form submissions from JetPack Contact Form"
+msgstr "ضبط ارسالی فرم از فرم تماس با ما JetPack"
+
+#: CF7DBPlugin.php:53
+msgid "Can See Submission data"
+msgstr "آیا می توانم اطلاعات ثبت نام را ببینید"
+
+#: CF7DBPlugin.php:55
+msgid "Can See Submission when using shortcodes"
+msgstr "آیا می توانم ثبت نام در هنگام استفاده از کوتاه را ببینید"
+
+#: CF7DBPlugin.php:57
+msgid "Can Edit/Delete Submission data"
+msgstr "می توانید ویرایش / حذف داده های ثبت نام"
+
+#: CF7DBPlugin.php:59
+msgid "Maximum number of rows to retrieve from the DB for the Admin display"
+msgstr "حداکثر تعداد ردیف برای بازیابی DB صفحه نمایش مدیریت"
+
+#: CF7DBPlugin.php:60
+msgid "Use Javascript-enabled tables in Admin Database page"
+msgstr "استفاده از جاوا اسکریپت را فعال کنید جداول پایگاه داده در صفحه مدیریت"
+
+#: CF7DBPlugin.php:61
+msgid "Show line breaks in submitted data table"
+msgstr "نمایش پرش به خط بعد را در جدول داده ها را مشاهده کنید"
+
+#: CF7DBPlugin.php:62
+msgid "Use Custom Date-Time Display Format (below)"
+msgstr "استفاده از سفارشی تاریخ و زمان فرمت صفحه نمایش (در زیر)"
+
+#: CF7DBPlugin.php:63
+msgid "Date-Time Display Format"
+msgstr "فرمت نمایش تاریخ و زمان"
+
+#: CF7DBPlugin.php:64
+msgid "Export URLs instead of file names for uploaded files"
+msgstr "صادرات URL ها به جای نام فایل ها برای فایل های آپلود شده"
+
+#: CF7DBPlugin.php:65
+msgid "Do not save <u>fields</u> in DB named (comma-separated list, no spaces)"
+msgstr ""
+"آیا به <u> زمینه </ U> به نام DB (جدا شده با کاما، بدون فاصله) را نجات دهد"
+
+#: CF7DBPlugin.php:66
+msgid "Do not save <u>forms</u> in DB named (comma-separated list, no spaces)"
+msgstr ""
+"آیا اشکال <u> برای </ U> به نام DB (جدا شده با کاما، بدون فاصله) را نجات دهد"
+
+#: CF7DBPlugin.php:67
+msgid "Save Cookie Data with Form Submissions"
+msgstr "ذخیره داده های کوکی با ارسال فرم"
+
+#: CF7DBPlugin.php:68
+msgid ""
+"Save only cookies in DB named (comma-separated list, no spaces, and above "
+"option must be set to true)"
+msgstr ""
+"ذخیره کوکی ها تنها در DB به نام (جدا شده با کاما، بدون فاصله، و گزینه فوق را "
+"باید درست تنظیم)"
+
+#: CF7DBPlugin.php:69
+msgid "Show the query used to display results"
+msgstr "نمایش پرس و جو استفاده می شود برای نشان دادن نتایج"
+
+#: CF7DBPlugin.php:70
+msgid "Drop this plugin's Database table on uninstall"
+msgstr "رها جدول پایگاه داده این پلاگین در عزل"
+
+#: CF7DBPlugin.php:83 CFDBViewShortCodeBuilder.php:705
+msgid "Administrator"
+msgstr "سرپرست"
+
+#: CF7DBPlugin.php:85 CFDBViewShortCodeBuilder.php:706
+msgid "Editor"
+msgstr "ویرایشگر"
+
+#: CF7DBPlugin.php:87 CFDBViewShortCodeBuilder.php:707
+msgid "Author"
+msgstr "نویسنده"
+
+#: CF7DBPlugin.php:89 CFDBViewShortCodeBuilder.php:708
+msgid "Contributor"
+msgstr "شرکت کننده"
+
+#: CF7DBPlugin.php:91 CFDBViewShortCodeBuilder.php:709
+msgid "Subscriber"
+msgstr "مشترک"
+
+#: CF7DBPlugin.php:93 CFDBViewShortCodeBuilder.php:710
+msgid "Anyone"
+msgstr "هر کس"
+
+#: CF7DBPlugin.php:347
+msgid "Missing form parameters"
+msgstr "گم شده پارامترهای فرم"
+
+#: CF7DBPlugin.php:351
+msgid "No such file."
+msgstr "چنین فایل وجود ندارد."
+
+#: CF7DBPlugin.php:409
+msgid "Invalid: "
+msgstr "نامعتبر است:"
+
+#: CF7DBPlugin.php:412
+msgid "Valid: "
+msgstr "معتبر:"
+
+#: CF7DBPlugin.php:428 CF7DBPlugin.php:448
+msgid "Database Options"
+msgstr "گزینه های پایگاه داده"
+
+#: CF7DBPlugin.php:446 CF7DBPlugin.php:679
+msgid "Database"
+msgstr "پایگاه داده"
+
+#: CF7DBPlugin.php:450
+msgid "Build Short Code"
+msgstr "ساخت کد کوتاه"
+
+#: CF7DBPlugin.php:452
+msgid "FAQ"
+msgstr "پرسش های متداول"
+
+#: CF7DBPlugin.php:687
+msgid "Database Short Code"
+msgstr "پایگاه داده کد کوتاه"
+
+#: CF7DBPluginExporter.php:33
+msgid "Error: No \"form\" parameter submitted"
+msgstr "خطا: بدون  \"فرم \" پارامتر را مشاهده کنید"
+
+#: CFDBCheckZendFramework.php:72
+msgid "Missing Zend Framework"
+msgstr "گمشده چارچوب Zend"
+
+#: CFDBShortcodeExportUrl.php:62 CFDBViewWhatsInDB.php:216
+msgid "Export"
+msgstr "صادرات"
+
+#: CFDBView.php:58
+msgid "Rate this Plugin"
+msgstr "امتیاز دادن به این پلاگین"
+
+#: CFDBView.php:64 CFDBViewShortCodeBuilder.php:64
+#: CFDBViewShortCodeBuilder.php:679
+msgid "Documentation"
+msgstr "مستندات"
+
+#: CFDBView.php:70
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: CFDBViewShortCodeBuilder.php:152
+msgid "Error: \""
+msgstr "خطا: \""
+
+#: CFDBViewShortCodeBuilder.php:154
+msgid "\" should not contain double-quotes (\")"
+msgstr " \"باید دابل کوتیشن (\")"
+
+#: CFDBViewShortCodeBuilder.php:202
+msgid "Error: no form is chosen"
+msgstr "خطا: فرم انتخاب شده است"
+
+#: CFDBViewShortCodeBuilder.php:239
+msgid ""
+"Warning: \"search\" field ignored because \"filter\" is used (use one but "
+"not both)"
+msgstr ""
+"هشدار: \"جستجو \" زمینه نادیده گرفت چرا که \"فیلتر \" استفاده شده است (با "
+"استفاده از یک اما نه هر دو)"
+
+#: CFDBViewShortCodeBuilder.php:252
+msgid ""
+"Error: \"limit\": if you provide a value for \"Start Row\" then you must "
+"also provide a value for \"Num Rows\""
+msgstr ""
+"خطا:  \"حد \": اگر به شما ارائه ارزش برای  \"ردیف شروع \" پس شما نیز باید "
+"ارائه ارزش برای \"NUM ردیف \""
+
+#: CFDBViewShortCodeBuilder.php:256
+msgid "Error: \"limit\": \"Num Rows\" must be a positive integer"
+msgstr "خطا: \"حد \": \"NUM ردیف \" باید یک عدد صحیح مثبت"
+
+#: CFDBViewShortCodeBuilder.php:263
+msgid "Error: \"limit\": \"Start Row\" must be a positive integer"
+msgstr "خطا:  \"حد \": \"شروع ردیف \" باید یک عدد صحیح مثبت"
+
+#: CFDBViewShortCodeBuilder.php:312
+msgid "Error: [cfdb-html] has empty Template. It will not output anything. "
+msgstr "خطا: [cfdb-HTML] الگو خالی است. آن را به هر چیزی خروجی نیست."
+
+#: CFDBViewShortCodeBuilder.php:390
+msgid "(Test Short Code Results)"
+msgstr "(نتایج آزمون کد کوتاه)"
+
+#: CFDBViewShortCodeBuilder.php:606
+msgid "Export and Short Code Builder"
+msgstr "برون بری و ساخت کد کوتاه"
+
+#: CFDBViewShortCodeBuilder.php:609
+msgid "form"
+msgstr "فرم"
+
+#: CFDBViewShortCodeBuilder.php:611 CFDBViewWhatsInDB.php:106
+msgid "* Select a form *"
+msgstr "* انتخاب * فرم"
+
+#: CFDBViewShortCodeBuilder.php:622
+msgid "Reset"
+msgstr "تنظیم مجدد"
+
+#: CFDBViewShortCodeBuilder.php:630
+msgid "Export File"
+msgstr "برون بری فایل"
+
+#: CFDBViewShortCodeBuilder.php:634 CFDBViewShortCodeBuilder.php:956
+#: CFDBViewWhatsInDB.php:194
+msgid "Excel CSV (UTF8-BOM)"
+msgstr "اکسل CSV (UTF8-BOM)"
+
+#: CFDBViewShortCodeBuilder.php:637 CFDBViewShortCodeBuilder.php:959
+#: CFDBViewWhatsInDB.php:197
+msgid "Excel TSV (UTF16LE-BOM)"
+msgstr "اکسل TSV (UTF16LE-BOM)"
+
+#: CFDBViewShortCodeBuilder.php:640 CFDBViewShortCodeBuilder.php:962
+#: CFDBViewWhatsInDB.php:200
+msgid "Plain CSV (UTF-8)"
+msgstr "دشت CSV (UTF-8)"
+
+#: CFDBViewShortCodeBuilder.php:643 CFDBViewShortCodeBuilder.php:965
+#: CFDBViewWhatsInDB.php:191
+msgid "Excel Internet Query"
+msgstr "اکسل پرس و جو اینترنت"
+
+#: CFDBViewShortCodeBuilder.php:647 CFDBViewShortCodeBuilder.php:821
+msgid "Include Header Row"
+msgstr "شامل ردیف سرصفحه"
+
+#: CFDBViewShortCodeBuilder.php:650
+msgid "Generated Export Link:"
+msgstr "تولید LINK صادرات:"
+
+#: CFDBViewShortCodeBuilder.php:656 CFDBViewShortCodeBuilder.php:691
+msgid "(Did you know: you can create your own short code)"
+msgstr "(آیا می دانستید: شما می توانید کد کوتاه خود را ایجاد کنید)"
+
+#: CFDBViewShortCodeBuilder.php:666
+msgid "Short Code"
+msgstr "کد کوتاه"
+
+#: CFDBViewShortCodeBuilder.php:669
+msgid "* Select a short code *"
+msgstr "* انتخاب * کد کوتاه"
+
+#: CFDBViewShortCodeBuilder.php:685
+msgid "Generated Short Code:"
+msgstr "تولید کد های کوتاه:"
+
+#: CFDBViewShortCodeBuilder.php:697
+msgid "Security"
+msgstr "امنیت"
+
+#: CFDBViewShortCodeBuilder.php:700
+msgid "role"
+msgstr "نقش"
+
+#: CFDBViewShortCodeBuilder.php:713
+msgid "permissionmsg"
+msgstr "permissionmsg"
+
+#: CFDBViewShortCodeBuilder.php:725
+msgid "Which fields/columns do you want to display?"
+msgstr "کدام یک از رشته ها / ستون را که می خواهید نمایش داده شود؟"
+
+#: CFDBViewShortCodeBuilder.php:728
+msgid "show"
+msgstr "نمایش"
+
+#: CFDBViewShortCodeBuilder.php:732 CFDBViewShortCodeBuilder.php:740
+#: CFDBViewShortCodeBuilder.php:807
+msgid "comma-delimited list of field"
+msgstr "فهرست کاما جدا از زمینه"
+
+#: CFDBViewShortCodeBuilder.php:736
+msgid "hide"
+msgstr "پنهان کردن"
+
+#: CFDBViewShortCodeBuilder.php:745
+msgid "Which rows/submissions do you want to display?"
+msgstr "ردیف / ارسالی را که می خواهید نمایش داده شود؟"
+
+#: CFDBViewShortCodeBuilder.php:748
+msgid "search"
+msgstr "جستجو"
+
+#: CFDBViewShortCodeBuilder.php:751
+msgid "search text"
+msgstr "متن جستجو"
+
+#: CFDBViewShortCodeBuilder.php:755
+msgid "filter"
+msgstr "فیلتر"
+
+#: CFDBViewShortCodeBuilder.php:774
+msgid "value"
+msgstr "مقدار"
+
+#: CFDBViewShortCodeBuilder.php:777
+msgid "Validate submit_time"
+msgstr "اعتبارسنجی submit_time"
+
+#: CFDBViewShortCodeBuilder.php:778
+msgid "Formats"
+msgstr "فرمت"
+
+#: CFDBViewShortCodeBuilder.php:781
+msgid "filter expression"
+msgstr "بیان فیلتر"
+
+#: CFDBViewShortCodeBuilder.php:788
+msgid "limit"
+msgstr "محدود کردن"
+
+#: CFDBViewShortCodeBuilder.php:791
+msgid "Num Rows"
+msgstr "ردیف تعداد"
+
+#: CFDBViewShortCodeBuilder.php:791 CFDBViewShortCodeBuilder.php:792
+#: CFDBViewShortCodeBuilder.php:799
+msgid "number"
+msgstr "شماره"
+
+#: CFDBViewShortCodeBuilder.php:792
+msgid "Start Row (0)"
+msgstr "شروع سطر (0)"
+
+#: CFDBViewShortCodeBuilder.php:796
+msgid "random"
+msgstr "تصادفی"
+
+#: CFDBViewShortCodeBuilder.php:803
+msgid "orderby"
+msgstr "سفارش داده شده توسط"
+
+#: CFDBViewShortCodeBuilder.php:806
+msgid "field"
+msgstr "رشته"
+
+#: CFDBViewShortCodeBuilder.php:810
+msgid "ASC"
+msgstr "بالا رونده"
+
+#: CFDBViewShortCodeBuilder.php:811
+msgid "DESC"
+msgstr "نزولی"
+
+#: CFDBViewShortCodeBuilder.php:817
+msgid "HTML Table Formatting"
+msgstr "HTML قالب بندی جدول"
+
+#: CFDBViewShortCodeBuilder.php:826
+msgid "id"
+msgstr "کد شناسایی"
+
+#: CFDBViewShortCodeBuilder.php:829
+msgid "HTML id"
+msgstr "HTML ID"
+
+#: CFDBViewShortCodeBuilder.php:833
+msgid "class"
+msgstr "کلاس"
+
+#: CFDBViewShortCodeBuilder.php:836
+msgid "HTML class"
+msgstr "HTML کلاس"
+
+#: CFDBViewShortCodeBuilder.php:840
+msgid "style"
+msgstr "سبک"
+
+#: CFDBViewShortCodeBuilder.php:843
+msgid "HTML style"
+msgstr "سبک HTML"
+
+#: CFDBViewShortCodeBuilder.php:848
+msgid "[cfdb-datatable] Options"
+msgstr "[cfdb شیبه] گزینه"
+
+#: CFDBViewShortCodeBuilder.php:850
+msgid "dt_options"
+msgstr "dt_options"
+
+#: CFDBViewShortCodeBuilder.php:853
+msgid "datatable options (JSON)"
+msgstr "گزینه شیبه (JSON)"
+
+#: CFDBViewShortCodeBuilder.php:857
+msgid "[cfdb-json] Options"
+msgstr "[cfdb JSON] گزینه"
+
+#: CFDBViewShortCodeBuilder.php:860
+msgid "var"
+msgstr "ور"
+
+#: CFDBViewShortCodeBuilder.php:863
+msgid "JS var name"
+msgstr "JS نام ور"
+
+#: CFDBViewShortCodeBuilder.php:867
+msgid "format"
+msgstr "قالب"
+
+#: CFDBViewShortCodeBuilder.php:872
+msgid "map"
+msgstr "نقشه"
+
+#: CFDBViewShortCodeBuilder.php:873
+msgid "array"
+msgstr "صف"
+
+#: CFDBViewShortCodeBuilder.php:874
+msgid "arraynoheader"
+msgstr "آرایه بدون هدر"
+
+#: CFDBViewShortCodeBuilder.php:880
+msgid "[cfdb-value] Options"
+msgstr "آرایه بدون هدر"
+
+#: CFDBViewShortCodeBuilder.php:883
+msgid "function"
+msgstr "تابع"
+
+#: CFDBViewShortCodeBuilder.php:888
+msgid "min"
+msgstr "دقیقه"
+
+#: CFDBViewShortCodeBuilder.php:889
+msgid "max"
+msgstr "حداکثر"
+
+#: CFDBViewShortCodeBuilder.php:890
+msgid "sum"
+msgstr "مجموع"
+
+#: CFDBViewShortCodeBuilder.php:891
+msgid "mean"
+msgstr "​​متوسط"
+
+#: CFDBViewShortCodeBuilder.php:892
+msgid "percent"
+msgstr "در صد"
+
+#: CFDBViewShortCodeBuilder.php:897
+msgid "delimiter"
+msgstr "حائل"
+
+#: CFDBViewShortCodeBuilder.php:906
+msgid "[cfdb-html] Options"
+msgstr "[cfdb-HTML] گزینه"
+
+#: CFDBViewShortCodeBuilder.php:908
+msgid "filelinks"
+msgstr "پیوندهای پرونده"
+
+#: CFDBViewShortCodeBuilder.php:913
+msgid "url"
+msgstr "آدرس"
+
+#: CFDBViewShortCodeBuilder.php:914
+msgid "name"
+msgstr "نام"
+
+#: CFDBViewShortCodeBuilder.php:915
+msgid "link"
+msgstr "پیوند"
+
+#: CFDBViewShortCodeBuilder.php:916
+msgid "img"
+msgstr "عکس"
+
+#: CFDBViewShortCodeBuilder.php:919
+msgid "stripbr"
+msgstr "stripbr"
+
+#: CFDBViewShortCodeBuilder.php:928
+msgid "wpautop"
+msgstr "wpautop"
+
+#: CFDBViewShortCodeBuilder.php:939
+msgid "Template"
+msgstr "قالب"
+
+#: CFDBViewShortCodeBuilder.php:943
+msgid "Per-entry HTML using ${field name} variables"
+msgstr "در ورود به HTML با استفاده از $ {زمینه} متغیر"
+
+#: CFDBViewShortCodeBuilder.php:950
+msgid "enc"
+msgstr "ENC"
+
+#: CFDBViewShortCodeBuilder.php:971
+msgid "urlonly"
+msgstr "آدرس تنها"
+
+#: CFDBViewShortCodeBuilder.php:982
+msgid "linktext"
+msgstr "متن لینک"
+
+#: CFDBViewWhatsInDB.php:43
+msgid "No form submissions in the database"
+msgstr "بدون ارسال فرم در پایگاه داده"
+
+#: CFDBViewWhatsInDB.php:142
+msgid "Google Login for Upload"
+msgstr "ورود گوگل برای آپلود"
+
+#: CFDBViewWhatsInDB.php:151
+msgid "Cannot perform operation because jQuery is not loaded in this page"
+msgstr "می تواند عملیات انجام نیست زیرا jQuery است در این صفحه لود شده"
+
+#: CFDBViewWhatsInDB.php:203
+msgid "Google Spreadsheet"
+msgstr "به Google Spreadsheet"
+
+#: CFDBViewWhatsInDB.php:206
+msgid "Google Spreadsheet Live Data"
+msgstr "گوگل گسترده اطلاعات زندگی می کنند"
+
+#: CFDBViewWhatsInDB.php:209
+msgid "HTML"
+msgstr "HTML"
+
+#: CFDBViewWhatsInDB.php:212
+msgid "JSON"
+msgstr "JSON"
+
+#: CFDBViewWhatsInDB.php:219
+msgid "Advanced Export"
+msgstr "پیشرفته برون بری"
+
+#: CFDBViewWhatsInDB.php:229
+msgid "Delete All This Form's Records"
+msgstr "حذف تمام سوابق این شکل"
+
+#: CFDBViewWhatsInDB.php:236
+msgid "Remove _wpcf7 columns"
+msgstr "حذف _wpcf7 ستون"
+
+#: CFDBViewWhatsInDB.php:247
+msgid "Edit Data Mode"
+msgstr "ویرایش حالت داده ها"
+
+#: CFDBViewWhatsInDB.php:333
+msgid "Did you know: This plugin captures data from both these plugins:"
+msgstr "آیا می دانید: این افزونه قطاری از داده ها را از هر دو این پلاگین:"
+
+#: CFDBViewWhatsInDB.php:342
+msgid ""
+"Did you know: You can add this data to your posts and pages using these "
+"shortcodes:"
+msgstr ""
+"آیا می دانید: شما می توانید این اطلاعات را به پست ها و صفحات خود را با "
+"استفاده از این کوتاه:"
+
+#: CFDBViewWhatsInDB.php:356
+msgid "Would you like to help translate this plugin into your language?"
+msgstr "آیا می خواهید برای کمک به ترجمه این افزونه را به زبان شما؟"
+
+#: CFDBViewWhatsInDB.php:358
+msgid "How to create a translation"
+msgstr "چگونه یک زبان ایجاد کنید؟"
+
+#: CFDBViewWhatsInDB.php:369
+msgid "Query:"
+msgstr "پرس و جو:"
+
+#: CFDBViewWhatsInDB.php:391
+msgid "Cancel"
+msgstr "لغو کردن"
+
+#: CFDBViewWhatsInDB.php:393
+msgid "Upload"
+msgstr "بارگذاری"
+
+#: CFDBViewWhatsInDB.php:401
+msgid "Add Column"
+msgstr "اضافه کردن ستون"
+
+#: CFDBViewWhatsInDB.php:402
+msgid "Delete Column"
+msgstr "حذف ستون"
+
+#: CFDBViewWhatsInDB.php:418
+msgid "next »"
+msgstr "بعدی »"
+
+#: CFDBViewWhatsInDB.php:419
+msgid "« prev"
+msgstr "«قبلی"
+
+#: CFDBViewWhatsInDB.php:436
+msgid "Returned entries %s to %s of %s entries in the database"
+msgstr "بازگشت نوشته های٪ s به٪ s را از نوشته های٪ s را در پایگاه داده"
+
+#: ExportBase.php:203
+msgid "You do not have sufficient permissions to access this data."
+msgstr "شما مجوز کافی برای دسترسی به این اطلاعات را ندارد."
+
+#: ExportToGoogleLiveData.php:170
+msgid "How to Set up Google Spreadsheet to pull data from WordPress"
+msgstr "چگونه به راه اندازی صفحه گسترده گوگل به جلو و داده ها را از وردپرس"
+
+#: ExportToGoogleSS.php:62
+msgid "Login Failed"
+msgstr "ورود ناموفق"
+
+#: ExportToGoogleSS.php:101
+msgid "New Google Spreadsheet"
+msgstr "جدید گوگل گسترده"
+
+#: ExportToGoogleSS.php:110
+msgid "Error"
+msgstr "خطا"
+
+#: ExportToHtmlTable.php:176
+msgid "Delete"
+msgstr "حذف کردن"
+
+#: contact-form-7-db.php:23
+msgid ""
+"Error: plugin \"Contact Form to DB Extension\" requires a newer version of "
+"PHP to be running."
+msgstr ""
+"خطا: پلاگین  \"فرم تماس با ما فرمت DB \" نیاز به یک نسخه جدیدتر از PHP به در "
+"حال اجرا است."
+
+#: contact-form-7-db.php:24
+msgid "Minimal version of PHP required: "
+msgstr "نسخه حداقل از PHP مورد نیاز:"
+
+#: contact-form-7-db.php:25
+msgid "Your server's PHP version: "
+msgstr "نسخه PHP سرور شما:"

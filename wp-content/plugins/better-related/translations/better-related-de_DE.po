@@ -1,0 +1,430 @@
+# German translations for PACKAGE package
+# German messages for PACKAGE.
+# Copyright (C) 2010 Nicolas Kuttler
+# This file is distributed under the same license as the PACKAGE package.
+# Nicolas Kuttler <wp@nicolaskuttler.de>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Better Related Posts 0.2.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/better-related\n"
+"POT-Creation-Date: 2010-11-04 21:29+0100\n"
+"PO-Revision-Date: 2010-10-04 19:03+0200\n"
+"Last-Translator: Nicolas Kuttler <wp@nicolaskuttler.de>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: better-related.php:174
+msgid "Related content:"
+msgstr "Verwandter Inhalt:"
+
+#: better-related.php:175
+msgid "No related content found."
+msgstr "Keinen verwandten Inhalt Inhalt gefunden."
+
+#: better-related.php:211
+#, php-format
+msgid "Warning: Multiple fulltext indexes found for %s"
+msgstr ""
+
+#: better-related.php:218
+#, php-format
+msgid "Warning: Unknown mysql result from %s"
+msgstr ""
+
+#: better-related.php:236
+#, php-format
+msgid ""
+"Better Related has been automatically deactivated because of the following "
+"error: <strong>%s</strong>."
+msgstr ""
+"Besserer Verwandter Inhalt wurde automatisch daktiviert mit folgernder "
+"Fehlermeldung: <strong>%s</strong>"
+
+#: better-related.php:256
+#, php-format
+msgid "Logfile %s is not writable.."
+msgstr "Leine Schreibrechte für die Logdatei %s"
+
+#: inc/admin.php:78
+#, php-format
+msgid "There is no fulltext index for %s"
+msgstr ""
+
+#. #-#-#-#-#  better-related.pot (Better Related Content 0.4)  #-#-#-#-#
+#. Plugin Name of an extension
+#: inc/admin.php:95 inc/admin.php:96
+msgid "Better Related Content"
+msgstr "Besserer Verwandter Inhalt"
+
+#: inc/admin.php:349
+msgid "Better Related Posts and Content Options"
+msgstr "Besserer Verwandte Artikel und Inhalte Optionen"
+
+#: inc/admin.php:352
+msgid "Main Options"
+msgstr "Haupteinstellungen"
+
+#: inc/admin.php:378
+msgid "Automatically show related content on"
+msgstr "Automatisch verwandte Inhalte auf diesen Artikeltypen anzeigen"
+
+#: inc/admin.php:380
+msgid ""
+"This option will add a link to the plugin's website by default, see below "
+"for options, or see the <tt>readme.txt</tt> for manual placement. "
+msgstr ""
+"Dies Option wird Standardmäßig einen Link zur Webseite des plugins anzeigen. "
+"Siehe unten für Optionen oder die <tt>readme.txt</tt> um eine Liste von Hand "
+"zu platzieren."
+
+#: inc/admin.php:383
+msgid "Automatically in feed"
+msgstr "Automatisch in den RSS feed"
+
+#: inc/admin.php:388
+msgid "Display Options"
+msgstr "Darstellung"
+
+#: inc/admin.php:391
+msgid "Max results"
+msgstr "Ergebnislimit"
+
+#: inc/admin.php:393
+msgid "How many related posts to show."
+msgstr "Wie viele verandte Artikel angezeigt werden."
+
+#: inc/admin.php:396
+msgid "Content filter priority"
+msgstr "Inhaltsfilter Priorität"
+
+#: inc/admin.php:398
+msgid ""
+"Changing this value might change the position of the related content list on "
+"your pages."
+msgstr ""
+"Hiermit kann eventuell die Anzeige-Position verwandten Begriffe geändert "
+"werden."
+
+#: inc/admin.php:401
+msgid "Related posts title"
+msgstr "Überschrift für verwandte Artikel"
+
+#: inc/admin.php:407
+msgid "No related posts found text"
+msgstr "Text für kein verwandter Inhalt gefunden"
+
+#: inc/admin.php:409
+msgid "Leave empty for no output at all."
+msgstr "Feld leeren um nichts anzuzeigen."
+
+#: inc/admin.php:413
+msgid "Display scoring details"
+msgstr "Details der Auswertung anzeigen"
+
+#: inc/admin.php:415
+msgid ""
+"If this is enabled logged in admins will see the exact score for each "
+"related post on the frontend. There will also be some information about "
+"performed database queries and query time."
+msgstr ""
+"Ist dies aktiviert wird angemeldeten Administratoren die genau Punktzahl für "
+"die Artikel angezeigt. Zusätzlich werden Informationen zur Anzahl der "
+"Datenbankabfragen und zur benötigten Zeit gezeigt."
+
+#: inc/admin.php:418
+msgid "Add default stylesheet"
+msgstr "Standard-Stylesheet hinzufügen"
+
+#: inc/admin.php:422
+msgid "Promote the plugin"
+msgstr "Das Plugin unterstützen"
+
+#: inc/admin.php:426
+msgid "Link below related posts"
+msgstr "Verweis unter den verwandten Artikeln"
+
+#: inc/admin.php:427
+msgid "Tiny info-link next to the title"
+msgstr "Winziger Info-Verweis neben dem Titel"
+
+#: inc/admin.php:428
+msgid "No, don't promote"
+msgstr "Nein, nicht unterstützen"
+
+#: inc/admin.php:430
+msgid ""
+"Please thank the plugin author by linking to the plugin's page or consider "
+"blogging about the plugin if you don't."
+msgstr ""
+"Bitte danken Sie dem Autor des plugins durch einen Link auf die Seite des "
+"plugins."
+
+#: inc/admin.php:436 inc/admin.php:517 inc/admin.php:549 inc/admin.php:594
+msgid "Save Changes"
+msgstr ""
+
+#: inc/admin.php:469
+msgid "Scoring Options"
+msgstr "Einstellungen für die Verwandtheit"
+
+#: inc/admin.php:472
+msgid ""
+"You can choose a multiplier for each scoring method the plugin uses. Setting "
+"the multiplier to zero will disable the scoring method, and lead to less "
+"database queries."
+msgstr ""
+"Du kannst für jede Methode einen Multiplikator auswählen. Ein Wert von null "
+"deaktiviert eine Methode, was zu weniger Datenbankabfragen führt."
+
+#: inc/admin.php:477
+msgid "Minimum related score"
+msgstr "Mindestpunktzahl zum anzeigen"
+
+#: inc/admin.php:479
+msgid "Minimum related necessary to be listed."
+msgstr "Mindestpunktzahl um als verwandt angezeigt zu werden."
+
+#: inc/admin.php:482
+msgid "Find post types"
+msgstr "Suche Artikeltypen"
+
+#: inc/admin.php:484
+msgid "Post types to find as related."
+msgstr "Artikeltypen die als verwandt angezeigt werden sollen."
+
+#: inc/admin.php:487
+msgid "Use taxonomies"
+msgstr "Benutze Taxonomien"
+
+#: inc/admin.php:491
+msgid "Content to content multiplier"
+msgstr "Inhalt zu Inhalt Multiplikator"
+
+#: inc/admin.php:495
+msgid "Title to title multiplier"
+msgstr "Titel zu Titel Multiplikator"
+
+#: inc/admin.php:499
+msgid "Title to content multiplier"
+msgstr "Titel zu Inhalt Multiplikator"
+
+#: inc/admin.php:503
+msgid "Keywords to content multiplier"
+msgstr "Schlagworte zu Inhalt Multiplikator"
+
+#: inc/admin.php:507
+msgid "Keywords to title multiplier"
+msgstr "Schlagwort zu Titel Multiplikator"
+
+#: inc/admin.php:511
+msgid "Term to taxonomy multiplier"
+msgstr "Schlagwort zu Taxonomie Multiplikator"
+
+#: inc/admin.php:520
+msgid "Performance Options"
+msgstr "Performanz Einstellungen"
+
+#: inc/admin.php:535
+msgid "Query limit"
+msgstr "Datenbankabfrage Limit"
+
+#: inc/admin.php:539
+msgid "Incremental scoring"
+msgstr "Schrittweise bewerten"
+
+#: inc/admin.php:543
+msgid "Total query limit"
+msgstr "Totales Limit für Datenbankabfragen"
+
+#: inc/admin.php:552
+msgid "Developer Options"
+msgstr "Entwickler Optionen"
+
+#: inc/admin.php:555
+msgid "Data storage engine"
+msgstr "Datenspeicher"
+
+#: inc/admin.php:558
+msgid "post meta"
+msgstr ""
+
+#: inc/admin.php:559
+msgid "transient"
+msgstr ""
+
+#: inc/admin.php:561
+msgid ""
+"Which storage engine is used for caching. Transients should only be used to "
+"test various scoring configurations."
+msgstr ""
+
+#: inc/admin.php:564
+msgid "Data storage ID"
+msgstr "Datenspeicher ID"
+
+#: inc/admin.php:566
+msgid ""
+"The prefix for the post meta or transient. I strongly recommend not to "
+"change this value while using post meta as storage."
+msgstr ""
+
+#: inc/admin.php:569
+msgid "Transient expiration time"
+msgstr "Transient Verfallszeit"
+
+#: inc/admin.php:571
+msgid ""
+"In seconds, only used if the relatedness scores are saved as transients."
+msgstr "In Sekunden, wird nur benutzt wenn transients benutzt werden."
+
+#: inc/admin.php:574
+msgid "Enable logging"
+msgstr ""
+
+#: inc/admin.php:578
+msgid "Which events to log"
+msgstr ""
+
+#: inc/admin.php:582
+msgid "filter"
+msgstr ""
+
+#: inc/admin.php:583
+msgid "storage"
+msgstr ""
+
+#: inc/admin.php:584
+msgid "global"
+msgstr ""
+
+#: inc/admin.php:585
+msgid "stopwords"
+msgstr ""
+
+#: inc/admin.php:586
+msgid "taxscore"
+msgstr ""
+
+#: inc/admin.php:587
+msgid "db queries"
+msgstr ""
+
+#: inc/admin.php:588
+msgid "cscore"
+msgstr ""
+
+#: inc/frontend.php:119
+msgid "This entry has no title"
+msgstr "Dieser Beitrag hat keinen Titel"
+
+#: inc/frontend.php:137
+msgid "Related content found by the Better Related Posts plugin"
+msgstr ""
+
+#: inc/frontend.php:149
+#, php-format
+msgid ""
+"<span class=\"score\">%s queries in %1.4f seconds, current offset %s</span>"
+msgstr ""
+
+#: inc/frontend.php:159
+msgid "Better Related Posts Plugin"
+msgstr ""
+
+#: inc/nkuttler.php:26
+msgid "Do you like this plugin?"
+msgstr "Gefällt Dir dieses plugin?"
+
+#: inc/nkuttler.php:34
+#, php-format
+msgid "<a href=\"%s\">Rate</a> it"
+msgstr "<a href=\"%s\">Bewerte es</a>"
+
+#: inc/nkuttler.php:37
+#, php-format
+msgid "<a href=\"%s\">Visit</a> it's homepage"
+msgstr "<a href=\"%s\">Besuch seine Webseite</a>"
+
+#: inc/nkuttler.php:40
+#, php-format
+msgid "<a href=\"%s\">Subscribe</a> the feed"
+msgstr "<a href=\"%s\">Abonniere den feed</a>"
+
+#: inc/nkuttler.php:43
+#, php-format
+msgid "<a href=\"%s\">Donate</a>!"
+msgstr "<a href=\"%s\">Spenden</a>!"
+
+#: inc/nkuttler.php:46
+msgid "About the author"
+msgstr "Über den Autor"
+
+#: inc/nkuttler.php:49
+#, php-format
+msgid "My <a href=\"%s\">blog</a>"
+msgstr "Mein <a href=\"%s\">Blog</a>"
+
+#: inc/nkuttler.php:52
+#, php-format
+msgid "Subscribe via <a href=\"%s\">RSS</a> or <a href=\"%s\">email</a>"
+msgstr "Abonnieren via <a href=\"%s\">RSS</a> or <a href=\"%s\">e-Mail</a>"
+
+#: inc/nkuttler.php:56
+msgid "My other plugins"
+msgstr "Meine anderen plugins"
+
+#: inc/nkuttler.php:57
+msgid "<a href=\"http://www.nkuttler.de\">Translated by Nicolas</a>"
+msgstr "<a href=\"http://www.nicolaskuttler.de\">Übersetzt von Nicolas</a>"
+
+#. Plugin URI of an extension
+msgid ""
+"http://www.nkuttler.de/wordpress-plugin/better-related-posts-and-custom-post-"
+"types/"
+msgstr ""
+
+#. Description of an extension
+msgid ""
+"Better related posts plugin that finds custom post types and searches custom "
+"taxonomies"
+msgstr ""
+
+#. Author of an extension
+msgid "Nicolas Kuttler"
+msgstr ""
+
+#. Author URI of an extension
+msgid "http://www.nkuttler.de/"
+msgstr ""
+
+#~ msgid "Thank the author"
+#~ msgstr "Dem Autor danken"
+
+#~ msgid "See the <tt>readme.txt</tt> for manual placement."
+#~ msgstr ""
+#~ "In der <tt>readme.txt</tt> sind Anweisungen für eine manuelle Platzierung."
+
+#~ msgid "Top entries to show."
+#~ msgstr "So viele Treffer anzeigen."
+
+#~ msgid "Taxonomy Options"
+#~ msgstr "Taxonomie Einstellungen"
+
+#~ msgid "Taxonomies to search for matching."
+#~ msgstr "Taxonomien die nach Übereinstimmungen durchsucht werden."
+
+#~ msgid "Term weight"
+#~ msgstr "Gewicht für Begriffe"
+
+#~ msgid "How important related taxonomies are."
+#~ msgstr "Wie wichtig verwandte Taxonomien sind."
+
+#~ msgid "Content weight"
+#~ msgstr "Gewicht für Inhalte"
+
+#~ msgid "Cache time"
+#~ msgstr "Zwischenspeicher Zeit"

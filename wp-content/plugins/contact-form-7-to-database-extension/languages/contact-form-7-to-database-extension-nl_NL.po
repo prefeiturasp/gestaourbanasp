@@ -1,0 +1,238 @@
+# Copyright (C) 2011
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Contact form 7 to Database plugin\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/contact-form-7-to-database-extension\n"
+"POT-Creation-Date: 2011-02-12 12:49:58+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2011-02-22 17:04+0100\n"
+"Last-Translator: Jelmer Holtes | Holtes Design <info@holtesdesign.nl>\n"
+"Language-Team: Dutch <info@holtesdesign.nl>\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+
+#: contact-form-7-db.php:23
+msgid "Minimal version of PHP required: "
+msgstr "Minimaal vereiste PHP versie:"
+
+#: contact-form-7-db.php:24
+msgid "Your server's PHP version: "
+msgstr "Uw server's PHP versie:"
+
+#: contact-form-7-db.php:27
+msgid "When using the Apache web server, typically you can configure it to use PHP5 by doing the following:"
+msgstr "Wanneer u een Apache webserver gebruikt, dan kun je het gemakkelijk gebruiken met PHP5 door het volgende te doen:"
+
+#: contact-form-7-db.php:29
+msgid "Locate and edit this file, located at the top directory of your WordPress installation: "
+msgstr "Zoek en bewerk dit bestand, en plaats het in de hoofdmap van uw Wordpress installatie:"
+
+#: contact-form-7-db.php:31
+msgid "Add these two lines to the file:"
+msgstr "Voeg deze twee regels toe aan het bestand:"
+
+#: ExportToJson.php:69
+#: CF7DBOptionsManager.php:278
+#: ExportToCsvUtf16le.php:32
+#: ExportToGoogleLiveData.php:29
+#: ExportToCsvUtf8.php:42
+#: ExportToGoogleSS.php:34
+#: ExportToHtmlTable.php:122
+#: ExportToValue.php:60
+#: getFile.php:32
+msgid "You do not have sufficient permissions to access this page."
+msgstr "U heeft niet voldoende rechten om deze pagina te openen."
+
+#: CFDBCheckZendFrameworkphp:70
+msgid "Missing Zend Framework"
+msgstr "Ontbrekend Zend Framework"
+
+#: CF7DBOptionsManager.php:296
+msgid "Settings"
+msgstr "Instellingen"
+
+#: CF7DBOptionsManager.php:321
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan"
+
+#: CF7DBOptionsManager.php:380
+#: CF7DBPlugin.php:71
+msgid "true"
+msgstr "aan"
+
+#: CF7DBOptionsManager.php:381
+#: CF7DBPlugin.php:73
+msgid "false"
+msgstr "uit"
+
+#: ExportToCsvUtf16le.php:50
+#: ExportToCsvUtf8.php:62
+msgid "Submitted"
+msgstr "Verstuurd"
+
+#: ExportToGoogleLiveData.php:164
+msgid "How to Set up Google Spreadsheet to pull data from WordPress"
+msgstr "Hoe u een Google Spreadsheet kunt instellen om data naartoe te sturen van Wordpress"
+
+#: ExportToGoogleSS.php:64
+msgid "Login Failed"
+msgstr "Inloggen mislukt"
+
+#: ExportToGoogleSS.php:100
+msgid "New Google Spreadsheet"
+msgstr "Nieuwe Google Spreadsheet"
+
+#: ExportToGoogleSS.php:109
+msgid "Error"
+msgstr "Fout"
+
+#: ExportToHtmlTable.php:234
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: CF7DBPlugin.php:49
+msgid "Can See Submission data"
+msgstr "Kan inzien van gegevens"
+
+#: CF7DBPlugin.php:51
+msgid "Can See Submission when using shortcodes"
+msgstr "Kan inzien van gegevens d.m.v. shortcodes"
+
+#: CF7DBPlugin.php:53
+msgid "Can Delete Submission data"
+msgstr "Kan verwijderen van gegevens"
+
+#: CF7DBPlugin.php:55
+msgid "Use Javascript-enabled tables in Admin Database page"
+msgstr "Gebruik Javascript-ingeschakelde tabellen in Administrator Database pagina"
+
+#: CF7DBPlugin.php:56
+msgid "Show line breaks in submitted data table"
+msgstr "Toon regeleinden in de ingediende gegevenstabel"
+
+#: CF7DBPlugin.php:57
+msgid "Use Custom Date-Time Display Format (below)"
+msgstr "Gebruik aangepaste tijdweergave formaat (zie hieronder)"
+
+#: CF7DBPlugin.php:58
+msgid "Date-Time Display Format"
+msgstr "Tijdweergave formaat"
+
+#: CF7DBPlugin.php:59
+msgid "Export URLs instead of file names for uploaded files"
+msgstr "Exporteer URL's in plaats van bestandsnamen voor geuploade bestanden"
+
+#: CF7DBPlugin.php:60
+msgid "Do not save <u>fields</u> in DB named (comma-separated list, no spaces)"
+msgstr "Sla geen <u> velden </u> op in de database (door komma's gescheiden lijst, geen spaties)"
+
+#: CF7DBPlugin.php:61
+msgid "Do not save <u>forms</u> in DB named (comma-separated list, no spaces)"
+msgstr "Sla geen <u> velden </u> op in de database (door komma's gescheiden lijst, geen spaties)"
+
+#: CF7DBPlugin.php:62
+msgid "Save Cookie Data with Form Submissions"
+msgstr "Sla cookie gegevens op door het inzien van de database"
+
+#: CF7DBPlugin.php:63
+msgid "Save only cookies in DB named (comma-separated list, no spaces, and above option must be set to true)"
+msgstr "Sla cookie's alleen op in de database (door komma's gescheiden lijst, geen spaties, en bovenstaande optie moet worden ingeschakeld als juist)"
+
+#: CF7DBPlugin.php:76
+msgid "Administrator"
+msgstr "Administrator"
+
+#: CF7DBPlugin.php:78
+msgid "Editor"
+msgstr "Redacteur"
+
+#: CF7DBPlugin.php:80
+msgid "Author"
+msgstr "Auteur"
+
+#: CF7DBPlugin.php:82
+msgid "Contributor"
+msgstr "Medewerker"
+
+#: CF7DBPlugin.php:84
+msgid "Subscriber"
+msgstr "Abonnee"
+
+#: CF7DBPlugin.php:86
+msgid "Anyone"
+msgstr "Iedereen"
+
+#: CF7DBPlugin.php:212
+#: CF7DBPlugin.php:232
+msgid "Database Options"
+msgstr "Database instellingen"
+
+#: CF7DBPlugin.php:230
+#: CF7DBPlugin.php:381
+msgid "Database"
+msgstr "Database"
+
+#: CF7DBPlugin.php:234
+#: CF7DBPlugin.php:420
+msgid "FAQ"
+msgstr "FAQ (Veelgestelde vragen)"
+
+#: CF7DBPlugin.php:414
+msgid "Rate this Plugin"
+msgstr "Beoordeel deze plugin"
+
+#: CF7DBPlugin.php:426
+msgid "Support"
+msgstr "Ondersteuning"
+
+#: CF7DBPlugin.php:440
+msgid "No form submissions in the database"
+msgstr "Er zijn geen gegevens in de database beschikbaar"
+
+#: CF7DBPlugin.php:495
+msgid "Google Login for Upload"
+msgstr "Google login om bestanden te uloaden"
+
+#: CF7DBPlugin.php:504
+msgid "Cannot perform operation because jQuery is not loaded in this page"
+msgstr "Kan operatie niet uitvoeren omdat jQuery niet is geladen in deze pagina"
+
+#: CF7DBPlugin.php:543
+msgid "Export"
+msgstr "Exporteer"
+
+#: CF7DBPlugin.php:553
+msgid "Delete All This Form's Records"
+msgstr "Verwijder alle records"
+
+#: CF7DBPlugin.php:611
+msgid "Did you know: This plugin captures data from both these plugins:"
+msgstr "Wist u dat: Deze plugin registreert de gegevens van beide plugins:"
+
+#: CF7DBPlugin.php:620
+msgid "Did you know: You can add this data to your posts and pages using these shortcodes:"
+msgstr "Wist u dat: U kunt deze gegevens gebruiken en toevoegen aan uw berichten en pagina's door het toevoegen van deze shortcodes"
+
+#: CF7DBPlugin.php:645
+msgid "Cancel"
+msgstr "Annuleer"
+
+#: CF7DBPlugin.php:647
+msgid "Upload"
+msgstr "Verstuur"
+
+#: getFile.php:39
+msgid "Missing form parameters"
+msgstr "Ontbrekende parameters"
+
+#: getFile.php:44
+msgid "No such file."
+msgstr "Geen bestand geselecteerd"
+
+#: CFDBShortCodeLoaderSecurityCheck.php:34
+msgid "Insufficient privileges to display data from form: "
+msgstr "Onvoldoende rechten om gegevens uit formulier weer te geven:"
+

@@ -1,0 +1,88 @@
+/* version 0.2.3 */
+p, li {
+	max-width:				100ex;
+}
+p {
+	text-align:				justify;
+}
+thead {
+	text-align:				center;
+	font-weight:			bold;
+}
+blockquote {
+	font-style:				italic;
+	max-width:				80ex;
+}
+
+.wrap {
+	max-width:				2000px;
+}
+#nkcontent {
+	float:					left;
+	width:					70%;
+}
+#nkbox {
+	width:					20%;
+	float:					left;
+	background-color:		#ddf;
+}
+.box,
+#nkbox {
+	margin:					16px 8px;
+	padding:				8px;
+	border-radius:	  		6px;
+	-moz-border-radius:     6px;
+	-webkit-border-radius:  6px;
+}
+#nkbox div {
+	text-align:				right;
+	font-size:				smaller;
+	clear:					right;
+}
+#nkbox ul {
+	margin:					4px 0;
+}
+#nkbox ul li {
+	margin:					4px 0 0 4px;
+}
+#nkbox .gravatar {
+	float:					right;
+	margin:					8px 0 0 8px;
+	width:					55px;
+	text-align:				center;
+}
+
+.form-table span {
+	padding:				3px;
+	border:					1px solid #ccc;
+}
+
+.form-table-clearnone {
+	clear:					none;
+	width:					auto;
+}
+
+.nkthemeswitch-admin {
+	text-align:				center;
+}
+a.nkthemeswitch {
+	line-height:		    28px;
+	padding:				4px 4px;
+	background:				#ddf;
+	color:					#0d0d0d;
+	text-decoration:		none;
+	font-size:				12px;
+	border:					1px solid #fff;
+	border-radius:	  		6px;
+	-moz-border-radius:     6px;
+	-webkit-border-radius:  6px;
+	white-space:			pre;
+}
+a.nkthemeswitch:hover {
+	background:				#eef;
+	border:					1px solid #ccf;
+}
+
+#zcmail * {
+	display:                block;
+}
