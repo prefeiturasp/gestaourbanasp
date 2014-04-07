@@ -5,6 +5,45 @@ Template Name: Index
 ?>
 
 <?php get_header(); ?>
+
+<a href="#modal_homenagem" style="display:none;" id="hidden_link" class="fancybox">ver homenagem</a>
+<div style="display: none">
+<div id="modal_homenagem" style="padding:25px; margin:25px;">
+<h3 style="text-align:center">JORGE WILHEIM</h3>
+<h4 style="text-align:center">HOMENAGEM DO CONSELHO MUNICIPAL DE POLÍTICA URBANA</h4><br/>
+<p style="text-align:center"><img src="http://gestaourbana.prefeitura.sp.gov.br/centro-dialogo-aberto-participe/wp-content/uploads/2014/02/homenagem_wilheim_gestao.jpg" alt="Imagem representativa sobre trabalho do homenageado" /></p>
+<br/>
+<p>Idéias e interpretações vão além de qualquer tempo, atravessando eras e formas físicas de apresentação. Bem mais que planejar uma construção ou dividir espaços para sua melhor ocupação, Jorge Wilheim é responsável por um legado inestimável de emblemáticos projetos, obras e conceitos, entre os quais vários cartões postais paulistanos, como o Vale do Anhangabaú (1º entre 94 em concurso público para a reurbanização, 1981-91), o Parque Anhembi (1967-73) e o Pátio do Colégio (projeto de reurbanização, 1975).</p>
+<p>Dedicou 60 de seus 85 anos em torno de idéias capazes de recuperar, preservar e promover a melhoria da qualidade de vida nas cidades, influenciando gerações, não só de arquitetos e urbanistas, mas de geógrafos, engenheiros, sociólogos e demais profissionais.  Foi ator ativo no desenvolvimento urbano do país e responsável pela elaboração de diversos planos diretores pelo Brasil. Como um dos renovadores da urbanística no País, Wilheim sempre teve distinta atuação profissional, tanto no Brasil como no exterior. Ocupou diversos cargos públicos, tendo também papel destacado em funções no Instituto dos Arquitetos do Brasil e como Secretário Geral Adjunto da divisão da ONU para a realização da 2ª Conferência das Nações Unidas sobre Assentamentos Humanos (Habitat II), realizada em Istambul, em 1996. Anos antes, participou das reuniões preparatórias da Conferência das Nações Unidas para o Meio Ambiente Humano, em Estocolmo (1972), marco da governança ambiental mundial.</p>
+<p>No entanto, mais do que tudo, se pode definir Jorge Wilheim como um humanista, que tão bem transitou no campo da arquitetura, do urbanismo, das artes, da técnica e da política. Como poucos, soube pautar sua trajetória profissional conciliando o "homem de idéias" (o pensador) ao "homem da prática" (o implementador). A ele se deve, por exemplo, a criação do PROCON, da Fundação Seade, da EMTU, do "passe do trabalhador", da primeira utilização oficial de álcool combustível no País (conhecido mais tarde como Proálcool). Empreendedor e organizado na sua forma de trabalho, Wilheim imaginava as coisas com começo, meio e fim.</p>
+<p>Muito antes de ser "moda", soube trabalhar a multi e transdisciplinaridade das equipes que chefiava e introduzir, em seus projetos e idéias, o conceito de sustentabilidade. Conciliou como poucos, a questão ambiental e o planejamento urbano, até então duas matrizes do pensamento distintas e até mesmo compreendidas como antagônicas. Não é a toa que acumulou ao longo de seu extenso currículo na vida pública, os cargos de Secretário de Economia e Planejamento e de Meio Ambiente do Estado de São Paulo. Foi também, por duas vezes, Secretario Municipal de Planejamento, nas gestões de Mario Covas e de Marta Suplicy.</p>
+<p>Em sua segunda participação à frente da pasta, coordenou a elaboração do Plano Diretor Estratégico vigente, tendo grande participação dos diversos segmentos da sociedade. Partindo de um raciocínio territorial sob a forma de redes, propôs uma visão de cidade estrutural e integrada. Introduziu a questão ambiental ao planejamento e desenvolvimento urbano adotando, de forma pioneira, a rede hídrica como elemento estruturador do espaço da cidade.</p>
+<p>Sensível as demandas da sociedade, transformou de forma definitiva a maneira como se relacionam os diversos atores que constroem a cidade, através da criação, no PDE, de instrumentos inovadores como o Conselho Municipal de Política Urbana e o Fundo Municipal de Desenvolvimento Urbano - FUNDURB. Ainda sob sua coordenação, se deu a elaboração e aprovação da atual lei de uso e ocupação do solo e os 31 planos regionais estratégicos das subprefeituras de São Paulo, onde buscou romper a tradicional dicotomia centro - periferia.</p>
+<p>No último ano, com a disposição para o debate de idéias que lhe era peculiar, vinha contribuindo ativamente no processo de revisão do Plano Diretor Estratégico conduzido pela Prefeitura. Apresentou inúmeras propostas e demonstrou ser um colaborador incansável na construção de uma São Paulo melhor para todos.</p>
+<p>Talvez esse tenha sido justamente seu maior legado à cidade, o de verdadeiro pensador da cidade, com seu olhar curioso e visionário, capaz de identificar e propor soluções para suas grandes carências. A Prefeitura de São Paulo agradece à Jorge Wilheim pela sua inestimável cotribuição.</p>
+<br/>
+<p><a href="/arquivos/130523_Plano_basico_urbanistico_do_tiete_1966_JW_resumida.ppt"> <img src="http://gestaourbana.prefeitura.sp.gov.br/centro-dialogo-aberto-participe/wp-content/uploads/2014/02/homenagem_wilheim_link.jpg"> </a></p>
+<p>Em 1966 elaborou o Plano Urbanístico Tietê, disponível no link acima e os originais na biblioteca da SPUrbanismo.</p>
+</div>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+    jQuery(".fancybox, .fancybox a")
+        .fancybox({
+            type: 'inline',
+            autoSize: false,
+            height: 450,
+            maxHeight: 450,
+            margin: [5, 30, 5, 30]
+    });
+if (document.cookie.replace(/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+jQuery("#hidden_link").fancybox().trigger('click');
+document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+}
+});
+</script>
+
 <div class="wrapper" id="wrapper-second-home">
 	<div id="banner-slide">
 		<ul class="bjqs">
@@ -103,7 +142,9 @@ Template Name: Index
   				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
   				<p class="news-title"><?php the_title(); ?></p>
   			</a>
-  			<p class="news-text"><?php the_excerpt(); ?></p>
+  			<p class="news-text"><?php echo get_the_excerpt(); ?></p>
+			
+			<?php get_breadcrumb_data(get_the_ID(), 'projetos');?>
   		</div>
   		<div class="clear"></div>
   	</div>
@@ -116,17 +157,19 @@ Template Name: Index
     	 		<a href="<?php the_permalink(); ?>">
     				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
     				<p class="news-title"><?php the_title(); ?></p>
-    	   </a>
-    	   <p class="news-text"><?php the_excerpt(); ?></p>
-    		</div>
+				</a>
+				<p class="news-text"><?php echo get_the_excerpt(); ?></p>
+				<?php get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
+			</div>
     <?php endif; ?>
     <?php if ($count == 3): ?>
     		<div class="news cell">
     	 		<a href="<?php the_permalink(); ?>">
     				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
     				<p class="news-title"><?php the_title(); ?></p>
-    	    </a>
-    	    <p class="news-text"><?php the_excerpt(); ?></p>
+				</a>
+				<p class="news-text"><?php echo get_the_excerpt(); ?></p>
+				<?php get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
     		</div>
     <?php endif; ?>
     <?php if ($count == 4): ?>
@@ -134,8 +177,9 @@ Template Name: Index
     	 		<a href="<?php the_permalink(); ?>">
     				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
     				<p class="news-title"><?php the_title(); ?></p>
-    	  	</a>
-    	  	<p class="news-text"><?php the_excerpt(); ?></p>
+				</a>
+				<p class="news-text"><?php echo get_the_excerpt(); ?></p>
+				<?php get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
     		</div>
     		<div class="clear"></div>
     	</div>
@@ -150,23 +194,31 @@ Template Name: Index
 			<h1>Agenda</h1>
 			<h3>Confira as próximas pautas discutidas.</h3>
 			<div id="calendar">
-				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/evento">
-				  <?php $event_query = new WP_Query( array('post_type' => 'agenda', 'paged' => $paged, 'posts_per_page' => 2, 'meta_query' => array(array( 'key' => 'agenda_show_date','value' => time(),'compare' => '>='),),'orderby' => 'meta_value_num','order' => 'ASC','meta_key' => 'agenda_show_date')); ?>
-				  <?php while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
-  					<div class="event">
-  						<div class="event-date">
-  							<div class="number"><?php _e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?></div>
-  							<div class="month"><?php _e(date('M', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?></div>
-  						</div>
-  						<div class="event-text">
-  							<?php the_title(); ?>
-  						</div>
-  						<div class="clear"></div>
-  					</div>
-					<?php $count++; endwhile;?>
-				</a>
+                <?php $event_query = new WP_Query( array('post_type' => 'agenda', 'paged' => $paged, 'posts_per_page' => 2, 'meta_query' => array(array( 'key' => 'agenda_show_date','value' => time(),'compare' => '>='),),'orderby' => 'meta_value_num','order' => 'ASC','meta_key' => 'agenda_show_date')); ?>
+                <?php if ( $event_query->have_posts() ) { ?>
+    				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/evento">
+    				  <?php while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
+      					<div class="event">
+      						<div class="event-date">
+								<?php
+									_e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true )) . ' | ' . strftime('%B', get_post_meta( $post->ID, 'agenda_show_date', true )));
+								?>
+      						</div>
+      						<div class="event-text">
+      							<?php the_title(); ?>
+      						</div>
+							
+							<?php get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
+							
+      						<div class="clear"></div>
+      					</div>
+    					<?php $count++; endwhile;?>
+    				</a>
+                <?php } else { ?>
+                    <p style="display: inline-block; margin: 10px; font-family: 'museoSlab', Arial, Helvetica, sans-serif;">Não há eventos no momento. Confira os <a style="color: #000; text-decoration:underline;" href="<?php echo get_bloginfo( 'url' ); ?>/agenda-completa/">eventos já realizados</a>.</p>
+                <?php } ?>
 			</div>
-			<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/evento" class="see-all-events">Veja a agenda completa</a>
+			<!--a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/evento" class="see-all-events">Veja a agenda completa</a-->
 		</div>
 		<div class="right">
 			<h1>Biblioteca</h1>

@@ -1,6 +1,4 @@
 jQuery(function() {
-
-
 	/*Navigation*/
 	jQuery('#wrapper .menu-menu-principal-container li ul').hide().removeClass('sub-menu');
 	jQuery('#wrapper .menu-menu-principal-container li').click(
@@ -132,5 +130,28 @@ jQuery(function() {
 		    jQuery("#data").html('');
 		}
 	});
-
+	
+	jQuery('#project-nav .menu a').bind('hover', function(e) {
+		var parent = jQuery(this).parent().find('.sub-menu');
+		jQuery(parent).slideDown();
+	});
+	
+	jQuery('#project-nav .menu').bind('mouseleave', function() {
+		jQuery(this).find('.sub-menu').slideUp();
+	});
+	
+	//events for mobile
+	jQuery('#project-nav .menu a').click(function() {
+		var parent = jQuery(this).parent().find('.sub-menu');
+		if (jQuery(parent).hasClass('open'))
+		{
+			jQuery(parent).stop().slideUp(100);
+			jQuery(parent).removeClass('open');
+		}
+		else
+		{
+			jQuery(parent).stop().slideDown(100);
+			jQuery(parent).addClass('open');
+		}
+	});
 });

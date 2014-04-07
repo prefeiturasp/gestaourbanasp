@@ -24,7 +24,11 @@
     register_nav_menus(
       array(
         'header-menu' => __( 'Header Menu' ),
-        'extra-menu' => __( 'Footer Menu' )
+        'extra-menu' => __( 'Footer Menu' ),
+        'revisao-menu' => __('Revisão dos instrumentos menu'),
+        'arco-menu' => __('Arco do futuro menu'),
+        //'territorio-menu' => __('Território CEU menu'),
+        'dialogo-menu' => __('Centro Diálogo Aberto')
       )
     );
   }
@@ -318,7 +322,7 @@
 
   /********************************************************************************/
 
-
+  /*******************************************************************************/
 
   /********************************************************************************/
   /**************** CUSTOM NOTÍCIAS                 *******************************/
@@ -355,6 +359,95 @@
     register_post_type( 'noticias' , $args );
     flush_rewrite_rules( );
   }
+  
+  /*******************************************************************************/
+  /************************CUSTOM TAXONOMY PROJETOS***************/
+  add_action('init', 'add_project_taxonomy', 0);
+  function add_project_taxonomy() {
+    $labels = array(
+        'name' => _x( 'Projetos', 'taxonomy general name' ),
+        'singular_name' => _x( 'Category', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search Categories' ),
+        'popular_items' => __( 'Popular Categories' ),
+        'all_items' => __( 'Todos os projetos' ),
+        'parent_item' => null,
+        'parent_item_colon' => null,
+        'edit_item' => __( 'Edit Category' ),
+        'update_item' => __( 'Update Category' ),
+        'add_new_item' => __( 'Add New Category' ),
+        'new_item_name' => __( 'New Category Name' ),
+        'separate_items_with_commas' => __( 'Separate categories with commas' ),
+        'add_or_remove_items' => __( 'Add or remove categories' ),
+        'choose_from_most_used' => __( 'Choose from the most used categories' ),
+    );
+
+    register_taxonomy('projetos', array('noticias', 'agenda', 'biblioteca'), array(
+        'label' => __('Projetos'),
+        'labels' => $labels,
+        'hierarchical' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'projetos' ),
+        'show_in_nav_menus' => true,
+    ));
+  }
+  
+  function add_project_meta_data() {
+    echo '<div class="form-field">';
+      echo '<label for="term_meta[custom_term_meta]">Cor:</label>';
+      echo '<input type="text" name="term_meta[custom_term_meta]" id="term_meta[custom_term_meta]">';
+    echo '</div>';
+    
+    echo '<div class="form-field">';
+      echo '<label for="term_meta[custom_term_meta]">Aparecer no topo:</label>';
+      echo '<input type="text" name="term_meta[custom_term_meta_topo]" value="S">';
+    echo '</div>';
+  }
+  add_action('projetos_add_form_fields', 'add_project_meta_data', 10, 2 );
+  
+  function edit_project_meta_data($term) {
+    $termId = $term->term_id;
+    $termMeta = get_option('taxonomy_'.$termId);
+    
+    if (!empty($termMeta['custom_term_meta'])) {
+      echo '<tr class="form-field">';
+        echo '<th scope="row" valign="top">';
+          echo '<label for="term_meta[custom_term_meta]">Cor:</label>';
+        echo '</th>';
+        echo '<td>';
+          echo '<input type="text" name="term_meta[custom_term_meta]" id="term_meta[custom_term_meta]" value="'.$termMeta['custom_term_meta'].'">';
+        echo '</td>';
+      echo '</tr>';
+      
+      echo '<tr class="form-field">';
+        echo '<th scope="row" valign="top">';
+          echo '<label for="term_meta[custom_term_meta]">Aparecer no topo:</label>';
+        echo '</th>';
+        echo '<td>';
+          echo '<input type="text" name="term_meta[custom_term_meta_topo]" id="term_meta[custom_term_meta_topo]" value="'.$termMeta['custom_term_meta_topo'].'">';
+        echo '</td>';
+      echo '</tr>';
+    }
+  }
+  add_action('projetos_edit_form_fields', 'edit_project_meta_data', 10, 2 );
+  
+  function save_projetos_custom_meta($term_id) {
+    if ( isset( $_POST['term_meta'] ) ) {
+      $t_id = $term_id;
+      $term_meta = get_option( "taxonomy_$t_id" );
+      $cat_keys = array_keys( $_POST['term_meta'] );
+      foreach ( $cat_keys as $key ) {
+        if ( isset ( $_POST['term_meta'][$key] ) ) {
+          $term_meta[$key] = $_POST['term_meta'][$key];
+        }
+      }
+      // Save the option array.
+      update_option( "taxonomy_$t_id", $term_meta );
+    }
+  }
+  
+  add_action( 'edited_projetos', 'save_projetos_custom_meta', 10, 2 );  
+  add_action( 'create_projetos', 'save_projetos_custom_meta', 10, 2 );
 
   add_filter("manage_edit-noticias_columns", "noticias_edit_columns");
   function noticias_edit_columns($columns){
@@ -921,3 +1014,185 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
 // ";
 // }
 // add_action( 'wp_head', 'insert_fb_in_head', 5 );
+
+//Create a Walker to change the way wp_list_categories displays the output
+//Here I'm removing the links from the output
+
+function get_breadcrumb_data($postId, $taxonomyName, $left = false) {
+    $outPut = array();
+    $postTerms = get_the_terms($postId, $taxonomyName);
+    
+    if (!empty($postTerms)) {
+      $postTermsId = array();
+      foreach ($postTerms as $term) {
+        if (empty($term->parent)) {
+          $customTermMeta = get_term_by('slug', $term->slug, $taxonomyName, ARRAY_A);
+          if (!empty($customTermMeta)) {
+            $customTermMetaData = get_option('taxonomy_'.$term->term_id);
+            $postTermsId[]= array(
+              'id' => $term->term_id,
+              'name' => $term->name,
+              'color' => $customTermMetaData['custom_term_meta']
+            );
+          }
+        }
+      }
+      
+      if (!empty($postTermsId)) {
+        foreach ($postTermsId as $postTermId) {
+          $childTerms = get_terms( $taxonomyName, array( 'child_of' => $postTermId['id']));
+          $outPut['parent']['name'] = $postTermId['name'];
+          $outPut['parent']['color'] = $postTermId['color'];
+          $outPut['parent']['childs'] = $childTerms;
+        }
+      }
+      
+      
+      if (!empty($outPut)) {
+        ?>
+        <div class="taxonomy-breadcrumb <?php echo($left) ? 'left' :'';?>">
+            <div class="float">
+              <div class="breadcrumb-border" style="border-right: 20px solid <?php echo $outPut['parent']['color'];?>"></div>
+              <div class="breadcrumb-first breadcrumb-text" style="background: <?php echo $outPut['parent']['color'];?>">
+                <a href="">&bull;<?php echo $outPut['parent']['name'];?></a>
+              </div>
+            </div>  
+            <?php
+              foreach($outPut['parent']['childs'] as $child):
+                  ?>
+                    <div class="float">
+                      <div class="breadcrumb-border-next" style="border-right: 14px solid <?php echo $outPut['parent']['color'];?>"></div>
+                      <div class="breadcrumb-next breadcrumb-text" style="background: <?php echo $outPut['parent']['color'];?>">
+                          <a href="">&bull;<?php echo $child->name;?></a>
+                      </div>
+                    </div>  
+                  <?php
+              endforeach;
+            ?>
+        </div>    
+      <?php
+      }  
+    }
+}
+
+// Add Shortcode
+function rodape_centro_dialogo_aberto_shorcode( $atts ) {
+
+  wp_enqueue_style( 'widgets-cda', get_stylesheet_directory_uri().'/css/widgets-centro-dialogo-aberto.css' );
+
+  // Attributes
+  extract( shortcode_atts(
+    array(
+      'mostrar_biblioteca' => 'sim',
+      'mostrar_noticias' => 'sim',
+      'mostrar_navegador' => 'sim',
+    ), $atts )
+  );
+
+  // Code
+  $output = '
+  </div>
+  <div id="strip-rodape-centro-dialogo-aberto">
+  <div class="wrapper">
+    <h5>saiba mais sobre o centro diálogo aberto</h5>
+    <div class="noticias">
+      <h6 id="cda-noticias">Notícias</h6>
+      <ul>
+        ';
+  $the_query = new WP_Query( 
+    array ( 'tax_query' => array(
+      array(
+        'taxonomy' => 'post_tag',
+        'field' => 'slug',
+        'terms' => 'centro-dialogo-aberto'
+      )
+    ), 
+    'orderby'=>'modified',
+    'post_type' => 'noticias', 
+    'posts_per_page' => 3 ) );
+  while ( $the_query->have_posts() ):
+    $the_query->the_post();
+    $output .= '<li>
+    <p class="news-date">'.get_the_date().'</p>
+    <a class="news-title" href="'.get_permalink().'">' . get_the_title() . '</a>
+    <a class="news-excerpt" href="'.get_permalink().'">' . get_the_excerpt() . '</a>
+    </li>
+        ';
+  endwhile;
+  wp_reset_postdata();
+  $output .= '
+      </ul>
+      <a class="ver-todos" href="'.site_url('/tag/centro-dialogo-aberto/').'">» Ver todas as notícias sobre o Centro Diálogo Aberto</a>
+    </div>
+    <div class="biblioteca">
+      <h6 id="cda-biblioteca">Biblioteca</h6>
+      <ul>
+        ';
+  $the_query = new WP_Query( array ( 'tax_query' => array(
+      array(
+        'taxonomy' => 'post_tag',
+        'field' => 'slug',
+        'terms' => 'centro-dialogo-aberto'
+      ),
+    ),  'orderby'=>'modified', 'post_type' => 'biblioteca', 'posts_per_page' => 6 ) );
+  while ( $the_query->have_posts() ):
+    $the_query->the_post();
+    $output .= '<li>» <a href="'.get_permalink().'">' . get_the_title() . '</a></li>
+        ';
+  endwhile;
+  wp_reset_postdata();
+  $output .= '
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div id="cda-navegador">
+    <a class="biblioteca" href="#cda-biblioteca">biblioteca</a>
+    <a class="noticias" href="#cda-noticias">noticias</a>
+  </div>
+  <div class="wrapper page-dialogo">';
+  return $output;
+
+}
+add_shortcode( 'rodape-centro-dialogo-aberto', 'rodape_centro_dialogo_aberto_shorcode' );
+
+
+// Add Shortcode
+function form_aviso_plataforma_participativa_shorcode( $atts ) {
+
+  wp_enqueue_style( 'widgets-cda', get_stylesheet_directory_uri().'/css/widgets-centro-dialogo-aberto.css' );
+
+  // Attributes
+  extract( shortcode_atts(
+    array(
+      'mostrar_biblioteca' => 'sim',
+      'mostrar_noticias' => 'sim',
+      'mostrar_navegador' => 'sim',
+    ), $atts )
+  );
+  
+  $output = '<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="http://prefeitura.us7.list-manage.com/subscribe/post?u=dd2d95999955c44afed480456&amp;id=9ed02a74da" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<i class="cda-icone-comentario"></i><p class="legend">Deixe aqui seu e-mail para ser avisado assim que nossa<br/> Ferramenta Participativa estiver pronta:</p>
+<div class="mc-field-group">
+  <input type="text" value="" placeholder="Nome" name="FNAME" class="" id="mce-FNAME">
+</div>
+<div class="mc-field-group">
+  <input type="email" value="" placeholder="E-mail" name="EMAIL"  class="required email" id="mce-EMAIL">
+</div>
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_dd2d95999955c44afed480456_9ed02a74da" value=""></div>
+  <div class="clear"><input type="submit" value="Enviar" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->';
+  return $output;
+
+}
+add_shortcode( 'aviso-plataforma-participativa', 'form_aviso_plataforma_participativa_shorcode' );
+

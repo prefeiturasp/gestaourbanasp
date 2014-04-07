@@ -11,7 +11,15 @@ Template Name: Biblioteca
             <div id="lista-artigos">
 			<h1>Biblioteca</h1>
             <a id="arquivo-biblioteca"class="btn" href="mailto:gestaourbanasp@prefeitura.sp.gov.br?subject=Gestão Urbana SP - Biblioteca: Documento enviado para análise">Envie seu arquivo</a>
-            <div class="input text"><label for="search">Busca</label><input class="search" /></div>
+
+            <div class="input text"><label for="search">Busca: </label><input class="search" /></div>
+
+            <div class="input radio">
+                <label>Visualização:</label>
+                <input type="radio" value="grid" checked="checked" name="view-type" /><label for="view-type"> Grid</label>
+                <input type="radio" value="list" name="view-type" /><label for="view-type"> Lista</label>
+            </div>
+
 			<div class="nav-bar">
 				<ul>
 					<li>
@@ -79,6 +87,15 @@ Template Name: Biblioteca
                 };
 
                 var hackerList = new List('lista-artigos', options);
+
+
+                jQuery('input[name="view-type"]').on('click', function () {
+                    if (this.value === 'list') {
+                        jQuery('#lista-artigos').addClass('modo-lista');
+                    }else {
+                        jQuery('#lista-artigos').removeClass('modo-lista');
+                    }
+                });
             });
             </script>
 

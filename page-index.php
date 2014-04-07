@@ -17,7 +17,7 @@ Template Name: Index Temp
 					<p>Você se preocupa com a sua cidade, quer espaços públicos bem cuidados, preservar o meio ambiente, se preocupa com moradia adequada para todos, quer poder ir trabalhar, passear, estudar sem enfrentar congestionamentos e longas horas em deslocamentos? Luta por qualidade de vida? <br />
 						A prefeitura quer a sua participação, para avaliar a cidade que temos e planejar a que queremos..</p>
 					<div>
-						
+
 						<div align="center">
 						  <img id="Image-Maps_8201305031729588" src="<?php echo bloginfo('template_url'); ?>/_tmp/1-entenda-bottom.jpg" usemap="#Image-Maps_8201305031729588" border="0" width="350" height="225" alt="" />
               <map id="_Image-Maps_8201305031729588" name="Image-Maps_8201305031729588">
@@ -28,14 +28,14 @@ Template Name: Index Temp
 					</div>
 				</span>
 			</li>
-			<li class="bjqs-slide">			
+			<li class="bjqs-slide">
 				<span class="image">
 					<img src="<?php echo bloginfo('template_url'); ?>/_tmp/2-etapas-2.jpg" />
 				</span>
 				<span class="text">
 					<a href="/etapas/"><h2>Conheças as etapas de revisão</h2></a>
-					<p>A Prefeitura não pode definir o planejamento 
-						da cidade sozinha. Precisa ter a participação de 
+					<p>A Prefeitura não pode definir o planejamento
+						da cidade sozinha. Precisa ter a participação de
 						todos os cidadãos e cidadãs nas etapas de revisão: <br /><br />
 
 						- do Plano Diretor Estratégico<br />
@@ -54,7 +54,7 @@ Template Name: Index Temp
 					</div>
 				</span>
 			</li>
-			<li class="bjqs-slide">			
+			<li class="bjqs-slide">
 				<span class="image">
 					<img id="Image-Maps_920130426172526212" src="<?php echo bloginfo('template_url'); ?>/_tmp/3-perguntas_frequentes.jpg" />
 				</span>
@@ -81,14 +81,14 @@ Template Name: Index Temp
 <br /><br />
 <div class="wrapper" id="wrapper-third-home">
 	<h1>Notícias</h1>
-	
-	
+
+
 	<?php $news_query = new WP_Query( array('post_type' => 'noticias', 'posts_per_page' => 4)); ?>
 	<?php $count = 1; ?>
   <?php while ( $news_query->have_posts() ) : $news_query->the_post(); ?>
-	
+
     <?php if ($count == 1): ?>
-      
+
   	<div class="top-news">
   	  <?php if (get_the_post_thumbnail()): ?>
     		<div class="image">
@@ -104,9 +104,9 @@ Template Name: Index Temp
   		</div>
   		<div class="clear"></div>
   	</div>
-  	
+
   	<?php else : ?>
-  	
+
   	<?php if ($count == 2): ?>
     	<div class="bottom-news table">
     		<div class="news cell first">
@@ -147,8 +147,9 @@ Template Name: Index Temp
 			<h1>Agenda</h1>
 			<h3>Confira as próximas pautas discutidas.</h3>
 			<div id="calendar">
+                <?php $event_query = new WP_Query( array('post_type' => 'agenda', 'paged' => $paged, 'posts_per_page' => 2, 'meta_query' => array(array( 'key' => 'agenda_show_date','value' => time(),'compare' => '>='),),'orderby' => 'meta_value_num','order' => 'ASC','meta_key' => 'agenda_show_date')); ?>
+                <?php if ( $event_query->have_posts() ) { ?>
 				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/agenda">
-				  <?php $event_query = new WP_Query( array('post_type' => 'agenda', 'paged' => $paged, 'posts_per_page' => 2, 'meta_query' => array(array( 'key' => 'agenda_show_date','value' => time(),'compare' => '>='),),'orderby' => 'meta_value_num','order' => 'ASC','meta_key' => 'agenda_show_date')); ?>
 				  <?php while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
   					<div class="event">
   						<div class="event-date">
@@ -162,6 +163,9 @@ Template Name: Index Temp
   					</div>
 					<?php $count++; endwhile;?>
 				</a>
+                <?php } else { ?>
+                    <p style="display: inline-block; margin: 10px;">Não há eventos no momento. Confira os <a style="color: #000; text-decoration:underline;" href="<?php echo get_bloginfo( 'url' ); ?>/agenda-completa/">eventos já realizados</a>.</p>
+                <?php } ?>
 			</div>
 			<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/agenda" class="see-all-events">Veja a agenda completa</a>
 		</div>
@@ -220,7 +224,7 @@ Template Name: Index Temp
 		<div class="social-inner">
 			<iframe width="250" height="205" src="http://www.youtube.com/embed/NdQoEvIaxfE" frameborder="0" allowfullscreen></iframe>
 			<h3>Prefeitura de São Paulo - São Paulo 459 Anos - Comercial</h3>
-			
+
 		</div>
 		<div class="social-link"><a href="">Veja o canal</a></div>
 	</div>

@@ -14,14 +14,14 @@
 
 #library #arquivo-biblioteca {
     float: right;
-    margin: 10px 0 0 10px;
+    margin: 10px 0 0;
 }
 
 #library .input {
-    background: none repeat scroll 0 0 #D7322F;
+    background: none repeat scroll 0 0 #d3252d;
     float: right;
     margin: 10px 0;
-    padding: 5px 15px;
+    padding: 7px 15px;
 }
 #library .input label,
 #library .input input{
@@ -32,13 +32,14 @@
 #library .input label {
     color: #fff;
     margin: 0 5px 0 0;
+    line-height: 20px;
 }
 #library .nav-bar {
     clear: both;
     display: block;
     height: 60px;
     margin: 0 auto 40px auto;
-    width: 660px;
+    width: 735px;
 }
 #library .nav-bar ul {
     margin:0;
@@ -69,11 +70,12 @@
 }
 
 #library .inner .box a{
-	color:#D7322F;
+	color: #d3252d;
+	vertical-align: top;
 }
 
 #library .inner .box:hover {
-	background:#d7322f;
+	background: #d3252d;
 }
 
 #library .inner .box:hover a{
@@ -95,7 +97,23 @@
 #library .inner .box .inner-box h5{
 	margin-top:35px;
 }
+#library .inner .modo-lista .box {
+	width: 900px;
+	height: 30px;
+	padding:15px;
+	display:inline-block;
+}
+#library .inner .modo-lista .box .inner-box {
+	margin:0;
+	padding:0;
 
+}
+#library .inner .modo-lista .box .inner-box h5 {
+	display:inline-block;
+	margin:5px 0 0 30px;
+	vertical-align: top;
+
+}
 @media screen and (max-width: 539px) {
 
   #library .inner ul {

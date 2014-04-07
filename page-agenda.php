@@ -18,9 +18,9 @@ Template Name: Agendas
         <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 				<div class="text">
 				  <?php if (get_post_meta( $post->ID, 'agenda_show_date', true ) != '') : ?>
-				    <h2><?php _e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> <?php _e(date('M', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> | <?php echo ucfirst(__(date('l', get_post_meta( $post->ID, 'agenda_show_date', true )))); ?></h2>
+				    <h2><?php _e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> <?php _e(strftime('%b', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> | <?php echo ucfirst(__(date('l', get_post_meta( $post->ID, 'agenda_show_date', true )))); ?></h2>
 				  <?php else : ?>
-				    
+
 				  <?php endif; ?>
 					<?php the_post_thumbnail('170xX'); ?>
 					<h4><?php the_title(); ?></h4>
@@ -33,7 +33,7 @@ Template Name: Agendas
 					<?php endif; ?>
 				</div>
 				<?php $count++; endwhile;?>
-				
+
 				<?php
         global $wp_query;
         $current_page = $wp_query->get( 'paged' );
@@ -43,9 +43,9 @@ Template Name: Agendas
             <?php while ( $wp_query2->have_posts() ) : $wp_query2->the_post(); ?>
             <div class="text">
               <?php if (get_post_meta( $post->ID, 'agenda_show_date', true ) != '') : ?>
-                <h2><?php _e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> <?php _e(date('M', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> | <?php echo ucfirst(__(date('l', get_post_meta( $post->ID, 'agenda_show_date', true )))); ?></h2>
+                <h2><?php _e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> <?php _e(strftime('%b', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> | <?php echo ucfirst(__(date('l', get_post_meta( $post->ID, 'agenda_show_date', true )))); ?></h2>
               <?php else : ?>
-                
+
               <?php endif; ?>
               <?php the_post_thumbnail('170xX'); ?>
               <h4><?php the_title(); ?></h4>
@@ -59,21 +59,21 @@ Template Name: Agendas
             </div>
             <?php $count++; endwhile;?>
         <?php endif; ?>
-				
+
         <?php the_content_nav();wp_reset_query();?>
-        
-        
+
+
 			</div>
-			
-Veja a <a href="http://gestaourbana.prefeitura.sp.gov.br/agenda-completa/" target="_blank">lista completa</a> de atividades já realizadas.			
-			
-			
+
+Veja a <a href="http://gestaourbana.prefeitura.sp.gov.br/agenda-completa/" target="_blank">lista completa</a> de atividades já realizadas.
+
+
 		</div>
-		
+
 		<?php //include('agenda-sidebar.php'); ?>
-		
+
 		<div class="clear"></div>
-		
+
 	</div>
 </div>
 

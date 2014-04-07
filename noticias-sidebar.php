@@ -1,8 +1,8 @@
 <div id="news-sidebar" class="right sidebar">
 	<div class="inner">
-		
+
 		<?php dynamic_sidebar('noticias-sidebar') ?>
-		
+
 		<!--
 		<div class="box-destaque box">
 			<div class="title">
@@ -12,7 +12,7 @@
 	    	<?php $news_query = new WP_Query( array('post_type' => 'noticias', 'posts_per_page' => 3,'orderby' => 'meta_value_num','order' => 'DESC','meta_key' => 'views_counter_'.date('M'))); ?>
 	    	<?php $count = 1; ?>
 	    	<?php while ( $news_query->have_posts() ) : $news_query->the_post(); ?>
-	        
+
 	      	<div class="text">
 	        <?php the_post_thumbnail('96xX'); ?>
 	        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -22,22 +22,23 @@
 	    </div>
 		-->
 
-		
+
 		<div class="box-agenda box">
 			<div class="title">
 				<img src="<?php echo bloginfo('template_url'); ?>/images/title-news_sidebar-agenda.png" />
 			</div>
-			
+
 			<div id="calendar">
-				<?php $event_query = new WP_Query( array('post_type' => 'agenda', 'posts_per_page' => 2, 'meta_query' => array(array( 'key' => 'agenda_show_date','value' => time(),'compare' => '>='),),'orderby' => 'meta_value_num','order' => 'ASC','meta_key' => 'agenda_show_date')); ?>
+				<?php $event_query = new WP_Query( array('post_type' => 'agenda', 'posts_per_page' => 3, 'meta_query' => array(array( 'key' => 'agenda_show_date','value' => time(),'compare' => '>='),),'orderby' => 'meta_value_num','order' => 'ASC','meta_key' => 'agenda_show_date')); ?>
+                <?php if ( $event_query->have_posts() ) { ?>
         		<?php while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
-				
+
 				<div class="event">
 					<div class="event-date">
 						<div class="number"><?php _e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?></div>
-						<div class="month"><?php _e(date('M', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?></div>
+						<div class="month"><?php _e(strftime('%b', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?></div>
 					</div>
-					
+
 					<div class="event-text">
 						<?php the_title(); ?>
 					</div>
@@ -45,11 +46,14 @@
 				</div>
 				<?php $count++; endwhile;?>
 				<div class="clear"></div>
+                <?php } else { ?>
+                    <p style="display: inline-block; margin: 10px;">Não há eventos no momento. Confira os <a style="color: #000; text-decoration:underline;" href="<?php echo get_bloginfo( 'url' ); ?>/agenda-completa/">eventos já realizados</a>.</p>
+                <?php } ?>
 			</div>
-			<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/evento">Veja a agenda completa</a>		  
+			<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/evento">Veja a agenda completa</a>
 		</div>
-		
-		
+
+
 		<!--
 		<div class="box-biblioteca box">
 			<div class="title">
@@ -60,7 +64,7 @@
 			<p><a href="/index.php/biblioteca">Veja todos os arquivos</a></p>
 		</div>
 		-->
-		
+
 		<!--
 		<div class="box-saibamais box">
 			<img id="Image-Maps_8201305031754171" src="<?php echo bloginfo('template_url'); ?>/images/box-news-sidebar-saibamais.png" usemap="#Image-Maps_8201305031754171" border="0" width="301" height="225" alt="" />

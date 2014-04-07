@@ -8,7 +8,7 @@
 				<h1>Agenda</h1>
 				<div class="text">
 				  <?php if (get_post_meta( $post->ID, 'agenda_show_date', true ) != '') : ?>
-					<h2><?php _e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> <?php _e(date('M', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> | <?php echo ucfirst(__(date('l', get_post_meta( $post->ID, 'agenda_show_date', true )))); ?></h2>
+					<h2><?php _e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> <?php _e(strftime('%b', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?> | <?php echo ucfirst(__(date('l', get_post_meta( $post->ID, 'agenda_show_date', true )))); ?></h2>
 					<?php endif; ?>
 					<?php the_post_thumbnail('170xX'); ?>
 					<h4><?php the_title(); ?></h4>
@@ -20,7 +20,7 @@
 					<div class="information">Informações:</div>
 					<p><?php the_content(); ?></p>
 				</div>
-				
+
 				<?php /*<div class="see-also">
 					<img src="<?php echo bloginfo('template_url'); ?>/images/title-news_interna-veja_tambem.png" />
 					<ul>
@@ -39,15 +39,15 @@
 					</ul>
 				</div>	*/ ?>
 			</div>
-						
-			
-			
+
+
+
 		</div>
-		
+
 		<?php include("noticias-sidebar.php"); ?>
-		
+
 		<div class="clear"></div>
-		
+
 	</div>
 </div>
 

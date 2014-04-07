@@ -1,0 +1,227 @@
+[
+    {
+        "all_city": {
+
+        },
+        "goals_order": [1, 10, 11, 12, 2, 3, 4, 5, 6, 7, 8, 9],
+        "subprefeituras": [
+            {
+                "id": "S_1",
+                "name": "Aricanduva",
+                "map_position": 2632,
+                "absoluto": [3, 1, 1, 3, 2, 2, 0, 0, 0, 2, 1, 0],
+                "percentage_oficina": [20.0, 6.7, 6.7, 20.0, 13.3, 13.3, 0.0, 0.0, 0.0, 13.3, 6.7, 0.0]
+            },
+            {
+                "id": "S_2",
+                "name": "Butantã",
+                "map_position": 3384,
+                "absoluto": [3, 6, 0, 10, 7, 9, 10, 8, 3, 5, 3, 0],
+                "percentage_oficina": [4.7, 9.4, 0.0, 15.6, 10.9, 14.1, 15.6, 12.5, 4.7, 7.8, 4.7, 0.0]
+            },
+            {
+                "id": "S_3",
+                "name": "Campo Limpo",
+                "map_position": 4512,
+                "absoluto": [3, 6, 1, 1, 5, 2, 0, 1, 0, 4, 3, 0],
+                "percentage_oficina": [11.5, 23.1, 3.8, 3.8, 19.2, 7.7, 0.0, 3.8, 0.0, 15.4, 11.5, 0.0]
+            },
+            {
+                "id": "S_4",
+                "name": "Capela do Socorro",
+                "map_position": 5264,
+                "absoluto": [1, 5, 1, 4, 4, 1, 0, 2, 2, 2, 4, 0],
+                "percentage_oficina": [3.8, 19.2, 3.8, 15.4, 15.4, 3.8, 0.0, 7.7, 7.7, 7.7, 15.4, 0.0]
+            },
+            {
+                "id": "S_5",
+                "name": "Casa Verde",
+                "map_position": 752,
+                "absoluto": [2, 7, 1, 4, 5, 0, 0, 3, 0, 3, 3, 1],
+                "percentage_oficina": [6.9, 24.1, 3.4, 13.8, 17.2, 0.0, 0.0, 10.3, 0.0, 10.3, 10.3, 3.4]
+            },
+            {
+                "id": "S_6",
+                "name": "Cidade Ademar",
+                "map_position": 5452,
+                "absoluto": [3, 4, 1, 2, 7, 0, 0, 2, 1, 2, 6, 0],
+                "percentage_oficina": [10.7, 14.3, 3.6, 7.1, 25.0, 0.0, 0.0, 7.1, 3.6, 7.1, 21.4, 0.0]
+            },
+            {
+                "id": "S_7",
+                "name": "Cidade Tiradentes",
+                "map_position": 3196,
+                "absoluto": [0, 9, 3, 4, 8, 1, 0, 4, 0, 4, 6, 0],
+                "percentage_oficina": [0.0, 23.1, 7.7, 10.3, 20.5, 2.6, 0.0, 10.3, 0.0, 10.3, 15.4, 0.0]
+            },
+            {
+                "id": "S_8",
+                "name": "Ermelino Matarazzo",
+                "map_position": 1504,
+                "absoluto": [4, 18, 11, 1, 6, 3, 2, 5, 1, 5, 30, 4],
+                "percentage_oficina": [4.4, 20.0, 12.2, 1.1, 6.7, 3.3, 2.2, 5.6, 1.1, 5.6, 33.3, 4.4]
+            },
+            {
+                "id": "S_9",
+                "name": "Freguesia do Ó",
+                "map_position": 564,
+                "absoluto": [4, 8, 3, 3, 5, 0, 0, 2, 1, 16, 6, 1],
+                "percentage_oficina": [8.2, 16.3, 6.1, 6.1, 10.2, 0.0, 0.0, 4.1, 2.0, 32.7, 12.2, 2.0]
+            },
+            {
+                "id": "S_10",
+                "name": "Guaianases",
+                "map_position": 3008,
+                "absoluto": [2, 5, 1, 3, 3, 1, 1, 2, 0, 3, 5, 1],
+                "percentage_oficina": [7.4, 18.5, 3.7, 11.1, 11.1, 3.7, 3.7, 7.4, 0.0, 11.1, 18.5, 3.7]
+            },
+            {
+                "id": "S_11",
+                "name": "Ipiranga",
+                "map_position": 3948,
+                "absoluto": [4, 17, 3, 3, 15, 2, 1, 6, 1, 38, 13, 1],
+                "percentage_oficina": [3.8, 16.3, 2.9, 2.9, 14.4, 1.9, 1.0, 5.8, 1.0, 36.5, 12.5, 1.0]
+            },
+            {
+                "id": "S_12",
+                "name": "Itaim Paulista",
+                "map_position": 1880,
+                "absoluto": [4, 13, 3, 3, 6, 2, 1, 3, 0, 5, 8, 1],
+                "percentage_oficina": [8.2, 26.5, 6.1, 6.1, 12.2, 4.1, 2.0, 6.1, 0.0, 10.2, 16.3, 2.0]
+            },
+            {
+                "id": "S_13",
+                "name": "Itaquera",
+                "map_position": 2820,
+                "absoluto": [6, 10, 2, 4, 1, 2, 0, 3, 0, 8, 12, 0],
+                "percentage_oficina": [12.5, 20.8, 4.2, 8.3, 2.1, 4.2, 0.0, 6.3, 0.0, 16.7, 25.0, 0.0]
+            },
+            {
+                "id": "S_14",
+                "name": "Jabaquara",
+                "map_position": 4888,
+                "absoluto": [2, 4, 4, 2, 1, 1, 0, 0, 0, 2, 2, 0],
+                "percentage_oficina": [11.1, 22.2, 22.2, 11.1, 5.6, 5.6, 0.0, 0.0, 0.0, 11.1, 11.1, 0.0]
+            },
+            {
+                "id": "S_15",
+                "name": "Jaçanã/Tremembé",
+                "map_position": 1128,
+                "absoluto": [3, 5, 0, 4, 4, 1, 0, 1, 0, 3, 0, 0],
+                "percentage_oficina": [14.3, 23.8, 0.0, 19.0, 19.0, 4.8, 0.0, 4.8, 0.0, 14.3, 0.0, 0.0]
+            },
+            {
+                "id": "S_16",
+                "name": "Lapa",
+                "map_position": 2068,
+                "absoluto": [3, 14, 3, 6, 8, 0, 2, 14, 2, 7, 5, 2],
+                "percentage_oficina": [4.5, 21.2, 4.5, 9.1, 12.1, 0.0, 3.0, 21.2, 3.0, 10.6, 7.6, 3.0]
+            },
+            {
+                "id": "S_17",
+                "name": "M'Boi Mirim",
+                "map_position": 5076,
+                "absoluto": [0, 8, 2, 0, 4, 4, 3, 2, 0, 6, 7, 2],
+                "percentage_oficina": [0.0, 21.1, 5.3, 0.0, 10.5, 10.5, 7.9, 5.3, 0.0, 15.8, 18.4, 5.3]
+            },
+            {
+                "id": "S_18",
+                "name": "Mooca",
+                "map_position": 2444,
+                "absoluto": [5, 4, 3, 5, 2, 7, 0, 5, 1, 3, 7, 0],
+                "percentage_oficina": [11.9, 9.5, 7.1, 11.9, 4.8, 16.7, 0.0, 11.9, 2.4, 7.1, 16.7, 0.0]
+            },
+            {
+                "id": "S_19",
+                "name": "Parelheiros",
+                "map_position": 5640,
+                "absoluto": [1, 13, 4, 3, 4, 0, 1, 2, 0, 2, 8, 0],
+                "percentage_oficina": [2.6, 34.2, 10.5, 7.9, 10.5, 0.0, 2.6, 5.3, 0.0, 5.3, 21.1, 0.0]
+            },
+            {
+                "id": "S_20",
+                "name": "Penha",
+                "map_position": 5828,
+                "absoluto": [3, 3, 1, 6, 3, 2, 0, 1, 1, 5, 2, 0],
+                "percentage_oficina": [11.1, 11.1, 3.7, 22.2, 11.1, 7.4, 0.0, 3.7, 3.7, 18.5, 7.4, 0.0]
+            },
+            {
+                "id": "S_21",
+                "name": "Perus",
+                "map_position": 188,
+                "absoluto": [6, 0, 1, 4, 9, 2, 1, 4, 2, 13, 12, 1],
+                "percentage_oficina": [10.9, 0.0, 1.8, 7.3, 16.4, 3.6, 1.8, 7.3, 3.6, 23.6, 21.8, 1.8]
+            },
+            {
+                "id": "S_22",
+                "name": "Pinheiros",
+                "map_position": 3572,
+                "absoluto": [1, 7, 1, 9, 4, 3, 3, 2, 0, 2, 0, 2],
+                "percentage_oficina": [2.9, 20.6, 2.9, 26.5, 11.8, 8.8, 8.8, 5.9, 0.0, 5.9, 0.0, 5.9]
+            },
+            {
+                "id": "S_23",
+                "name": "Pirituba/Jaraguá",
+                "map_position": 376,
+                "absoluto": [6, 10, 0, 5, 8, 3, 0, 1, 2, 13, 8, 1],
+                "percentage_oficina": [10.5, 17.5, 0.0, 8.8, 14.0, 5.3, 0.0, 1.8, 3.5, 22.8, 14.0, 1.8]
+            },
+            {
+                "id": "S_24",
+                "name": "Santana/Tucuruvi",
+                "map_position": 940,
+                "absoluto": [3, 1, 4, 4, 7, 1, 0, 2, 1, 3, 0, 0],
+                "percentage_oficina": [11.5, 3.8, 15.4, 15.4, 26.9, 3.8, 0.0, 7.7, 3.8, 11.5, 0.0, 0.0]
+            },
+            {
+                "id": "S_25",
+                "name": "Santo Amaro",
+                "map_position": 4700,
+                "absoluto": [6, 7, 0, 5, 2, 4, 5, 5, 4, 2, 1, 1],
+                "percentage_oficina": [14.3, 16.7, 0.0, 11.9, 4.8, 9.5, 11.9, 11.9, 9.5, 4.8, 2.4, 2.4]
+            },
+            {
+                "id": "S_26",
+                "name": "São Mateus",
+                "map_position": 4324,
+                "absoluto": [5, 3, 0, 5, 5, 3, 0, 6, 3, 10, 9, 3],
+                "percentage_oficina": [9.6, 5.8, 0.0, 9.6, 9.6, 5.8, 0.0, 11.5, 5.8, 19.2, 17.3, 5.8]
+            },
+            {
+                "id": "S_27",
+                "name": "São Miguel Paulista",
+                "map_position": 1692,
+                "absoluto": [2, 5, 1, 2, 6, 1, 0, 4, 1, 6, 7, 1],
+                "percentage_oficina": [5.6, 13.9, 2.8, 5.6, 16.7, 2.8, 0.0, 11.1, 2.8, 16.7, 19.4, 2.8]
+            },
+            {
+                "id": "S_28",
+                "name": "Sé",
+                "map_position": 2256,
+                "absoluto": [5, 10, 3, 16, 7, 1, 2, 10, 4, 6, 6, 2],
+                "percentage_oficina": [6.9, 13.9, 4.2, 22.2, 9.7, 1.4, 2.8, 13.9, 5.6, 8.3, 8.3, 2.8]
+            },
+            {
+                "id": "S_29",
+                "name": "V.Maria/V.Guilherme",
+                "map_position": 1316,
+                "absoluto": [1, 15, 3, 6, 5, 1, 4, 5, 2, 9, 6, 1],
+                "percentage_oficina": [1.7, 25.9, 5.2, 10.3, 8.6, 1.7, 6.9, 8.6, 3.4, 15.5, 10.3, 1.7]
+            },
+            {
+                "id": "S_30",
+                "name": "Vila Mariana",
+                "map_position": 3760,
+                "absoluto": [2, 9, 2, 9, 6, 2, 1, 6, 1, 2, 0, 0],
+                "percentage_oficina": [5.0, 22.5, 5.0, 22.5, 15.0, 5.0, 2.5, 15.0, 2.5, 5.0, 0.0, 0.0]
+            },
+            {
+                "id": "S_31",
+                "name": "Vila Prudente",
+                "map_position": 4136,
+                "absoluto": [2, 5, 2, 0, 4, 7, 0, 1, 0, 13, 8, 1],
+                "percentage_oficina": [4.7, 11.6, 4.7, 0.0, 9.3, 16.3, 0.0, 2.3, 0.0, 30.2, 18.6, 2.3]
+            }
+        ]
+    }
+]

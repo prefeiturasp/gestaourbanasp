@@ -16,25 +16,33 @@ Template Name: Participe V.2
 		font-family: 'museoSlab', Arial,sans-serif;
 		font-weight: bold;
 		font-size: 90%;
+        text-align: center;
+        margin: 0 20px 0 0;
+	}
+    .col .p1,
+    .col .p2,
+    .col .p3 {
+        text-align: left;
+        height: 120px;
+    }
+
+	/*.col1, .col2 {
+		margin-right: 25px;
 	}
 
-	.col1, .col2 {
-		margin-right: 30px;
-	}
+	#page-participe p {min-height: 70px} */
 
-	#page-participe p {min-height: 70px}
-
-	.col1 .arrow {
+	/*.col .arrow {
 		margin-left: 150px;
 	}
 
 	.col2 .arrow {
-		margin-left: 140px;
+		 margin-left: 140px;
 	}
 
 	.col3 .arrow {
 		margin-left: 110px;
-	}
+	}*/
 
 	#page-participe {
 		background: url(http://gestaourbana.prefeitura.sp.gov.br/wp-content/themes/gestaourbana-1.2/images/participe/bg-participe.jpg) no-repeat center 0 transparent;
@@ -49,10 +57,27 @@ Template Name: Participe V.2
 	<div class="wrapper">
 		<h1> <?php the_title() ?> </h1>
 
-		<p>Antes de escolher uma das opções, consulte as <a id="inline" href="http://gestaourbana.prefeitura.sp.gov.br/regras_b">regras</a></p>
+		<p>Escolha umas das opções para colaborar com a 4ª e última etapa da revisão do Plano Diretor Estratégico:</p>
 
 		<div class="col1 col">
-			<p class="p1">Aponte no mapa da capital o que está bom ou precisa melhorar na sua região. De ideias como intervenções urbanísticas, corredores urbanos, parques lineares, etc.</p>
+			<p class="p1">Acompanhe a agenda de atividades e participe através de atividades devolutivas na sua região e audiências públicas.</p>
+			<img src="<?php bloginfo('template_url') ?>/images/participe/arrow_1.png" class="arrow">
+			<br />&nbsp;<a href="http://gestaourbana.prefeitura.sp.gov.br/evento/">
+				<img class="big-btn" src="<?php bloginfo('template_url') ?>/images/participe/botao_participe_agenda.png">
+			</a>
+		</div>
+
+		<div class="col2 col">
+			<p class="p2">Faça sua contribuição diretamente no Plano Diretor Estratégico analisando e comentando o texto da Minuta de Projeto de Lei que será enviada para a Câmara.</p>
+			<!-- <p style="position:absolute; height:1px">Em breve </p> -->
+			<img src="<?php bloginfo('template_url') ?>/images/participe/arrow_1.png" class="arrow">
+			<br />&nbsp;<a href="http://minuta.gestaourbana.prefeitura.sp.gov.br">
+				<img class="big-btn" src="<?php bloginfo('template_url') ?>/images/participe/botao_participe_minuta.png">
+			</a>
+		</div>
+
+		<div class="col3 col">
+			<p class="p3">Aponte no mapa da capital o que está bom ou precisa melhorar na sua região. De ideias como intervenções urbanísticas, corredores urbanos, parques lineares, etc.</p>
 			<!-- <p style="position:absolute; height:1px">Em breve </p> -->
 			<img src="<?php bloginfo('template_url') ?>/images/participe/arrow_1.png" class="arrow">
 			<br />&nbsp;<a href="http://mapa.gestaourbana.prefeitura.sp.gov.br/">
@@ -60,22 +85,7 @@ Template Name: Participe V.2
 			</a>
 		</div>
 
-		<div class="col2 col">
-			<p class="p2">Faça sua contribuição diretamente para o Plano Diretor Estratégico preenchendo o formulário de envio de proposta.</p>
-			<!-- <p style="position:absolute; height:1px">Em breve </p> -->
-			<img src="<?php bloginfo('template_url') ?>/images/participe/arrow_2.png" class="arrow">
-			<br />&nbsp;<a href="https://docs.google.com/forms/d/1Z-wBhdGGHcHkTzWlTwDKjGRrwlGa1gl64EJi35IuRsA/viewform">
-				<img class="big-btn" src="<?php bloginfo('template_url') ?>/images/participe/btn-formulario.jpg">
-			</a>
-		</div>
 
-		<div class="col3 col">
-			<p class="p3">Acompanhe a agenda de atividades e participe através de oficinas de propostas na sua região.</p>
-			<img src="<?php bloginfo('template_url') ?>/images/participe/arrow_3.png" class="arrow">
-			<br />&nbsp;<a href="http://gestaourbana.prefeitura.sp.gov.br/evento/">
-				<img class="big-btn" src="<?php bloginfo('template_url') ?>/images/participe/btn-agenda.jpg">
-			</a>
-		</div>
 		<!--
 		<div class="col12 clear alpha omega">
 			<p><br /><br />ATENÇÃO - REGRAS<br /><br />

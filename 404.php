@@ -11,27 +11,26 @@
 		font-size: 20px;
 	}
 
-	.content {
+	.content.quatro-zero-quatro {
 		min-height: 175px;
-		width: 780px;
+		width: 280px;
 		margin: 0 auto;
 		position: relative;
 		top:35px;
+        text-align: center;
 	}
+    .content.quatro-zero-quatro a img {
+        margin-left:-75px;
+    }
 </style>
 
 <div class="wrapper">
-	<div class="content">
-		<div class="left">
-			<img src="<?php bloginfo('template_url') ?>/images/404-image.png" width="329" height="250" style="margin-left:15px"> 
-		</div>
-		<div class="right">
+	<div class="content quatro-zero-quatro">
 			<h1>Oops!<br /> Erro.</h1>
 			<h2>Página não encontrada</h2>
 			<a href="<?php bloginfo('url') ?>">
-				<img src="<?php bloginfo('template_url') ?>/images/404-btn-back.png" style="position: relative; left:-60px">
+				<img src="<?php bloginfo('template_url') ?>/images/404-btn-back.png">
 			</a>
-		</div>
 	</div>
 </div>
 
