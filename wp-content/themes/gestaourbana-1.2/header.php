@@ -111,6 +111,7 @@ wp_head();
 				<?php wp_nav_menu(array('theme_location' => 'revisao-menu')); ?>
 				<?php wp_nav_menu(array('theme_location' => 'arco-menu')); ?>
 				<?php wp_nav_menu(array('theme_location' => 'dialogo-menu')); ?>
+                <?php wp_nav_menu(array('theme_location' => 'territorio-menu')); ?>
 			</div>
 		</div>	
 	</div>

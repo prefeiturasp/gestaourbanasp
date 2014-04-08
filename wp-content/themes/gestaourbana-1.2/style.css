@@ -854,7 +854,7 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 }
 
 #project-nav .menu-projetos {
-	width: 710px;
+	width: 960px;
 	height: 100%;
 }
 
@@ -960,8 +960,8 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 }
 
 /*setando cor do menu de arco*/
-#menu-territorio-ceu, #menu-territorio-ceu .sub-menu{
-	background: #faa627;
+#menu-territorio-ceu li a, #menu-territorio-ceu .sub-menu li a{
+	color: #FFCC00;
 }
 
 /*setando cor do menu de dialogo*/
