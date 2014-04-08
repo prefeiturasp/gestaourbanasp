@@ -26,6 +26,7 @@ wp-content/*
 # Ignore everything in the "plugins" directory, except the plugins you
 # specify (see the commented-out examples for hints on how to do this.)
 wp-content/plugins/*
+!wp-content/plugins/nav-menu-custom-fields.php
 !wp-content/plugins/advanced-custom-fields
 !wp-content/plugins/akismet
 !wp-content/plugins/backwpup

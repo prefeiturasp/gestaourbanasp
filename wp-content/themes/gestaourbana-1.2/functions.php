@@ -28,7 +28,8 @@
         'revisao-menu' => __('Revisão dos instrumentos menu'),
         'arco-menu' => __('Arco do futuro menu'),
         //'territorio-menu' => __('Território CEU menu'),
-        'dialogo-menu' => __('Centro Diálogo Aberto')
+        'dialogo-menu' => __('Centro Diálogo Aberto'),
+        'projetos-destaque' => __('Projetos em destaque'),
       )
     );
   }
@@ -1195,4 +1196,3 @@ function form_aviso_plataforma_participativa_shorcode( $atts ) {
 
 }
 add_shortcode( 'aviso-plataforma-participativa', 'form_aviso_plataforma_participativa_shorcode' );
-
