@@ -978,6 +978,10 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 	color: #fff;
 	background-color: #00aeec;
 }
+#menu-projetos-especiais .sub-menu li a:hover{
+	color: #fff;
+	background-color: #6B238E;
+}
 
 /*PAGINA DE CENTRO DIALOGO ABERTO*/
 .wrapper.page-dialogo {
