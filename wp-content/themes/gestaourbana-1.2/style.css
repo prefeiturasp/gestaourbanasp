@@ -862,7 +862,7 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 	max-width: 226px;
 	height: 78px;
 	float: left;
-	padding-right: 20px;
+	padding-right: 10px;
 }
 
 #project-nav .menu .sub-menu {
@@ -968,6 +968,11 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 #menu-centro-dialogo-aberto li a, #menu-centro-dialogo-aberto .sub-menu li a{
 	color: #00aeec;
 }
+
+#menu-projetos-especiais li a, #menu-projetos-especiais .sub-menu li a{
+	color: #6B238E;
+}
+
 /*setando cor do menu de dialogo*/
 #menu-centro-dialogo-aberto .sub-menu li a:hover{
 	color: #fff;

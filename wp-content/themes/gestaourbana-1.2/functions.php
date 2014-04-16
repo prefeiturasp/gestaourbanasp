@@ -28,7 +28,8 @@
         'revisao-menu' => __('Revisão dos instrumentos menu'),
         'arco-menu' => __('Arco do futuro menu'),
         'territorio-menu' => __('Território CEU menu'),
-        'dialogo-menu' => __('Centro Diálogo Aberto')
+        'dialogo-menu' => __('Centro Diálogo Aberto'),
+        'projetos-especiais' => __('Projetos Especiais')
       )
     );
   }
