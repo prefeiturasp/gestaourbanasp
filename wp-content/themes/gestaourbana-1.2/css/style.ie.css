@@ -17,7 +17,8 @@ header .inner ul li.last .social-buttons {
 }
 
 header .inner ul li.last .social-buttons .fb-like {
-  width:74px;
+  /*width:74px;*/
+  width:34px;
   float:left;
 }
 

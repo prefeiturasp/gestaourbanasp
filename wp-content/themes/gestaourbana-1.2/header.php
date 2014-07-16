@@ -62,12 +62,17 @@ wp_head();
 			<div class="wrapper">
 				<ul>
 					<li id="first">
-						<a href="<?php echo get_bloginfo( 'url' ); ?>" title="home"><img src="<?php echo bloginfo('template_url'); ?>/images/logo-gestao_urbana-home.png" /></a>
+<!--						<a href="<?php //echo get_bloginfo( 'url' ); ?>" title="home"><img src="<?php //echo bloginfo('template_url'); ?>/images/logo-gestao_urbana-home.png" /></a>-->
+                                                <a href="<?php echo get_bloginfo( 'url' ); ?>" title="home"><img src="<?php echo bloginfo('template_url'); ?>/images/logo_gestao.jpg" /></a>
 					</li>
 					<li  id="second">
-						<img src="<?php echo bloginfo('template_url'); ?>/images/logo-prefeitura.png" />
+<!--						<img src="<?php //echo bloginfo('template_url'); ?>/images/logo-prefeitura.png" />-->
+                                            <img src="<?php echo bloginfo('template_url'); ?>/images/logo_prefeitura.jpg" />
 					</li>
-					<li id="newsletter">
+					<li>
+                                            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+                                        </li>
+					<!--<li id="newsletter">
 						<div class="left label"  style="padding-top: 4px;">
 							Cadastre-se e<br />receba notícias
 						</div>
@@ -78,13 +83,13 @@ wp_head();
 							</form>
 						</div>
 						<div class="clear"></div>
-					</li>
+					</li>-->
 					<li class="last">
-						<div class="left label">
+						<!--<div class="left label">
 						  Redes<br />sociais
-						</div>
+						</div>-->
 						<div class="right social-buttons">
-							<iframe src="<?php echo bloginfo('template_url'); ?>/social-bar-home.php" name="social-bar-home" frameborder="0" height="25" width="180" scrolling="no"></iframe>
+							<iframe src="<?php echo bloginfo('template_url'); ?>/social-bar-home.php" name="social-bar-home" frameborder="0" height="30" width="113" scrolling="no"></iframe>
 						</div>
 						<div class="clear"></div>
 					</li>
@@ -95,24 +100,25 @@ wp_head();
 	</header>
 	<div id="nav">
 		<div class="wrapper" id="wrapper-first">
-		  <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+		  <?php //wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 			<div id="search">
 				<?php /*<input type="text" value="Pesquisar" /><input type="submit" value="" />*/ ?>
 			</div>
 			<div class="clear"></div>
-		</div> <!-- #wrapper -->
+		</div>
+        <!-- #wrapper -->
 	</div>
 	<div id="project-nav">
 		<div class="wrapper" id="wrapper-first">
 			<div class="menu-projetos">
-				<div class="label">
+				<!--<div class="label">
 					<b>Acontecendo agora:</b>
-				</div>
+				</div>-->
 				<?php wp_nav_menu(array('theme_location' => 'revisao-menu')); ?>
 				<?php wp_nav_menu(array('theme_location' => 'arco-menu')); ?>
 				<?php wp_nav_menu(array('theme_location' => 'dialogo-menu')); ?>
-                <?php wp_nav_menu(array('theme_location' => 'territorio-menu')); ?>
-                <?php wp_nav_menu(array('theme_location' => 'projetos-especiais')); ?>
+                                <?php wp_nav_menu(array('theme_location' => 'territorio-menu')); ?>
+                                <?php wp_nav_menu(array('theme_location' => 'projetos-especiais')); ?>
 			</div>
 		</div>	
 	</div>

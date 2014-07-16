@@ -3,16 +3,19 @@
 }
 
 #wrapper-second-home #banner-slide {
-  margin-top: 30px;
+  margin-top: 32px;
 }
 
-#wrapper-second-home #banner-slide  .image {
-
-  max-width: 512px;
+#wrapper-second-home #banner-slide  .image
+{
+    /*max-width: 512px;*/
+    max-width: 960px;
+    height: 405px;
 }
 
 #wrapper-second-home #banner-slide .image  img{
-  width:100%;
+    width:100%;
+    height: 405px;
 }
 
 #wrapper-second-home #banner-slide .text  img{
@@ -20,17 +23,25 @@
   height:auto;
 }
 
-#wrapper-second-home #banner-slide  .text {
-  position: absolute;
-  top: 0;
-  width: 45%;
-  z-index: 999;
-  margin-top:10px;
+#wrapper-second-home #banner-slide .text {
+    /*position: absolute;*/
+    top: 0;
+    /*width: 45%;*/
+    z-index: 999;
+    /*margin-top:10px;*/
+    width: 960px;
+    padding-left: 30px;
+    height: 45px;
+    padding-top: 2px;
 }
 
 #wrapper-second-home #banner-slide  .text h2 {
-  color:#333333;
-  /*margin-bottom:36.5px;*/
+    /*color:#333333;*/
+    /*margin-bottom:36.5px;*/
+    font-family: 'museoSlab', Arial, sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
 }
 
 #wrapper-second-home #banner-slide  .text p {
@@ -39,11 +50,36 @@
   /*line-height:120%;*/
 }
 
+.RevisaoInstrumentos
+{
+    background-color: #C81400;
+}
+
+.ArcoFuturo
+{
+    background-color: #EA5600;
+}
+
+.CentroDialogoAberto
+{
+    background-color: #00AEEB;
+}
+
+.TerritoriosCeu
+{
+    background-color: #FFCC01;
+}
+
+.ProjetosEspeciais
+{
+    background-color: #C14292;
+}
+
 #wrapper-second-home #banner-slide  .toolbar-links {
     width: 100%;
     text-align: center;
     background: url("../images/bg-nav.png") repeat-x scroll center top transparent;
-    margin: 30px 0  0;
+    /*margin: 30px 0  0;*/
     padding: 30px 0 0;
 }
 
@@ -54,12 +90,12 @@
 #wrapper-second-home #banner-slide  .toolbar-links ul li {
     display: inline-block;
     width: 205px;
-    height: 205px;
+    /*height: 205px;*/
     margin:0 15px;
 }
 #wrapper-second-home #banner-slide  .toolbar-links ul li a {
     width: 205px;
-    height: 205px;
+    /*height: 205px;*/
     float: left;
 }
 #wrapper-second-home #banner-slide  .toolbar-links ul li a img{
@@ -109,6 +145,70 @@
   border-bottom: 1px solid #ddd;
 }
 
+#wrapper-third-home #titulo_noticias
+{
+    margin-top: 60px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+#wrapper-third-home #titulo_noticias #logo_noticias
+{
+    margin-top: -12px;
+    margin-bottom: 15px;
+}
+
+#wrapper-third-home #newsletter
+{
+    float: right;
+    font-family: 'museoSlab', Arial, sans-serif;
+    font-size: 12px;
+    width: 480px;
+}
+
+#wrapper-third-home #newsletter label
+{
+    /*width: 97px;*/
+    width: 180px;
+    padding-right: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+#wrapper-third-home #register-newsletter-box
+{
+    /*width: 199px;*/
+    width: 335px;
+    padding-left: 10px;
+    margin-top: -5px;
+}
+
+#wrapper-third-home #newsletter input[type="submit"]
+{
+    width:39px;
+    height:31px;
+    /*background:#d7322f;*/
+    background: #B6B6B4;
+    color:white;
+    border:none;
+    margin:0;
+    cursor:pointer;
+    margin-left: 10px;
+}
+
+#wrapper-third-home #newsletter input[type="text"]
+{
+    /*width:134px;*/
+    width: 260px;
+    height:12px;
+    /*border:1px solid #e2e2e2;*/
+    border:1px solid #E6E6E6;
+    /*color:#d7322f;*/
+    font-size: 12px;
+    padding: 9px 12px;
+    margin:0;
+}
+
 #wrapper-third-home .top-news {
   width:100%;
   margin-bottom:60px;
@@ -127,14 +227,14 @@
 #wrapper-third-home .news-date{
   font-size: 14px;
   color: #666;
-  font-family: 'museuSlab', Arial, sans-serif;
+  font-family: 'museoSlab', Arial, sans-serif;
   font-weight: bold;
 }
 
 #wrapper-third-home .top-news .news-title{
   font-size: 20px;
   color: #000;
-  font-family: 'museuSlab', Arial, sans-serif;
+  font-family: 'museoSlab', Arial, sans-serif;
   margin: 5px 0;
   font-weight: bold;
 }
@@ -145,6 +245,11 @@
   color: #000;
   font-weight: bold;
   letter-spacing: 0px;
+}
+
+/* cor da barra lateral das noticias top */
+#wrapper-third-home .top-news .newsRevisaoInstrumentos{
+  border-left: 7px solid red;
 }
 
 .taxonomy-breadcrumb{
@@ -193,7 +298,7 @@
 .taxonomy-breadcrumb .breadcrumb-first a{
   color: #fff;
   font-size: 15px;
-  font-family: 'museuSlab', Arial, sans-serif;
+  font-family: 'museoSlab', Arial, sans-serif;
   line-height: 2.5;
   font-size: 15px;
   font-weight: 600;
@@ -212,7 +317,7 @@
 .taxonomy-breadcrumb .breadcrumb-next a{
   color: #fff;
   font-size: 12px;
-  font-family: 'museuSlab', Arial, sans-serif;
+  font-family: 'museoSlab', Arial, sans-serif;
   line-height: 1.8;
   font-size: 15px;
   font-weight: 600;
@@ -220,12 +325,57 @@
 }
 
 #wrapper-third-home .bottom-news {
-  border-top: 1px solid #ddd;  
+  border-top: 1px solid #ddd;
 }
 
 #wrapper-third-home .bottom-news .news{
   width:30%;
   float:left;
+}
+
+/* cor da barra lateral das noticias bottom */
+#wrapper-third-home .bottom-news .newsRevisaoInstrumentos
+{
+    /*border: 1px solid black;*/
+    border-left: 7px solid #C81400;
+    /*width: 50px;*/
+    height: 90px;
+}
+
+/* cor da barra lateral das noticias bottom */
+#wrapper-third-home .bottom-news .newsArcoFuturo
+{
+    /*border: 1px solid black;*/
+    border-left: 7px solid #EA5600;
+    /*width: 50px;*/
+    height: 90px;
+}
+
+/* cor da barra lateral das noticias bottom */
+#wrapper-third-home .bottom-news .newsCentroDialogoAberto
+{
+    /*border: 1px solid black;*/
+    border-left: 7px solid #00AEEB;
+    /*width: 50px;*/
+    height: 90px;
+}
+
+/* cor da barra lateral das noticias bottom */
+#wrapper-third-home .bottom-news .newsTerritoriosCeu
+{
+    /*border: 1px solid black;*/
+    border-left: 7px solid #FFCC01;
+    /*width: 50px;*/
+    height: 90px;
+}
+
+/* cor da barra lateral das noticias bottom */
+#wrapper-third-home .bottom-news .newsProjetosEspeciais
+{
+    /*border: 1px solid black;*/
+    border-left: 7px solid #C14292;
+    /*width: 50px;*/
+    height: 90px;
 }
 
 #wrapper-third-home .bottom-news .news:nth-of-type(2){
@@ -234,14 +384,19 @@
 }
 
 #wrapper-third-home .bottom-news .news-title{
-  font-size: 18px;
+  /*border: 1px solid black;*/
+  /*font-size: 18px;*/
+  font-size: 27px;
   color: #000;
-  font-family: 'museuSlab', Arial, sans-serif;
-  margin: 5px 0;
+  font-family: 'museoSlab', Arial, sans-serif;
+  /*margin: 5px 0;*/
+  margin: -5px 0px -5px 0px;
   font-weight: bold;
+  line-height: 32px;
 }
 
 #wrapper-third-home .bottom-news .news-text{
+  /*border: 1px solid black;*/
   font-size: 14px;
   margin-top: 25px;
   color: #000;
@@ -316,7 +471,7 @@
 
 #red-area #wrapper-fourth-home > .left #calendar .event{
   padding:27px 0;
-  font-family:'museuSlab', Arial, sans-serif;
+  font-family:'museoSlab', Arial, sans-serif;
   color:white;
   font-size:13px;
   color: #000;
@@ -439,7 +594,7 @@
 
 #wrapper-fifth-home .social-box .social-link a{
   font-size:15px;
-  font-family: 'museuSlab', Arial, Helvetica, sans-serif;
+  font-family: 'museoSlab', Arial, Helvetica, sans-serif;
   color:#d7322f;
 }
 #wrapper-fifth-home .social-box .social-link{
@@ -476,9 +631,32 @@ ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; d
 li.bjqs-slide{position:absolute; display:none;}
 ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
 
-ul.bjqs-controls.v-centered li a{position:absolute;top: 475px !important;}
-ul.bjqs-controls.v-centered li.bjqs-next a{right:0;/*margin-right:-50px*/}
-ul.bjqs-controls.v-centered li.bjqs-prev a{left:0;/*margin-left:-50px*/}
+/*ul.bjqs-controls.v-centered li a{position:absolute;top: 475px !important;}*/
+ul.bjqs-controls.v-centered li a
+{
+    position: absolute;
+    top: 405px !important;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-next a
+{
+    right:0;
+    /*margin-right:-50px*/
+    /*height: 45px;*/
+    width: 20px;
+    text-align: center;
+    border: 0px;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-prev a
+{
+    left:0;
+    /*margin-left:-50px*/
+    /*height: 45px;*/
+    width: 20px;
+    text-align: center;
+    border: 0px;
+}
 
 ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
 ol.bjqs-markers.h-centered{text-align: center;}

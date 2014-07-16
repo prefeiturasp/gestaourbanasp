@@ -1197,3 +1197,72 @@ function form_aviso_plataforma_participativa_shorcode( $atts ) {
 }
 add_shortcode( 'aviso-plataforma-participativa', 'form_aviso_plataforma_participativa_shorcode' );
 
+/********************************************************************************/
+/* envia classe css da cor conforme projeto da noticia */
+/********************************************************************************/
+function cor_barra_conforme_projeto( $id )
+{
+    $terms = get_the_terms( $id, 'projetos' );
+    $projeto = "";
+    $classeCss = "";
+    if ( $terms && ! is_wp_error( $terms ) ) :
+        $first = true;
+        foreach ( $terms as $term )
+        {
+            if ( $first )
+            {
+                $projeto = $term->slug;
+                $first = false;
+            }
+            else
+            {
+
+            }
+        }
+        $classeCss = classe_css_conforme_projeto($projeto);
+    endif;
+    return $classeCss;
+}
+
+/********************************************************************************/
+/* envia classe de css de cor conforme projeto */
+/********************************************************************************/
+function classe_css_conforme_projeto( $projeto )
+{
+    $classeCss = "";
+    if ($projeto == "plano-diretor" || $projeto == "revisao-dos-instrumentos")
+    {
+        $classeCss = "RevisaoInstrumentos";
+    }
+    else if ($projeto == "arco-do-futuro")
+    {
+        $classeCss = "ArcoFuturo";
+    }
+    else if ($projeto == "centro-dialogo-aberto")
+    {
+        $classeCss = "CentroDialogoAberto";
+    }
+    else if ($projeto == "territorios-ceu")
+    {
+        $classeCss = "TerritoriosCeu";
+    }
+    else if ($projeto == "projetos-especiais")
+    {
+        $classeCss = "ProjetosEspeciais";
+    }
+    return $classeCss;
+}
+
+/********************************************************************************/
+/* envia classe css da cor conforme projeto do slider */
+/********************************************************************************/
+function cor_barra_conforme_projeto_slider( $id )
+{
+    $term = get_term( $id ,'projetos');
+    $projeto = "";
+    $classeCss = "";
+    
+    $projeto = $term->slug;
+    $classeCss = classe_css_conforme_projeto($projeto);
+    return $classeCss;
+}

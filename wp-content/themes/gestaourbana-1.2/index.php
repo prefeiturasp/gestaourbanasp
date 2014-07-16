@@ -45,76 +45,83 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
 </script>
 
 <div class="wrapper" id="wrapper-second-home">
-	<div id="banner-slide">
-		<ul class="bjqs">
-		  <?php $slide_query = new WP_Query( array('post_type' => 'slider', 'posts_per_page' => 3, 'orderby'=>'menu_order', 'order' => 'ASC')); ?>
-      <?php $count = 1; ?>
-      <?php while ( $slide_query->have_posts() ) : $slide_query->the_post(); ?>
-			<li class="bjqs-slide bjqs-slide-<?php echo $count; ?>" id="slide-first">
-				<div class="right image">
-				  <?php $image = get_field('big_image'); ?>
-					<img src="<?php echo $image['sizes']['510xX'] ?>" />
-				</div>
-				<div class="left text">
-					<a href="<?php the_field('link'); ?>"><h2><?php the_title(); ?></h2></a>
-					<p><?php the_content(); ?></p>
-				</div>
-                <div class="toolbar-links left">
-                    <?php
-                        $image_chamada_1 = get_field('image_chamada_1');
-                        $link_chamada_1 = get_field('link_chamada_1');
-
-                        $image_chamada_2 = get_field('image_chamada_2');
-                        $link_chamada_2 = get_field('link_chamada_2');
-
-                        $image_chamada_3 = get_field('image_chamada_3');
-                        $link_chamada_3 = get_field('link_chamada_3');
-                    ?>
-                    <ul>
-                        <?php if ( (!empty($link_chamada_1)) && (!empty($image_chamada_1)) ) { ?>
-                        <li>
-                            <a href="<?php echo $link_chamada_1; ?>">
-                                <img src="<?php echo $image_chamada_1['sizes']['150xX']; ?>" />
+    <div id="banner-slide">
+        <ul class="bjqs">
+            <?php $slide_query = new WP_Query( array('post_type' => 'slider', 'posts_per_page' => 3, 'orderby'=>'menu_order', 'order' => 'ASC')); ?>
+                <?php $count = 1; ?>
+                <?php while ( $slide_query->have_posts() ) : $slide_query->the_post(); ?>
+                    <li class="bjqs-slide bjqs-slide-<?php echo $count; ?>" id="slide-first">
+                        <!--<div class="right image">-->
+                        <div class="image">
+                          <?php $image = get_field('big_image'); ?>
+                            <a href="<?php echo get_field('link_chamada_1'); ?>">
+                                <img src="<?php echo $image['sizes']['large'/*'510xX'*/] ?>" />
                             </a>
-                        </li>
+                        </div>
+                        <!--<div class="left text">-->
                         <?php
-                        }
-                        if ( (!empty($link_chamada_2)) && (!empty($image_chamada_2)) ) { ?>
-                        <li>
-                            <a href="<?php echo $link_chamada_2; ?>">
-                                <img src="<?php echo $image_chamada_2['sizes']['150xX']; ?>" />
-                            </a>
-                        </li>
-                        <?php
-                        }
-                        if ( (!empty($link_chamada_3)) && (!empty($image_chamada_3)) ) { ?>
-                        <li>
-                            <a href="<?php echo $link_chamada_3; ?>">
-                                <img src="<?php echo $image_chamada_3['sizes']['150xX']; ?>" />
-                            </a>
-                        </li>
-                        <?php } ?>
-                    </ul>
+                            $classeCssSlide = "";
+                            $classeCssSlide = cor_barra_conforme_projeto_slider( get_field('projeto') );
+                        ?>
+                        <div class="text <?php echo $classeCssSlide; ?>">
+                                <a href="<?php echo get_field('link_chamada_1');//the_field('link'); ?>"><h2><?php the_title(); ?></h2></a>
+                                <!--<p><?php //the_content(); ?></p>-->
+                        </div>
+                        <!--<div class="toolbar-links left">-->
+                            <?php
+                                //$image_chamada_1 = get_field('image_chamada_1');
+                                //$link_chamada_1 = get_field('link_chamada_1');
 
-                </div>
-                <?php $image = get_field('small_image'); ?>
-			</li>
-			<?php $count++; endwhile;wp_reset_query();?>
-		</ul>
-	</div>
+                                //$image_chamada_2 = get_field('image_chamada_2');
+                                //$link_chamada_2 = get_field('link_chamada_2');
+
+                                //$image_chamada_3 = get_field('image_chamada_3');
+                                //$link_chamada_3 = get_field('link_chamada_3');
+                            ?>
+                            <!--<ul>
+                                <?php //if ( (!empty($link_chamada_1)) && (!empty($image_chamada_1)) ) { ?>
+                                <li>
+                                    <a href="<?php //echo $link_chamada_1; ?>">
+                                        <img src="<?php //echo $image_chamada_1['sizes']['150xX']; ?>" />
+                                    </a>
+                                </li>
+                                <?php
+                                //}
+                                //if ( (!empty($link_chamada_2)) && (!empty($image_chamada_2)) ) { ?>
+                                    <li>
+                                        <a href="<?php //echo $link_chamada_2; ?>">
+                                            <img src="<?php //echo $image_chamada_2['sizes']['150xX']; ?>" />
+                                        </a>
+                                    </li>
+                                    <?php
+                                    //}
+                                    //if ( (!empty($link_chamada_3)) && (!empty($image_chamada_3)) ) { ?>
+                                    <li>
+                                        <a href="<?php //echo $link_chamada_3; ?>">
+                                            <img src="<?php //echo $image_chamada_3['sizes']['150xX']; ?>" />
+                                        </a>
+                                    </li>
+                                    <?php //} ?>
+                            </ul>-->
+                        <!--</div>-->
+                        <?php //$image = get_field('small_image'); ?>
+                    </li>
+                <?php $count++; endwhile;wp_reset_query();?>
+        </ul>
+    </div>
 </div>
 
 <!--script>
   jQuery('.slider-nav-images').each(function(index) {
     jQuery(this).html(
-      <?php $slide_query = new WP_Query( array('post_type' => 'slider', 'posts_per_page' => 3, 'orderby'=>'menu_order', 'order' => 'ASC')); ?>
-      <?php $count = 1; ?>
-      <?php while ( $slide_query->have_posts() ) : $slide_query->the_post(); ?>
-        '<a href="javascript://" onclick="jQuery(\'#slider-to-click-<?php echo $count; ?>\').trigger(\'click\');">' +
-          <?php $image = get_field('small_image'); ?>
-          '<img src="<?php echo $image['sizes']['126xX'] ?>" class="slider-nav-image-image-<?php echo $count; ?>" />' +
-        '</a>' <?php if ($count < 3) { echo '+'; } ?>
-      <?php $count++; endwhile; wp_reset_query();?>
+      <?php //$slide_query = new WP_Query( array('post_type' => 'slider', 'posts_per_page' => 3, 'orderby'=>'menu_order', 'order' => 'ASC')); ?>
+      <?php //$count = 1; ?>
+      <?php //while ( $slide_query->have_posts() ) : $slide_query->the_post(); ?>
+        '<a href="javascript://" onclick="jQuery(\'#slider-to-click-<?php //echo $count; ?>\').trigger(\'click\');">' +
+          <?php //$image = get_field('small_image'); ?>
+          '<img src="<?php //echo $image['sizes']['126xX'] ?>" class="slider-nav-image-image-<?php //echo $count; ?>" />' +
+        '</a>' <?php //if ($count < 3) { echo '+'; } ?>
+      <?php //$count++; endwhile; wp_reset_query();?>
     );
   });
 </script>
@@ -122,9 +129,24 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
 <br /><br />
 <br /><br /-->
 <div class="wrapper" id="wrapper-third-home">
-	<h1>Notícias</h1>
+	<!--<h1>Notícias</h1>-->
 
-
+        <div id="titulo_noticias">
+            <img id="logo_noticias" src="<?php echo bloginfo('template_url'); ?>/images/noticias.png" />
+            <div id="newsletter">
+                <div class="left label">
+                        Cadastre seu email e<br />receba nossas notícias
+                </div>
+                <div class="right" id="register-newsletter-box">
+                        <form id="register-newsletter" class="ajax_submit_form" action="<?php echo plugins_url( 'newsletter/do/subscribe.php' ); ?>" method="post">
+                            <!--<input type="text" class="defaultText defaultTextActive" name="ne" id="register-newsletter-input" title="Seu e-mail" /><input type="submit" value="OK" />-->
+                            <input type="text" class="defaultText" name="ne" id="register-newsletter-input" /><input type="submit" value="OK" />
+                        </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        
 	<?php $news_query = new WP_Query( array('post_type' => 'noticias', 'posts_per_page' => 4)); ?>
 	<?php $count = 1; ?>
   <?php while ( $news_query->have_posts() ) : $news_query->the_post(); ?>
@@ -138,13 +160,16 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
     		</div>
   		<?php endif; ?>
   		<div class="news">
-  			<a href="<?php the_permalink(); ?>" />
-  				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
-  				<p class="news-title"><?php the_title(); ?></p>
-  			</a>
-  			<p class="news-text"><?php echo get_the_excerpt(); ?></p>
-			
-			<?php get_breadcrumb_data(get_the_ID(), 'projetos');?>
+                    <a href="<?php the_permalink(); ?>" />
+                            <p class="news-date"><?php the_time('d/m/Y'); ?></p>
+                    </a>
+                </div>
+  		<div class="news news1">
+                    <a href="<?php the_permalink(); ?>" />
+                            <p class="news-title"><?php the_title(); ?></p>
+                    </a>
+                    <p class="news-text"><?php echo get_the_excerpt(); ?></p>
+                    <?php get_breadcrumb_data(get_the_ID(), 'projetos');?>
   		</div>
   		<div class="clear"></div>
   	</div>
@@ -154,32 +179,104 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
   	<?php if ($count == 2): ?>
     	<div class="bottom-news table">
     		<div class="news cell first">
-    	 		<a href="<?php the_permalink(); ?>">
-    				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
-    				<p class="news-title"><?php the_title(); ?></p>
+                        <div class="row">
+                            <div class="cell">
+                            </div>
+                            <div class="cell">
+                                <a href="<?php the_permalink(); ?>">
+                                    <p class="news-date"><?php the_time('d/m/Y'); ?></p>
 				</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <?php
+                                $classeCss = "";
+                                $classeCss = cor_barra_conforme_projeto( get_the_ID() );
+                            ?>
+                            <div class="cell news<?php echo $classeCss; ?>">
+                            </div>
+                            <div class="cell">
+                                <a href="<?php the_permalink(); ?>">
+                                    <p class="news-title"><?php the_title(); ?></p>
+				</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">
+                            </div>
+                            <div class="cell">
 				<p class="news-text"><?php echo get_the_excerpt(); ?></p>
-				<?php get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
-			</div>
+				<?php // get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
+                            </div>
+                        </div>
+                </div>
     <?php endif; ?>
     <?php if ($count == 3): ?>
     		<div class="news cell">
-    	 		<a href="<?php the_permalink(); ?>">
-    				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
-    				<p class="news-title"><?php the_title(); ?></p>
+                        <div class="row">
+                            <div class="cell">
+                            </div>
+                            <div class="cell">
+                                <a href="<?php the_permalink(); ?>">
+                                    <p class="news-date"><?php the_time('d/m/Y'); ?></p>
 				</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <?php
+                                $classeCss = "";
+                                $classeCss = cor_barra_conforme_projeto( get_the_ID() );
+                            ?>
+                            <div class="cell news<?php echo $classeCss; ?>">
+                            </div>
+                            <div class="cell">
+                                <a href="<?php the_permalink(); ?>">
+                                    <p class="news-title"><?php the_title(); ?></p>
+				</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">
+                            </div>
+                            <div class="cell">
 				<p class="news-text"><?php echo get_the_excerpt(); ?></p>
-				<?php get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
+				<?php // get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
+                            </div>
+                        </div>
     		</div>
     <?php endif; ?>
     <?php if ($count == 4): ?>
     		<div class="news cell last">
-    	 		<a href="<?php the_permalink(); ?>">
-    				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
-    				<p class="news-title"><?php the_title(); ?></p>
+                        <div class="row">
+                            <div class="cell">
+                            </div>
+                            <div class="cell">
+                                <a href="<?php the_permalink(); ?>">
+                                    <p class="news-date"><?php the_time('d/m/Y'); ?></p>
 				</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <?php
+                                $classeCss = "";
+                                $classeCss = cor_barra_conforme_projeto( get_the_ID() );
+                            ?>
+                            <div class="cell news<?php echo $classeCss; ?>">
+                            </div>
+                            <div class="cell">
+                                <a href="<?php the_permalink(); ?>">
+                                    <p class="news-title"><?php the_title(); ?></p>
+				</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">
+                            </div>
+                            <div class="cell">
 				<p class="news-text"><?php echo get_the_excerpt(); ?></p>
-				<?php get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
+				<?php // get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
+                            </div>
+                        </div>
     		</div>
     		<div class="clear"></div>
     	</div>
