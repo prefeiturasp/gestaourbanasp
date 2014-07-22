@@ -89,7 +89,7 @@ wp_head();
 						  Redes<br />sociais
 						</div>-->
 						<div class="right social-buttons">
-							<iframe src="<?php echo bloginfo('template_url'); ?>/social-bar-home.php" name="social-bar-home" frameborder="0" height="30" width="113" scrolling="no"></iframe>
+							<iframe src="<?php echo bloginfo('template_url'); ?>/social-bar-home.php" name="social-bar-home" frameborder="0" height="38" width="113" scrolling="no"></iframe>
 						</div>
 						<div class="clear"></div>
 					</li>

@@ -15,6 +15,7 @@
     add_image_size( '657xX', 657, 0 );
     add_image_size( '510xX', 510, 0 );
     add_image_size( '365x195', 664, 195, true);
+    add_image_size( '470x270', 470, 270, true);
   }
 
   /**

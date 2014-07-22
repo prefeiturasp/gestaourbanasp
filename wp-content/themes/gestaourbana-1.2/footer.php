@@ -2,10 +2,12 @@
 		<div class="wrapper">
 			<div class="footer-col">
 				<div class="footer-row">
-					<img src="<?php echo bloginfo('template_url'); ?>/images/logo-gestao_urbana.png">
+					<!--<img src="<?php //echo bloginfo('template_url'); ?>/images/logo-gestao_urbana.png">-->
+                                        <img src="<?php echo bloginfo('template_url'); ?>/images/logo_gestao_footer.jpg">
 				</div>
 				<div class="footer-row">
-					<img src="<?php echo bloginfo('template_url'); ?>/images/logo-prefeitura.png">
+					<!--<img src="<?php //echo bloginfo('template_url'); ?>/images/logo-prefeitura.png">-->
+                                        <img src="<?php echo bloginfo('template_url'); ?>/images/logo_smdu_footer.jpg">
 				</div>
 			</div>
 			<div class="footer-col">
@@ -16,9 +18,10 @@
 					<a href="contato.php">Contato</a>
 				</div>*/ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'extra-menu' ) ); ?>
-				<br /><br /><br /><br />
+				<br /><br />
 				<div class="footer-row contato">
-					Secretaria Municipal de Desenvolvimento Urbano (SMDU) - Prefeitura de São Paulo<br />
+					Secretaria Municipal de Desenvolvimento Urbano (SMDU)<br />
+                                        Prefeitura de São Paulo<br />
 					Rua São Bento, 405, Centro - 17º e 18º andar<br />
 					CEP 01011-100 - São Paulo - SP<br />
 					Telefone: (11) 3113 7500<br />

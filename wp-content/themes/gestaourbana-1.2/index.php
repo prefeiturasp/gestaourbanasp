@@ -134,10 +134,10 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
         <div id="titulo_noticias">
             <img id="logo_noticias" src="<?php echo bloginfo('template_url'); ?>/images/noticias.png" />
             <div id="newsletter">
-                <div class="left label">
+                <div class="label">
                         Cadastre seu email e<br />receba nossas notícias
                 </div>
-                <div class="right" id="register-newsletter-box">
+                <div id="register-newsletter-box">
                         <form id="register-newsletter" class="ajax_submit_form" action="<?php echo plugins_url( 'newsletter/do/subscribe.php' ); ?>" method="post">
                             <!--<input type="text" class="defaultText defaultTextActive" name="ne" id="register-newsletter-input" title="Seu e-mail" /><input type="submit" value="OK" />-->
                             <input type="text" class="defaultText" name="ne" id="register-newsletter-input" /><input type="submit" value="OK" />
@@ -153,24 +153,46 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
 
     <?php if ($count == 1): ?>
 
-  	<div class="top-news">
-  	  <?php if (get_the_post_thumbnail()): ?>
-    		<div class="image">
-    			<?php the_post_thumbnail('365x195'); ?>
+  	<div class="top-news table">
+            <div class="row">
+            <?php if (get_the_post_thumbnail()): ?>
+    		<div class="image cell">
+    			<?php  the_post_thumbnail('470x270');//the_post_thumbnail('365x195'); ?>
     		</div>
-  		<?php endif; ?>
-  		<div class="news">
-                    <a href="<?php the_permalink(); ?>" />
-                            <p class="news-date"><?php the_time('d/m/Y'); ?></p>
-                    </a>
+            <?php endif; ?>
+  		<div class="news cell">
+                    <div class="row">
+                        <div class="cell">
+                        </div>
+                        <div class="cell">
+                            <a href="<?php the_permalink(); ?>">
+                                <p class="news-date"><?php the_time('d/m/Y'); ?></p>
+                            </a>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <?php
+                                $classeCss = "";
+                                $classeCss = cor_barra_conforme_projeto( get_the_ID() );
+                            ?>
+                            <div class="cell news<?php echo $classeCss; ?>">
+                            </div>
+                            <div class="cell">
+                                <a href="<?php the_permalink(); ?>">
+                                    <p class="news-title"><?php the_title(); ?></p>
+				</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">
+                            </div>
+                            <div class="cell">
+				<p class="news-text"><?php echo get_the_excerpt(); ?></p>
+				<?php // get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
+                            </div>
+                        </div>
                 </div>
-  		<div class="news news1">
-                    <a href="<?php the_permalink(); ?>" />
-                            <p class="news-title"><?php the_title(); ?></p>
-                    </a>
-                    <p class="news-text"><?php echo get_the_excerpt(); ?></p>
-                    <?php get_breadcrumb_data(get_the_ID(), 'projetos');?>
-  		</div>
+            </div>
   		<div class="clear"></div>
   	</div>
 
@@ -212,40 +234,6 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
                 </div>
     <?php endif; ?>
     <?php if ($count == 3): ?>
-    		<div class="news cell">
-                        <div class="row">
-                            <div class="cell">
-                            </div>
-                            <div class="cell">
-                                <a href="<?php the_permalink(); ?>">
-                                    <p class="news-date"><?php the_time('d/m/Y'); ?></p>
-				</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <?php
-                                $classeCss = "";
-                                $classeCss = cor_barra_conforme_projeto( get_the_ID() );
-                            ?>
-                            <div class="cell news<?php echo $classeCss; ?>">
-                            </div>
-                            <div class="cell">
-                                <a href="<?php the_permalink(); ?>">
-                                    <p class="news-title"><?php the_title(); ?></p>
-				</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="cell">
-                            </div>
-                            <div class="cell">
-				<p class="news-text"><?php echo get_the_excerpt(); ?></p>
-				<?php // get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
-                            </div>
-                        </div>
-    		</div>
-    <?php endif; ?>
-    <?php if ($count == 4): ?>
     		<div class="news cell last">
                         <div class="row">
                             <div class="cell">
@@ -278,64 +266,163 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
                             </div>
                         </div>
     		</div>
-    		<div class="clear"></div>
-    	</div>
-  	<?php endif; ?>
+    <?php endif; ?>
+    <?php //if ($count == 4): ?>
+<!--    		<div class="news cell last">
+                        <div class="row">
+                            <div class="cell">
+                            </div>
+                            <div class="cell">
+                                <a href="<?php //the_permalink(); ?>">
+                                    <p class="news-date"><?php //the_time('d/m/Y'); ?></p>
+				</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <?php
+                                //$classeCss = "";
+                                //$classeCss = cor_barra_conforme_projeto( get_the_ID() );
+                            ?>
+                            <div class="cell news<?php //echo $classeCss; ?>">
+                            </div>
+                            <div class="cell">
+                                <a href="<?php //the_permalink(); ?>">
+                                    <p class="news-title"><?php //the_title(); ?></p>
+				</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="cell">
+                            </div>
+                            <div class="cell">
+				<p class="news-text"><?php //echo get_the_excerpt(); ?></p>
+				<?php // get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
+                            </div>
+                        </div>
+    		</div>
+    		<div class="clear"></div>-->
+  	<?php //endif; ?>
   	<?php endif; ?>
 	<?php $count++; endwhile;?>
-	<a href="<?php echo get_bloginfo( 'url' ); ?>/noticia"><div id="see-all-news">Veja todas as notícias</div></a>
+    	</div>
+	<a href="<?php echo get_bloginfo( 'url' ); ?>/noticia"><div id="see-all-news">+ notícias</div></a>
 </div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=391372857648079";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 <div id="red-area">
-	<div class="wrapper" id="wrapper-fourth-home">
-		<div class="left">
-			<h1>Agenda</h1>
-			<h3>Confira as próximas pautas discutidas.</h3>
+	<div class="wrapper table" id="wrapper-fourth-home">
+            <div class="row">
+		<div class="left cell">
+                    <div id="agenda" class="row">
+                        <div id="titulo_agenda">
+                        <img id="logo_agenda" src="<?php bloginfo('template_url') ?>/images/agenda.png" />
+                        </div>
+			<!--<h3>Confira as próximas pautas discutidas.</h3>-->
 			<div id="calendar">
-                <?php $event_query = new WP_Query( array('post_type' => 'agenda', 'paged' => $paged, 'posts_per_page' => 2, 'meta_query' => array(array( 'key' => 'agenda_show_date','value' => time(),'compare' => '>='),),'orderby' => 'meta_value_num','order' => 'ASC','meta_key' => 'agenda_show_date')); ?>
+                <?php $event_query = new WP_Query( array('post_type' => 'agenda', 'paged' => $paged, 'posts_per_page' => 1, 'meta_query' => array(array( 'key' => 'agenda_show_date','value' => time(),'compare' => '>='),),'orderby' => 'meta_value_num','order' => 'ASC','meta_key' => 'agenda_show_date')); ?>
                 <?php if ( $event_query->have_posts() ) { ?>
     				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/evento">
     				  <?php while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
-      					<div class="event">
-      						<div class="event-date">
-								<?php
-									_e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true )) . ' | ' . strftime('%B', get_post_meta( $post->ID, 'agenda_show_date', true )));
-								?>
-      						</div>
-      						<div class="event-text">
-      							<?php the_title(); ?>
-      						</div>
-							
-							<?php get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
-							
+      					<div class="event table">
+                                            <div class="row">
+                                                <div class="cell">
+                                                </div>
+                                                <div class="event-date cell">
+                                                    <?php
+                                                        //_e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true )) . ' | ' . strftime('%B', get_post_meta( $post->ID, 'agenda_show_date', true )));
+                                                        _e( 'Próximo Evento ' . date('d/m/Y', get_post_meta( $post->ID, 'agenda_show_date', true )));
+                                                    ?>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <?php
+                                                    $classeCss = "";
+                                                    $classeCss = cor_barra_conforme_projeto( get_the_ID() );
+                                                ?>
+                                                <div class="cell news<?php echo $classeCss; ?>">
+                                                </div>
+                                                <div class="cell">
+                                                    <div class="event-text">
+                                                    <?php the_title(); ?>
+                                                    <?php //get_breadcrumb_data(get_the_ID(), 'projetos', true);?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
       						<div class="clear"></div>
-      					</div>
     					<?php $count++; endwhile;?>
     				</a>
                 <?php } else { ?>
-                    <p style="display: inline-block; margin: 10px; font-family: 'museoSlab', Arial, Helvetica, sans-serif;">Não há eventos no momento. Confira os <a style="color: #000; text-decoration:underline;" href="<?php echo get_bloginfo( 'url' ); ?>/agenda-completa/">eventos já realizados</a>.</p>
+                    <p style="display: inline-block; font-family: 'museoSlab', Arial, Helvetica, sans-serif;">Não há eventos no momento. Confira os <a style="color: #000; text-decoration:underline;" href="<?php echo get_bloginfo( 'url' ); ?>/agenda-completa/">eventos já realizados</a>.</p>
                 <?php } ?>
 			</div>
 			<!--a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/evento" class="see-all-events">Veja a agenda completa</a-->
+                        <div id="see-all-events">
+                            <a href="<?php echo get_bloginfo( 'url' ); ?>/agenda-completa/"><div class="see-all-events">+ eventos</div></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="face" class="left cell social-box">
+                            <div id="titulo_face">
+                                <img id="logo_face" src="<?php bloginfo('template_url') ?>/images/facebook.png" />
+                            </div>
+                            <div class="social-inner">
+                                    <div class="fb-like-box" data-href="https://www.facebook.com/pmsp.smdu" data-width="232" data-height="325" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
+                            </div>
+                        </div>
+                        <div id="twitter" class="right cell social-box">
+                            <div id="titulo_twitter">
+                                <img id="logo_twitter" src="<?php bloginfo('template_url') ?>/images/twitter.png" />
+                            </div>
+                            <div class="social-inner">
+                                    <a class="twitter-timeline" href="https://twitter.com/pmsp_smdu" data-widget-id="349239983451803649" data-chrome="nofooter transparent noheader">Tweets by @pmsp_smdu</a>
+                                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            </div>
+                        </div>
+                    </div>
 		</div>
-		<div class="right">
-			<h1>Biblioteca</h1>
-			<h3>Todo material de apoio sobre legislação relativa a cidade.<br />Assista vídeos e leia os artigos. Informe-se!</h3>
-			<div class="library-icons icons-left">
-				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/biblioteca"><img src="<?php echo bloginfo('template_url'); ?>/images/icon-videos.png" /></a>
-			</div>
-			<div class="library-icons icons-middle">
-				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/biblioteca"><img src="<?php echo bloginfo('template_url'); ?>/images/icon-images.png" /></a>
-			</div>
-			<div class="library-icons icons-right">
-				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/biblioteca"><img src="<?php echo bloginfo('template_url'); ?>/images/icon-legislation.png" /></a>
-			</div>
-			<div class="clear"></div>
-			<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/biblioteca" class="see-all-events">Veja todos os arquivos</a>
+		<div id="youtube" class="right cell social-box">
+                    <div id="titulo_youtube">
+                        <img id="logo_youtube" src="<?php bloginfo('template_url') ?>/images/youtube.png" />
+                    </div>
+                    <div class="social-inner">
+                        <p>
+                        <?php echo do_shortcode('[youtubechannel channelname="pmspsmdu" numvideos="2" width="469" showtitle="No"]') ?>
+                        </p>
+                        
+                            <p>
+                                    <a href="http://www.youtube.com/user/pmspsmdu" target="_blank">
+                                            Veja o canal
+                                    </a>
+                            </p>
+                    </div>
+                    <!--<h1>Biblioteca</h1>
+                    <h3>Todo material de apoio sobre legislação relativa a cidade.<br />Assista vídeos e leia os artigos. Informe-se!</h3>
+                    <div class="library-icons icons-left">
+                            <a href="<?php //echo get_bloginfo( 'url' ); ?>/index.php/biblioteca"><img src="<?php //echo bloginfo('template_url'); ?>/images/icon-videos.png" /></a>
+                    </div>
+                    <div class="library-icons icons-middle">
+                            <a href="<?php //echo get_bloginfo( 'url' ); ?>/index.php/biblioteca"><img src="<?php //echo bloginfo('template_url'); ?>/images/icon-images.png" /></a>
+                    </div>
+                    <div class="library-icons icons-right">
+                            <a href="<?php //echo get_bloginfo( 'url' ); ?>/index.php/biblioteca"><img src="<?php //echo bloginfo('template_url'); ?>/images/icon-legislation.png" /></a>
+                    </div>
+                    <div class="clear"></div>
+                    <a href="<?php //echo get_bloginfo( 'url' ); ?>/index.php/biblioteca" class="see-all-events">Veja todos os arquivos</a>
+                    -->
 		</div>
 		<div class="clear"></div>
+            </div>
 	</div>
 </div>
-<div id="fb-root"></div>
+<!--<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -346,23 +433,23 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
 <div class="wrapper" id="wrapper-fifth-home">
 	<h1>Redes Sociais</h1>
 	<div class="social-box">
-		<img src="<?php bloginfo('template_url') ?>/images/title-social-facebook.png" />
+		<img src="<?php //bloginfo('template_url') ?>/images/title-social-facebook.png" />
 		<div class="social-inner">
 			<div class="fb-like-box" data-href="https://www.facebook.com/pmsp.smdu" data-width="255" data-height="325" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
 		</div>
 	</div>
 	<div class="social-box">
-		<img src="<?php bloginfo('template_url') ?>/images/title-social-twitter.png" />
+		<img src="<?php //bloginfo('template_url') ?>/images/title-social-twitter.png" />
 		<div class="social-inner">
 			<a class="twitter-timeline" href="https://twitter.com/pmsp_smdu" data-widget-id="349239983451803649" data-chrome="nofooter transparent noheader">Tweets by @pmsp_smdu</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
 	<div class="social-box">
-		<img src="<?php bloginfo('template_url') ?>/images/title-social-youtube.png" />
+		<img src="<?php //bloginfo('template_url') ?>/images/title-social-youtube.png" />
 		<div class="social-inner">
-			<?php echo do_shortcode('[youtubechannel channelname="pmspsmdu" numvideos="1" width="255" showtitle="No"]') ?>
-			<p>
+			<?php //echo do_shortcode('[youtubechannel channelname="pmspsmdu" numvideos="1" width="255" showtitle="No"]') ?>
+                    <p>	
 				<a href="http://www.youtube.com/user/pmspsmdu" target="_blank">
 					Veja o canal
 				</a>
@@ -370,5 +457,5 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
 		</div>
 	</div>
 	<div class="clear"></div>
-</div>
+</div>-->
 <?php get_footer(); ?>
