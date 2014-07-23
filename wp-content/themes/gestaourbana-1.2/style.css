@@ -1247,6 +1247,7 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 .wrapper.page-dialogo {
     height: auto;
     overflow: hidden;
+    font-family: 'museoSans', Arial, sans-serif;
 }
 
 .wrapper.page-dialogo .no-margin {

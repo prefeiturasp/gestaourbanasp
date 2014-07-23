@@ -30,51 +30,9 @@ if ($using_ie7 || $using_ie6) {
         <script src="<?php bloginfo('template_url'); ?>/js/sistematizacao/vendor/modernizr.js"></script>
         <script type="text/javascript">var themeURL = "<?php bloginfo('template_url'); ?>/";</script>
     </head>
+<?php get_header(); ?>
     <body>
-        <div class="topbar fixed">
-            <div class="pure-g-r">
-                <div class="pure-u-1-5">
-                    <a href="http://gestaourbana.prefeitura.sp.gov.br/" class="logo-gestao">Gestão Urbana SP</a>
-                </div>
-                <div class="pure-u-2-5">
-                    <a href="http://gestaourbana.prefeitura.sp.gov.br/" class="voltar-gestao">Voltar</a>
-                    <p>Relatório de participação</p>
-                </div>
-                <div class="socialbar pure-u-2-5">
-                    <div class="pure-g-r">
-                    <div class="pure-u-1-3">
-                        <a href="#"
-                        class="uibutton confirm"
-                          onclick="
-                            window.open(
-                              'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-                              'facebook-share-dialog',
-                              'width=626,height=436');
-                            return false;">
-                          Compartilhar
-                        </a>
-                    </div>
-                    <div class="pure-u-1-3">
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt" data-size="80">Tweetar</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                    </div>
-                    <div class="pure-u-1-3">
-                        <div class="g-plus" data-action="share" data-annotation="bubble"></div>
-                        <script type="text/javascript">
-                          window.___gcfg = {lang: 'pt-BR'};
-
-                          (function() {
-                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                            po.src = 'https://apis.google.com/js/plusone.js';
-                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                          })();
-                        </script>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <br>
         <div class="intro container">
             <div class="skyscraper">
 
@@ -409,4 +367,5 @@ if ($using_ie7 || $using_ie6) {
 
         <script src="<?php bloginfo('template_url'); ?>/js/sistematizacao/main.js"></script>
 </body>
+<?php get_footer(); ?>
 </html>
