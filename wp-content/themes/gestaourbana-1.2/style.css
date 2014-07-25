@@ -156,8 +156,10 @@ a {
     font-family:'museoSlab', Arial, Helvetica, sans-serif;
 }
 
-strong {
-    font-family:'museoSlab', Arial, Helvetica, sans-serif;
+strong
+{
+    font-family: 'museoSlab', Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 920px) {
@@ -1089,7 +1091,11 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
     height: 60px;
     float: left;
     /*padding-right: 10px;*/
-    padding-right: 25px;
+    
+    /* padding quando colocar o menu da lei de zoneamento - porem tem que aumentar, para que o de especiais fique ate o final */
+    /*padding-right: 25px;*/
+    
+    padding-right: 55px;
     margin-top: 22px;
 }
 
@@ -1231,6 +1237,10 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 #menu-projetos-especiais, #menu-projetos-especiais .sub-menu{
     border-left: 4px #C14292 solid;
     height: 60px;
+}
+.menu-projetos #menu-projetos-especiais
+{
+    padding-right: 0px;
 }
 
 /*setando cor do menu de dialogo*/
@@ -1449,4 +1459,57 @@ a img.aligncenter {
     line-height: 17px;
     margin: 0;
     padding: 0 4px 5px;
+}
+
+ul#topicos-menu
+{
+    list-style: disc;
+    margin-top: 20px;
+}
+
+ul#topicos-menu li
+{
+    
+}
+
+ul#topicos-menu li a
+{
+    color: black;
+    text-decoration: none;
+    display: block;
+    /*padding: 0px 3px;*/
+}
+
+ul#topicos-menu li.parent
+{
+    padding-top: 20px;
+}
+
+ul#topicos-menu li.parent > a
+{
+    background: transparent url('../img/down.gif') right center no-repeat;
+}
+
+ul#topicos-menu li.aberto > a {
+    background: transparent url('../img/up.gif') right center no-repeat;
+}
+
+/*ul#topicos-menu li a:hover
+{
+    background-color: #EAEEFF;
+}*/
+
+ul#topicos-menu li ul.topicos-submenu
+{
+    display: none;
+}
+
+ul#topicos-menu li ul.topicos-submenu li
+{
+}
+
+ul#topicos-menu li ul.topicos-submenu li a
+{
+    padding-top: 10px;
+    padding-left: 15px;
 }
