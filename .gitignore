@@ -45,3 +45,6 @@ wp-content/plugins/*
 # specify (see the commented-out example for a hint on how to do this.)
 wp-content/themes/*
 !wp-content/themes/gestaourbana-1.2/
+!/wp-content/plugins/ml-slider/
+/wp-content/themes/gestaourbana-1.2/gallery-single-template.php
+/wp-content/themes/gestaourbana-1.2/gallery-template.php
