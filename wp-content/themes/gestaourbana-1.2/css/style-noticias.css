@@ -47,6 +47,10 @@
 	border-radius:5px;
 }
 
+#news .left .big-text span a
+{
+    color: #333333;
+}
 
 #news .left .text img{
 	width:30%;
@@ -55,9 +59,10 @@
 	margin:0 20px 20px 0;
 	border-radius:5px;
 }
-#news .left .text span a{
-        color: #333333;
-	
+
+#news .left .text span a
+{
+    color: #333333;
 }
 
 #news .left .inner-text p {
