@@ -47,7 +47,7 @@ document.cookie = "someCookieName=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; p
 <div class="wrapper" id="wrapper-second-home">
     <div id="banner-slide">
         <ul class="bjqs">
-            <?php $slide_query = new WP_Query( array('post_type' => 'slider', 'posts_per_page' => 3, 'orderby'=>'menu_order', 'order' => 'ASC')); ?>
+            <?php $slide_query = new WP_Query( array('post_type' => 'slider', 'posts_per_page' => 5, 'orderby'=>'menu_order', 'order' => 'ASC')); ?>
                 <?php $count = 1; ?>
                 <?php while ( $slide_query->have_posts() ) : $slide_query->the_post(); ?>
                     <li class="bjqs-slide bjqs-slide-<?php echo $count; ?>" id="slide-first">

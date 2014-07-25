@@ -42,7 +42,7 @@ jQuery(function() {
 			showmarkers : true,
 			showcontrols : true,
 			animduration : 1000,
-			animspeed : 10000,
+			animspeed : 5000,
 			nexttext : '<img src="'+template_url+'/images/btn-slide-next.png" />',
 			prevtext : '<img src="'+template_url+'/images/btn-slide-prev.png" />'
 
