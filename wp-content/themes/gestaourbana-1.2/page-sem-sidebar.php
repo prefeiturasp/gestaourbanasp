@@ -55,4 +55,19 @@ get_header(); ?>
 
 <?php endwhile; ?>
 
+<script type="text/javascript">
+//jQuery(document).ready(function()
+//{
+//    jQuery('ul#topicos-menu li.parent > a').click(function() {
+//            // Expande ou</span> retrai o elemento ul.sub-menu dentro do elemento pai (ul#menu li.parent)
+//            jQuery('ul.topicos-submenu', jQuery(this).parent()).slideToggle('fast', function() {
+//                    // Depois de expandir ou retrair, troca a classe 'aberto' do <a> clicado
+//                    jQuery(this).parent().toggleClass('aberto');
+//            });
+//            return false;
+//    });
+//});
+
+</script>
+
 <?php get_footer(); ?>

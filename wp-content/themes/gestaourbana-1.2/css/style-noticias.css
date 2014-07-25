@@ -23,7 +23,8 @@
 }
 
 #news h3, #news h4{
-	color:#D7322F;
+	/*color:#D7322F;*/
+        color: black;
 }
 
 #news h3 {

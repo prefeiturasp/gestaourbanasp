@@ -29,7 +29,8 @@
 }
 
 #news-sidebar .box-destaque .text a{
-	color:#D7322F;
+	/*color:#D7322F;*/
+        color: black;
 	font-family:'museuSlab', Arial, Helvetica, sans-serif;
 	font-size:14px;
 }
