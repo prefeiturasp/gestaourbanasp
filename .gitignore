@@ -48,3 +48,9 @@ wp-content/themes/*
 !/wp-content/plugins/ml-slider/
 /wp-content/themes/gestaourbana-1.2/gallery-single-template.php
 /wp-content/themes/gestaourbana-1.2/gallery-template.php
+/wp-content/themes/gestaourbana-1.2/webfonts/museo-500-webfont.ttf
+/wp-content/themes/gestaourbana-1.2/webfonts/museo-700-webfont.eot
+/wp-content/themes/gestaourbana-1.2/webfonts/museo-500-webfont.woff
+/wp-content/themes/gestaourbana-1.2/webfonts/museo-500-webfont.eot
+/wp-content/themes/gestaourbana-1.2/webfonts/museo-700-webfont.woff
+/wp-content/themes/gestaourbana-1.2/webfonts/museo-700-webfont.ttf
