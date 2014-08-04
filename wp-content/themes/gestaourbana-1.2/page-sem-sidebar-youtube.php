@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Página sem sidebar Sem Título
+ * Template Name: Página sem sidebar youtube
  */
 
 get_header(); ?>
@@ -36,6 +36,11 @@ get_header(); ?>
 
             <?php endfor; ?>
 
+                    <div class="social-inner">
+                        <p>
+                        <?php echo do_shortcode('[youtubechannel channelname="pmspsmdu" numvideos="20" width="469" showtitle="No"]') ?>
+                        </p>
+                    </div>
             <div class="clear"></div>
           </div>
         </div>

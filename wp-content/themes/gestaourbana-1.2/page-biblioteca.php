@@ -10,7 +10,7 @@ Template Name: Biblioteca
 		<div class="inner">
             <div id="lista-artigos">
 			<h1>Biblioteca</h1>
-            <a id="arquivo-biblioteca"class="btn" href="mailto:gestaourbanasp@prefeitura.sp.gov.br?subject=Gestão Urbana SP - Biblioteca: Documento enviado para análise">Envie seu arquivo</a>
+            <a id="arquivo-biblioteca"class="btn" href="mailto:imprensadu@prefeitura.sp.gov.br?subject=Gestão Urbana SP - Biblioteca: Documento enviado para análise">Envie seu arquivo</a>
 
             <div class="input text"><label for="search">Busca: </label><input class="search" /></div>
 

@@ -19,21 +19,21 @@
     border-bottom: 1px solid #e6e6e6;
     font-family: 'museoSlab', Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: #000000;
+    color: #C81400;
 }
 
 #news-inner .left .inner .menu-do-projeto a
 {
     font-family: 'museoSlab', Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: #000000;
+    color: #C81400;
 }
 
 #news-inner .left .inner .menu-do-projeto span
 {
     font-family: 'museoSlab', Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: #000000;
+    color: #C81400;
 }
 
 #news-inner .right .inner {
@@ -230,4 +230,107 @@ article.comment .avatar {
 
 article.comment .comment-author {
   font-weight: bold;
+}
+
+ul#lei-menu
+{
+    list-style: disc;
+    /*margin-top: 20px;*/
+    margin-left: 20px;
+}
+
+ul#lei-menu li
+{
+    
+}
+
+ul#lei-menu li a
+{
+    color: black;
+    text-decoration: none;
+    display: block;
+    /*padding: 0px 3px;*/
+}
+
+ul#lei-menu li.parent
+{
+    padding-top: 20px;
+}
+
+ul#lei-menu li.parent code
+{
+    /*font-family: 'Wingdings 3';*/
+    /*background: transparent url('../images/menu-down.gif') left center no-repeat;*/
+}
+
+ul#lei-menu li.parent > a code
+{
+    background: transparent url('../images/menu-down.gif') left center no-repeat;
+}
+
+ul#lei-menu li.aberto > a code
+{
+    background: transparent url('../images/menu-up.gif') left center no-repeat;
+}
+
+/*ul#lei-menu li a:hover
+{
+    background-color: #EAEEFF;
+}*/
+
+ul#lei-menu li ul.lei-submenu
+{
+    display: none;
+}
+
+ul#lei-menu li ul.lei-submenu li
+{
+    padding-top: 10px;
+}
+
+ul#lei-menu li ul.lei-submenu li a
+{
+    /*padding-top: 10px;*/
+    padding-left: 15px;
+}
+
+ul#lei-menu li.parent ul.lei-submenu1 li.parent
+{
+    padding-top: 5px;
+}
+
+ul#lei-menu li ul.lei-submenu1
+{
+    display: none;
+}
+
+ul#lei-menu li ul.lei-submenu1 li
+{
+    
+}
+
+ul#lei-menu li ul.lei-submenu1 li a
+{
+    /*padding-top: 10px;*/
+    padding-left: 35px;
+}
+
+#news-inner .wp_youtube_gallery h4
+{
+    margin: 0;
+}
+
+.wp-caption
+{
+    border: none;
+}
+
+.imagem-borda img
+{
+    border: 1px solid white;
+}
+
+.imagem-borda img:hover
+{
+    border: 1px solid red;
 }

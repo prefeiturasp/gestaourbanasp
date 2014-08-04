@@ -1465,6 +1465,7 @@ ul#topicos-menu
 {
     list-style: disc;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 ul#topicos-menu li
@@ -1487,11 +1488,11 @@ ul#topicos-menu li.parent
 
 ul#topicos-menu li.parent > a
 {
-    background: transparent url('../img/down.gif') right center no-repeat;
+    background: transparent url('images/menu-down.gif') right center no-repeat;
 }
 
 ul#topicos-menu li.aberto > a {
-    background: transparent url('../img/up.gif') right center no-repeat;
+    background: transparent url('images/menu-up.gif') right center no-repeat;
 }
 
 /*ul#topicos-menu li a:hover
