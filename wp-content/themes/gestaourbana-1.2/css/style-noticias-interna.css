@@ -19,21 +19,83 @@
     border-bottom: 1px solid #e6e6e6;
     font-family: 'museoSlab', Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: #C81400;
+    margin-top: 10px;
 }
 
 #news-inner .left .inner .menu-do-projeto a
 {
     font-family: 'museoSlab', Arial, Helvetica, sans-serif;
     font-size: 12px;
+}
+
+#news-inner .left .inner .menu-do-projeto .oculto a
+{
+    color: #888888;
+    cursor: default;
+    cursor: not-allowed;
+}
+
+#news-inner .left .inner .menu-do-projeto li
+{
+    display: inline;
+}
+
+/********************************************************************************/
+/* cor do texto do menu interno do plano diretor */
+/********************************************************************************/
+.menu-menu-interno-plano-diretor-container a
+{
     color: #C81400;
 }
 
-#news-inner .left .inner .menu-do-projeto span
+/********************************************************************************/
+/* padding especifico para os itens do menu interno do plano diretor */
+/********************************************************************************/
+.menu-menu-interno-plano-diretor-container li
 {
-    font-family: 'museoSlab', Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+/********************************************************************************/
+/* padding especifico para o ultimo item do menu interno do plano diretor */
+/********************************************************************************/
+.menu-menu-interno-plano-diretor-container li:nth-of-type(7)
+{
+    padding-right: 0px;
+}
+
+/********************************************************************************/
+/* cor do texto do menu interno do plano diretor */
+/********************************************************************************/
+.menu-menu-interno-parcelamento-ocupacao-solo-container a
+{
     color: #C81400;
+}
+
+/********************************************************************************/
+/* padding especifico para os itens do menu interno do plano diretor */
+/********************************************************************************/
+.menu-menu-interno-parcelamento-ocupacao-solo-container li
+{
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+/********************************************************************************/
+/* padding especifico para o ultimo item do menu interno do plano diretor */
+/********************************************************************************/
+.menu-menu-interno-parcelamento-ocupacao-solo-container li:nth-of-type(7)
+{
+    padding-right: 0px;
+}
+
+/********************************************************************************/
+/* padding genérico para o 1o item do menu interno de todos os projetos */
+/********************************************************************************/
+#news-inner .left .inner .menu-do-projeto li:nth-of-type(1)
+{
+    padding-left: 0px;
 }
 
 #news-inner .right .inner {

@@ -30,7 +30,9 @@
         'arco-menu' => __('Arco do futuro menu'),
         'territorio-menu' => __('Território CEU menu'),
         'dialogo-menu' => __('Centro Diálogo Aberto'),
-        'projetos-especiais' => __('Projetos Especiais')
+        'projetos-especiais' => __('Projetos Especiais'),
+        'menu-interno-plano-diretor' => __('Menu interno - Plano Diretor'),
+        'menu-interno-parcelamento-ocupacao-solo' => __('Menu interno - Parcelamento e Ocupação do Solo')
       )
     );
   }
@@ -1231,7 +1233,7 @@ function cor_barra_conforme_projeto( $id )
 function classe_css_conforme_projeto( $projeto )
 {
     $classeCss = "";
-    if ($projeto == "plano-diretor" || $projeto == "revisao-dos-instrumentos")
+    if ($projeto == "plano-diretor" || $projeto == "revisao-dos-instrumentos" || $projeto == 'parcelamento-ocupacao-solo')
     {
         $classeCss = "RevisaoInstrumentos";
     }
@@ -1266,4 +1268,28 @@ function cor_barra_conforme_projeto_slider( $id )
     $projeto = $term->slug;
     $classeCss = classe_css_conforme_projeto($projeto);
     return $classeCss;
+}
+
+/********************************************************************************/
+/* mostrar menu interno */
+/********************************************************************************/
+function mostrar_menu_interno( $projeto_id )
+{
+    $term = get_term( $projeto_id ,'projetos');
+    $projeto = "";
+
+    if ($term)
+        {
+        $projeto = $term->slug;
+
+        if ($projeto == 'plano-diretor')
+        {
+            return wp_nav_menu( array( 'theme_location' => 'menu-interno-plano-diretor' ) );
+        }
+        
+        if ($projeto == 'parcelamento-ocupacao-solo')
+        {
+            return wp_nav_menu( array( 'theme_location' => 'menu-interno-parcelamento-ocupacao-solo' ) );
+        }
+    }
 }

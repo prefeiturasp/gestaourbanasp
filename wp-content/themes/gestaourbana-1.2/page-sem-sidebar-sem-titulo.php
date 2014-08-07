@@ -18,6 +18,15 @@ get_header(); ?>
           <?php /*<div class="social"><img src="<?php echo bloginfo('template_url'); ?>/_tmp/news-inner-social.png" /></div>*/ ?>
           <?php /*<div class="author">Por <?php the_author(); ?> </div>*/ ?>
           <div class="inner-text">
+                <?php if (get_field('mostrar_menu') == "sim")
+                    {
+                ?>
+                <div class="menu-do-projeto">
+                    <?php mostrar_menu_interno( get_field('projeto') );?>
+                </div>
+                <?php 
+                    }
+                ?>
             <?php
               $content = get_the_content();
               $content = apply_filters('the_content', $content);

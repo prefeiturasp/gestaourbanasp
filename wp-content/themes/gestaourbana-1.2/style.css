@@ -1514,3 +1514,17 @@ ul#topicos-menu li ul.topicos-submenu li a
     padding-top: 10px;
     padding-left: 15px;
 }
+
+.colunas19
+{
+    -webkit-column-count: 19; /* Chrome, Safari, Opera */
+    -moz-column-count: 19; /* Firefox */
+    column-count: 19;
+    font-size: 12px;
+    line-height: 200%;
+}
+
+.colunas19 a
+{
+    font-size: 12px;
+}
