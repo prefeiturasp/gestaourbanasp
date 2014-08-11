@@ -53,20 +53,20 @@
 /********************************************************************************/
 .menu-menu-interno-plano-diretor-container li
 {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 12px;
+    padding-right: 11px;
 }
 
 /********************************************************************************/
 /* padding especifico para o ultimo item do menu interno do plano diretor */
 /********************************************************************************/
-.menu-menu-interno-plano-diretor-container li:nth-of-type(7)
+.menu-menu-interno-plano-diretor-container li:nth-of-type(8)
 {
     padding-right: 0px;
 }
 
 /********************************************************************************/
-/* cor do texto do menu interno do plano diretor */
+/* padding especifico para o ultimo item do menu interno do parcelamento e ocupacao do solo */
 /********************************************************************************/
 .menu-menu-interno-parcelamento-ocupacao-solo-container a
 {
@@ -74,7 +74,7 @@
 }
 
 /********************************************************************************/
-/* padding especifico para os itens do menu interno do plano diretor */
+/* padding especifico para o ultimo item do menu interno do parcelamento e ocupacao do solo */
 /********************************************************************************/
 .menu-menu-interno-parcelamento-ocupacao-solo-container li
 {
@@ -83,7 +83,7 @@
 }
 
 /********************************************************************************/
-/* padding especifico para o ultimo item do menu interno do plano diretor */
+/* padding especifico para o ultimo item do menu interno do parcelamento e ocupacao do solo */
 /********************************************************************************/
 .menu-menu-interno-parcelamento-ocupacao-solo-container li:nth-of-type(7)
 {

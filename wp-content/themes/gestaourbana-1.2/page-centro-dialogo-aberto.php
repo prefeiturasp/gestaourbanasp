@@ -7,6 +7,7 @@ Template Name: Centro Dialogo Aberto
 <?php get_header(); ?>
 
 <div class="wrapper page-dialogo">
+  <?php the_content(); ?>
     <h2 class="breadcrumb"><span class="gray">Projetos &raquo;</span> Centro Dialogo aberto</h2>
     
     <h3 class="info">Um diálogo aberto a favor da requalificação do centro está inaugurado. Esse diálogo se expressará em projeto, e o projeto será testado por intervenções concretas nesse território singular da cidade.</h3>

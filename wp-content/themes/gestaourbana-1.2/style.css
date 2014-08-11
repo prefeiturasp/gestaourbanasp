@@ -580,7 +580,8 @@ footer .footer-col:nth-of-type(3) .footer-row:nth-of-type(2) .social-buttons{
 }
 
 .wrapper {
-    width: 96%;
+    /*width: 96%;*/
+    width: 100%;
     max-width: 960px;
     margin: auto;
     /*padding: 2%;*/
