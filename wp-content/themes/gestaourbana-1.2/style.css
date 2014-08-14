@@ -1529,3 +1529,28 @@ ul#topicos-menu li ul.topicos-submenu li a
 {
     font-size: 12px;
 }
+
+.RevisaoInstrumentos
+{
+    background-color: #C81400;
+}
+
+.ArcoFuturo
+{
+    background-color: #EA5600;
+}
+
+.CentroDialogoAberto
+{
+    background-color: #00AEEB;
+}
+
+.TerritoriosCeu
+{
+    background-color: #FFCC01;
+}
+
+.ProjetosEspeciais
+{
+    background-color: #C14292;
+}
