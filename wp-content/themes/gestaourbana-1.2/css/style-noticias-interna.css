@@ -66,7 +66,7 @@
 }
 
 /********************************************************************************/
-/* padding especifico para o ultimo item do menu interno do parcelamento e ocupacao do solo */
+/* cor do texto do menu interno do parcelamento e ocupacao do solo */
 /********************************************************************************/
 .menu-menu-interno-parcelamento-ocupacao-solo-container a
 {
@@ -78,14 +78,14 @@
 /********************************************************************************/
 .menu-menu-interno-parcelamento-ocupacao-solo-container li
 {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 48px;
+    padding-right: 48px;
 }
 
 /********************************************************************************/
 /* padding especifico para o ultimo item do menu interno do parcelamento e ocupacao do solo */
 /********************************************************************************/
-.menu-menu-interno-parcelamento-ocupacao-solo-container li:nth-of-type(7)
+.menu-menu-interno-parcelamento-ocupacao-solo-container li:nth-of-type(5)
 {
     padding-right: 0px;
 }
