@@ -396,3 +396,49 @@ ul#lei-menu li ul.lei-submenu1 li a
 {
     border: 1px solid red;
 }
+
+#accordion2
+{
+    width: 100%;
+    /*padding: 0 0 0 15px;*/
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100%;
+}
+
+#accordion2 .info-col
+{
+    float: left;
+    width: 47%;
+    padding: 5px 0 0 0;
+}
+
+#accordion2 dt
+{
+    padding: 5px;
+}
+
+#accordion2 dd
+{
+    position: absolute;
+    left: -9999px;
+    top: -9999px; 
+    padding: 10px;
+    -webkit-margin-start: 0px;
+}
+
+#accordion2 .primeiracoluna
+{
+    padding-right: 3%;
+}
+
+#accordion2 .segundacoluna
+{
+    padding-left: 3%;
+}
+
+#accordion2 .curCol
+{
+    z-index: 1;
+    position: relative;
+}
