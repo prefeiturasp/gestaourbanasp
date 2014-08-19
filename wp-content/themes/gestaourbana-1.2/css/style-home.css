@@ -45,6 +45,7 @@
     font-size: 27px;
     font-weight: bold;
     color: white;
+    letter-spacing: -1px;
 }
 
 #wrapper-second-home #banner-slide  .text p {
@@ -262,11 +263,13 @@
     float:left;
     /*margin-right:26px;*/
     /*padding-right: 10px;*/
-    width: 50%
+    width: 50%;
 }
 
-#wrapper-third-home .top-news  .image img{
-    height:auto;
+#wrapper-third-home .top-news  .image img
+{
+    height: auto;
+    width: 100%;
 }
 
 #wrapper-third-home .news-date
@@ -511,6 +514,11 @@
 
 @media screen and (max-width: 700px)
 {
+    #wrapper-third-home .top-news  .image
+    {
+        width: 100%;
+    }
+    
     #wrapper-third-home .top-news  .image img
     {
         width:100%;

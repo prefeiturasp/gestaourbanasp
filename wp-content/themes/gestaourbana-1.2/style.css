@@ -1057,17 +1057,31 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 
 
 /*aqui*/
-#project-nav {
+#project-nav
+{
     width: 100%;
-    height: 78px;
+    /* pegar o height do menu-projetos quando visualizado e colocar aqui */
+    height: 105px;
     margin: -8px auto;
     padding-bottom: 15px;
     /*background: url(images/bg-nav-projetos.png) repeat-x;*/
+    /*float: left;*/
+}
+
+#project-nav .wrapper
+{
+    /*float: left;*/
 }
 
 #project-nav .menu-projetos {
     max-width: 960px;
     height: 100%;
+    float: left;
+}
+
+#project-nav .menu-projetos div
+{
+    float: left;
 }
 
 /* altura do texto do menu de projetos */
@@ -1089,7 +1103,7 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 #project-nav .menu
 {
     /*max-width: 226px;*/
-    height: 60px;
+    height: 83px;
     float: left;
     /*padding-right: 10px;*/
     

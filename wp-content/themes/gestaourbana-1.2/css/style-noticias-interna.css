@@ -20,6 +20,8 @@
     font-family: 'museoSlab', Arial, Helvetica, sans-serif;
     font-size: 12px;
     margin-top: 10px;
+    float: left;
+    width: 100%;
 }
 
 #news-inner .left .inner .menu-do-projeto a
@@ -40,6 +42,16 @@
     display: inline;
 }
 
+@media screen and (max-width: 959px)
+{
+    #news-inner .left .inner .menu-do-projeto li
+    {
+        line-height: 35px;
+        display: inline-table;
+    }
+
+}
+
 /********************************************************************************/
 /* cor do texto do menu interno do plano diretor */
 /********************************************************************************/
@@ -53,8 +65,7 @@
 /********************************************************************************/
 .menu-menu-interno-plano-diretor-container li
 {
-    padding-left: 12px;
-    padding-right: 11px;
+    padding-right: 23px;
 }
 
 /********************************************************************************/
@@ -78,8 +89,7 @@
 /********************************************************************************/
 .menu-menu-interno-parcelamento-ocupacao-solo-container li
 {
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-right: 96px;
 }
 
 /********************************************************************************/
@@ -120,8 +130,10 @@
 	margin:15px 0 30px;
 }
 
-#news-inner .left .text img {
-	max-width:100%;
+#news-inner .left .text img
+{
+    max-width: 100%;
+    height: auto;
 }
 
 #news-inner .left .text .subtitle {
@@ -441,4 +453,17 @@ ul#lei-menu li ul.lei-submenu1 li a
 {
     z-index: 1;
     position: relative;
+}
+
+@media screen and (max-width: 700px)
+{
+    #accordion2 .info-col
+    {
+        width: 100%;
+    }
+
+    #accordion2 .segundacoluna
+    {
+        padding-left: 0;
+    }
 }
